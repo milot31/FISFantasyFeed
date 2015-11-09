@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "FFFantasyAPIClient.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    [FFFantasyAPIClient getActiveQBPlayersWithCompletion:^(NSDictionary *quarterbacks) {
+        NSLog(@"%@", quarterbacks[@"Players"]);
+    }];
     return YES;
 }
 
