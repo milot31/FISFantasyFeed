@@ -1,5 +1,5 @@
 //
-//  FISTeamDataStore.h
+//  FFFantasyAPIClient.h
 //  InjuryReport
 //
 //  Created by Phil Milot on 11/9/15.
@@ -8,12 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface FISTeamDataStore : NSObject
-
-@property (nonatomic, strong) NSMutableArray *team;
-
-+ (instancetype)sharedDataStore;
-
-
+@interface FFFantasyAPIClient : NSObject
 
 @end

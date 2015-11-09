@@ -4,12 +4,12 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-InjuryReport-STTwitter.xcscheme</key>
+		<key>Pods-STTwitter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-InjuryReport.xcscheme</key>
+		<key>Pods.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,12 +17,12 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>14640B4A11039970EAFD44ED</key>
+		<key>13D3C36B435547C7D7D03967</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FAEA102CEBDDBFA74AA5F291</key>
+		<key>F1BCBB8D3FC624A7B4FEB60B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
