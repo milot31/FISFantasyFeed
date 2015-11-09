@@ -19,9 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    [FFFantasyAPIClient getActiveQBPlayersWithCompletion:^(NSDictionary *quarterbacks) {
-        NSLog(@"%@", quarterbacks[@"Players"]);
-    }];
+//    [FFFantasyAPIClient getActiveQBPlayersWithCompletion:^(NSDictionary *quarterbacks) {
+//        NSLog(@"%@", quarterbacks[@"Players"]);
+//    }];
     return YES;
 }
 

@@ -10,16 +10,16 @@
 
 @interface FFFantasyAPIClient : NSObject
 
-+(void)getActiveQBPlayersWithCompletion:(void (^)(NSDictionary *quarterbacks))completion;
++(void)getActiveQBPlayersWithCompletion:(void (^)(NSDictionary *quarterBacks))completion;
 
-+(void)getActiveRBPlayersWithCompletion:(void (^)(BOOL success))completion;
++(void)getActiveRBPlayersWithCompletion:(void (^)(NSDictionary *runningBacks))completion;
 
-+(void)getActiveWRPlayersWithCompletion:(void (^)(BOOL success))completion;
++(void)getActiveWRPlayersWithCompletion:(void (^)(NSDictionary *wideReceivers))completion;
 
-+(void)getActiveTEPlayersWithCompletion:(void (^)(BOOL success))completion;
++(void)getActiveTEPlayersWithCompletion:(void (^)(NSDictionary *tightEnds))completion;
 
-+(void)getActiveKPlayersWithCompletion:(void (^)(BOOL success))completion;
++(void)getActiveKPlayersWithCompletion:(void (^)(NSDictionary *kickers))completion;
 
-+(void)getActiveDEFPlayersWithCompletion:(void (^)(BOOL success))completion;
++(void)getActiveDEFPlayersWithCompletion:(void (^)(NSDictionary *defenses))completion;
 
 @end
