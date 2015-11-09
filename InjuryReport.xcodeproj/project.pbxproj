@@ -1,0 +1,583 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3B0A71ED1BF03CAA0010A257 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A71EC1BF03CAA0010A257 /* main.m */; };
+		3B0A71F01BF03CAA0010A257 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A71EF1BF03CAA0010A257 /* AppDelegate.m */; };
+		3B0A71F31BF03CAA0010A257 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A71F21BF03CAA0010A257 /* ViewController.m */; };
+		3B0A71F61BF03CAA0010A257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0A71F41BF03CAA0010A257 /* Main.storyboard */; };
+		3B0A71F81BF03CAA0010A257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3B0A71F71BF03CAA0010A257 /* Assets.xcassets */; };
+		3B0A71FB1BF03CAA0010A257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0A71F91BF03CAA0010A257 /* LaunchScreen.storyboard */; };
+		3B0A72061BF03CAA0010A257 /* InjuryReportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72051BF03CAA0010A257 /* InjuryReportTests.m */; };
+		3B0A72111BF03CAA0010A257 /* InjuryReportUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72101BF03CAA0010A257 /* InjuryReportUITests.m */; };
+		3FC3836702C2C972E81763FB /* libPods-InjuryReport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CDDD86C66E55A28B250CE8 /* libPods-InjuryReport.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3B0A72021BF03CAA0010A257 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B0A71E01BF03CAA0010A257 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B0A71E71BF03CAA0010A257;
+			remoteInfo = InjuryReport;
+		};
+		3B0A720D1BF03CAA0010A257 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3B0A71E01BF03CAA0010A257 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3B0A71E71BF03CAA0010A257;
+			remoteInfo = InjuryReport;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		06791E0F02EA8200C51C1878 /* Pods-InjuryReport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InjuryReport.release.xcconfig"; path = "Pods/Target Support Files/Pods-InjuryReport/Pods-InjuryReport.release.xcconfig"; sourceTree = "<group>"; };
+		3B0A71E81BF03CAA0010A257 /* InjuryReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InjuryReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0A71EC1BF03CAA0010A257 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3B0A71EE1BF03CAA0010A257 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3B0A71EF1BF03CAA0010A257 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3B0A71F11BF03CAA0010A257 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3B0A71F21BF03CAA0010A257 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3B0A71F51BF03CAA0010A257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3B0A71F71BF03CAA0010A257 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3B0A71FA1BF03CAA0010A257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3B0A71FC1BF03CAA0010A257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B0A72011BF03CAA0010A257 /* InjuryReportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InjuryReportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0A72051BF03CAA0010A257 /* InjuryReportTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InjuryReportTests.m; sourceTree = "<group>"; };
+		3B0A72071BF03CAA0010A257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B0A720C1BF03CAA0010A257 /* InjuryReportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InjuryReportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0A72101BF03CAA0010A257 /* InjuryReportUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InjuryReportUITests.m; sourceTree = "<group>"; };
+		3B0A72121BF03CAA0010A257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E2A5AABAF092444485F13A4 /* Pods-InjuryReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InjuryReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InjuryReport/Pods-InjuryReport.debug.xcconfig"; sourceTree = "<group>"; };
+		80CDDD86C66E55A28B250CE8 /* libPods-InjuryReport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InjuryReport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3B0A71E51BF03CAA0010A257 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3FC3836702C2C972E81763FB /* libPods-InjuryReport.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B0A71FE1BF03CAA0010A257 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B0A72091BF03CAA0010A257 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		24C36662B8211BE0C8891290 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4E2A5AABAF092444485F13A4 /* Pods-InjuryReport.debug.xcconfig */,
+				06791E0F02EA8200C51C1878 /* Pods-InjuryReport.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		3B0A71DF1BF03CAA0010A257 = {
+			isa = PBXGroup;
+			children = (
+				3B0A71EA1BF03CAA0010A257 /* InjuryReport */,
+				3B0A72041BF03CAA0010A257 /* InjuryReportTests */,
+				3B0A720F1BF03CAA0010A257 /* InjuryReportUITests */,
+				3B0A71E91BF03CAA0010A257 /* Products */,
+				24C36662B8211BE0C8891290 /* Pods */,
+				A68681AE65D5A491FB420B28 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		3B0A71E91BF03CAA0010A257 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3B0A71E81BF03CAA0010A257 /* InjuryReport.app */,
+				3B0A72011BF03CAA0010A257 /* InjuryReportTests.xctest */,
+				3B0A720C1BF03CAA0010A257 /* InjuryReportUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3B0A71EA1BF03CAA0010A257 /* InjuryReport */ = {
+			isa = PBXGroup;
+			children = (
+				3B0A71EE1BF03CAA0010A257 /* AppDelegate.h */,
+				3B0A71EF1BF03CAA0010A257 /* AppDelegate.m */,
+				3B0A71F11BF03CAA0010A257 /* ViewController.h */,
+				3B0A71F21BF03CAA0010A257 /* ViewController.m */,
+				3B0A71F41BF03CAA0010A257 /* Main.storyboard */,
+				3B0A71F71BF03CAA0010A257 /* Assets.xcassets */,
+				3B0A71F91BF03CAA0010A257 /* LaunchScreen.storyboard */,
+				3B0A71FC1BF03CAA0010A257 /* Info.plist */,
+				3B0A71EB1BF03CAA0010A257 /* Supporting Files */,
+			);
+			path = InjuryReport;
+			sourceTree = "<group>";
+		};
+		3B0A71EB1BF03CAA0010A257 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3B0A71EC1BF03CAA0010A257 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3B0A72041BF03CAA0010A257 /* InjuryReportTests */ = {
+			isa = PBXGroup;
+			children = (
+				3B0A72051BF03CAA0010A257 /* InjuryReportTests.m */,
+				3B0A72071BF03CAA0010A257 /* Info.plist */,
+			);
+			path = InjuryReportTests;
+			sourceTree = "<group>";
+		};
+		3B0A720F1BF03CAA0010A257 /* InjuryReportUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3B0A72101BF03CAA0010A257 /* InjuryReportUITests.m */,
+				3B0A72121BF03CAA0010A257 /* Info.plist */,
+			);
+			path = InjuryReportUITests;
+			sourceTree = "<group>";
+		};
+		A68681AE65D5A491FB420B28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				80CDDD86C66E55A28B250CE8 /* libPods-InjuryReport.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3B0A71E71BF03CAA0010A257 /* InjuryReport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B0A72151BF03CAA0010A257 /* Build configuration list for PBXNativeTarget "InjuryReport" */;
+			buildPhases = (
+				DB5B5F0A7484DB25B6AF1145 /* Check Pods Manifest.lock */,
+				3B0A71E41BF03CAA0010A257 /* Sources */,
+				3B0A71E51BF03CAA0010A257 /* Frameworks */,
+				3B0A71E61BF03CAA0010A257 /* Resources */,
+				A80CA8000ADDD8DD2C95DFE1 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = InjuryReport;
+			productName = InjuryReport;
+			productReference = 3B0A71E81BF03CAA0010A257 /* InjuryReport.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3B0A72001BF03CAA0010A257 /* InjuryReportTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B0A72181BF03CAA0010A257 /* Build configuration list for PBXNativeTarget "InjuryReportTests" */;
+			buildPhases = (
+				3B0A71FD1BF03CAA0010A257 /* Sources */,
+				3B0A71FE1BF03CAA0010A257 /* Frameworks */,
+				3B0A71FF1BF03CAA0010A257 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B0A72031BF03CAA0010A257 /* PBXTargetDependency */,
+			);
+			name = InjuryReportTests;
+			productName = InjuryReportTests;
+			productReference = 3B0A72011BF03CAA0010A257 /* InjuryReportTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3B0A720B1BF03CAA0010A257 /* InjuryReportUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3B0A721B1BF03CAA0010A257 /* Build configuration list for PBXNativeTarget "InjuryReportUITests" */;
+			buildPhases = (
+				3B0A72081BF03CAA0010A257 /* Sources */,
+				3B0A72091BF03CAA0010A257 /* Frameworks */,
+				3B0A720A1BF03CAA0010A257 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3B0A720E1BF03CAA0010A257 /* PBXTargetDependency */,
+			);
+			name = InjuryReportUITests;
+			productName = InjuryReportUITests;
+			productReference = 3B0A720C1BF03CAA0010A257 /* InjuryReportUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3B0A71E01BF03CAA0010A257 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "Phil Milot";
+				TargetAttributes = {
+					3B0A71E71BF03CAA0010A257 = {
+						CreatedOnToolsVersion = 7.0.1;
+					};
+					3B0A72001BF03CAA0010A257 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 3B0A71E71BF03CAA0010A257;
+					};
+					3B0A720B1BF03CAA0010A257 = {
+						CreatedOnToolsVersion = 7.0.1;
+						TestTargetID = 3B0A71E71BF03CAA0010A257;
+					};
+				};
+			};
+			buildConfigurationList = 3B0A71E31BF03CAA0010A257 /* Build configuration list for PBXProject "InjuryReport" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3B0A71DF1BF03CAA0010A257;
+			productRefGroup = 3B0A71E91BF03CAA0010A257 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3B0A71E71BF03CAA0010A257 /* InjuryReport */,
+				3B0A72001BF03CAA0010A257 /* InjuryReportTests */,
+				3B0A720B1BF03CAA0010A257 /* InjuryReportUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3B0A71E61BF03CAA0010A257 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B0A71FB1BF03CAA0010A257 /* LaunchScreen.storyboard in Resources */,
+				3B0A71F81BF03CAA0010A257 /* Assets.xcassets in Resources */,
+				3B0A71F61BF03CAA0010A257 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B0A71FF1BF03CAA0010A257 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B0A720A1BF03CAA0010A257 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A80CA8000ADDD8DD2C95DFE1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-InjuryReport/Pods-InjuryReport-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DB5B5F0A7484DB25B6AF1145 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3B0A71E41BF03CAA0010A257 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B0A71F31BF03CAA0010A257 /* ViewController.m in Sources */,
+				3B0A71F01BF03CAA0010A257 /* AppDelegate.m in Sources */,
+				3B0A71ED1BF03CAA0010A257 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B0A71FD1BF03CAA0010A257 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B0A72061BF03CAA0010A257 /* InjuryReportTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3B0A72081BF03CAA0010A257 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3B0A72111BF03CAA0010A257 /* InjuryReportUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3B0A72031BF03CAA0010A257 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B0A71E71BF03CAA0010A257 /* InjuryReport */;
+			targetProxy = 3B0A72021BF03CAA0010A257 /* PBXContainerItemProxy */;
+		};
+		3B0A720E1BF03CAA0010A257 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3B0A71E71BF03CAA0010A257 /* InjuryReport */;
+			targetProxy = 3B0A720D1BF03CAA0010A257 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3B0A71F41BF03CAA0010A257 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B0A71F51BF03CAA0010A257 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3B0A71F91BF03CAA0010A257 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3B0A71FA1BF03CAA0010A257 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3B0A72131BF03CAA0010A257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3B0A72141BF03CAA0010A257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3B0A72161BF03CAA0010A257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4E2A5AABAF092444485F13A4 /* Pods-InjuryReport.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InjuryReport/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3B0A72171BF03CAA0010A257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 06791E0F02EA8200C51C1878 /* Pods-InjuryReport.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = InjuryReport/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReport;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3B0A72191BF03CAA0010A257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InjuryReportTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReportTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InjuryReport.app/InjuryReport";
+			};
+			name = Debug;
+		};
+		3B0A721A1BF03CAA0010A257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = InjuryReportTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReportTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InjuryReport.app/InjuryReport";
+			};
+			name = Release;
+		};
+		3B0A721C1BF03CAA0010A257 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = InjuryReportUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReportUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = InjuryReport;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		3B0A721D1BF03CAA0010A257 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = InjuryReportUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReportUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = InjuryReport;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3B0A71E31BF03CAA0010A257 /* Build configuration list for PBXProject "InjuryReport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B0A72131BF03CAA0010A257 /* Debug */,
+				3B0A72141BF03CAA0010A257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B0A72151BF03CAA0010A257 /* Build configuration list for PBXNativeTarget "InjuryReport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B0A72161BF03CAA0010A257 /* Debug */,
+				3B0A72171BF03CAA0010A257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B0A72181BF03CAA0010A257 /* Build configuration list for PBXNativeTarget "InjuryReportTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B0A72191BF03CAA0010A257 /* Debug */,
+				3B0A721A1BF03CAA0010A257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3B0A721B1BF03CAA0010A257 /* Build configuration list for PBXNativeTarget "InjuryReportUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3B0A721C1BF03CAA0010A257 /* Debug */,
+				3B0A721D1BF03CAA0010A257 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3B0A71E01BF03CAA0010A257 /* Project object */;
+}
