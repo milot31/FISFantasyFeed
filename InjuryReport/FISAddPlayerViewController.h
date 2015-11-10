@@ -1,5 +1,5 @@
 //
-//  FISAddPlayerTableViewController.h
+//  FISAddPlayerViewController.h
 //  InjuryReport
 //
 //  Created by Phil Milot on 11/9/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FISAddPlayerTableViewController : UITableViewController
+@interface FISAddPlayerViewController : UIViewController
 
 @end

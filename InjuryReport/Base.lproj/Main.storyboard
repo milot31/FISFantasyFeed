@@ -4,10 +4,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Add Player View Controller-->
         <scene sceneID="DYW-vp-JrJ">
             <objects>
-                <viewController id="2Ir-qN-yMv" sceneMemberID="viewController">
+                <viewController id="2Ir-qN-yMv" customClass="FISAddPlayerViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KhC-6c-FFC"/>
                         <viewControllerLayoutGuide type="bottom" id="Q4J-53-tV4"/>
@@ -133,7 +133,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="My Team" id="aPr-4k-eQa">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ILm-9w-glq"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ILm-9w-glq">
+                            <connections>
+                                <segue destination="2Ir-qN-yMv" kind="presentation" id="szN-jh-ZwZ"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                 </tableViewController>
@@ -150,11 +154,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="pW2-Hz-1Ny">
-                                <rect key="frame" x="0.0" y="92" width="414" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="69" id="pW2-Hz-1Ny">
+                                <rect key="frame" x="0.0" y="92" width="414" height="69"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pW2-Hz-1Ny" id="WYi-U5-og6">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="68.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
