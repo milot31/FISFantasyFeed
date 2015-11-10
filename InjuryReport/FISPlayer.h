@@ -10,4 +10,8 @@
 
 @interface FISPlayer : NSObject
 
+@property (nonatomic, strong) NSString *fullName;
+@property (nonatomic, strong) NSString *position;
+@property (nonatomic, strong) NSString *team;
+
 @end

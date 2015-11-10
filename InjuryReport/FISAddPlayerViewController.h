@@ -10,4 +10,6 @@
 
 @interface FISAddPlayerViewController : UIViewController
 
+@property (nonatomic, strong) NSMutableArray *playerArray;
+
 @end

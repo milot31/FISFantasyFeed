@@ -17,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2ab-mv-kr8">
-                                <rect key="frame" x="0.0" y="28" width="414" height="216"/>
+                                <rect key="frame" x="0.0" y="28" width="414" height="130"/>
                             </pickerView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2JG-6K-e8x">
-                                <rect key="frame" x="0.0" y="252" width="414" height="484"/>
+                                <rect key="frame" x="0.0" y="201" width="414" height="489"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="playerCell" rowHeight="69" id="VLa-5d-few">
@@ -65,10 +65,24 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rA8-gD-Ztg">
+                                <rect key="frame" x="152" y="166" width="110" height="30"/>
+                                <color key="backgroundColor" red="0.29771959240000001" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Update Players"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EPZ-1q-dwR">
+                                <rect key="frame" x="152" y="698" width="110" height="30"/>
+                                <color key="backgroundColor" red="0.29771959240000001" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Add Player Players"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="playerTableView" destination="2JG-6K-e8x" id="EnP-Jg-UsO"/>
+                        <outlet property="positionPickerView" destination="2ab-mv-kr8" id="LdN-uH-u1A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6TK-e1-bCf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
