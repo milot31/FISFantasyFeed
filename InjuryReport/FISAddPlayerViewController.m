@@ -16,6 +16,14 @@
 @property (strong, nonatomic) IBOutlet UIPickerView *positionPickerView;
 @property (strong, nonatomic) IBOutlet UITableView *playerTableView;
 
+@property (strong, nonatomic) NSMutableArray *quarterBacks;
+@property (strong, nonatomic) NSMutableArray *runningBacks;
+@property (strong, nonatomic) NSMutableArray *wideReceivers;
+@property (strong, nonatomic) NSMutableArray *tightEnds;
+@property (strong, nonatomic) NSMutableArray *kickers;
+@property (strong, nonatomic) NSMutableArray *defenses;
+
+
 @end
 
 @implementation FISAddPlayerViewController
@@ -36,8 +44,59 @@
     self.playerTableView.delegate = self;
     self.playerTableView.dataSource = self;
     
+    [self initalizeAllTheGroupsToDefaultValue];
+    
 
 }
+
+- (void)initalizeAllTheGroupsToDefaultValue {
+    self.quarterBacks = [NSMutableArray new];
+    self.runningBacks = [NSMutableArray new];
+    self.wideReceivers = [NSMutableArray new];
+    self.tightEnds = [NSMutableArray new];
+    self.kickers = [NSMutableArray new];
+    self.defenses = [NSMutableArray new];
+    self.playerArray = [NSMutableArray new];
+}
+
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    
+    
+    [self reloadPlayersBasedOnPickerSelection];
+    [self.playerTableView reloadData];
+}
+
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+
+    
+    return self.playerArray.count;
+}
+
+
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+ UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
+ 
+     
+     FISPlayer *player = self.playerArray[indexPath.row];
+     
+     cell.textLabel.text = player.fullName;
+     
+     UILabel *positionLabel = (UILabel *)[cell viewWithTag:1];
+     positionLabel.text = player.position;
+     
+     UILabel *teamLabel = (UILabel *)[cell viewWithTag:2];
+     teamLabel.text = player.team;
+     
+ return cell;
+ }
+ 
+
+
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     
@@ -72,22 +131,6 @@
     }
 }
 
--(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
-}
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.playerArray.count;
-}
-
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    
-}
-
--(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-    [self reloadPlayersBasedOnPickerSelection];
-    [self.playerTableView reloadData];
-}
 
 //-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
 //    
@@ -105,35 +148,57 @@
 
 -(void)loadQuarterbacks {
     
-    self.playerArray = [[NSMutableArray alloc]init];
-    
-    [FFFantasyAPIClient getActiveQBPlayersWithCompletion:^(NSDictionary *quarterBacks) {
-        for (NSDictionary *player in quarterBacks[@"Player"]) {
-            FISPlayer *newPlayer = [[FISPlayer alloc]init];
-            newPlayer.fullName = player[@"displayName"];
-            newPlayer.position = player[@"position"];
-            newPlayer.team = player[@"team"];
-            [self.playerArray addObject:newPlayer];
-        }
-    }];
+
+    if (self.quarterBacks.count == 0) {
+        
+        [FFFantasyAPIClient getActiveQBPlayersWithCompletion:^(NSDictionary *quarterBacks) {
+            
+            for (NSDictionary *player in quarterBacks[@"Players"]) {
+                FISPlayer *newPlayer = [[FISPlayer alloc]init];
+                newPlayer.fullName = player[@"displayName"];
+                newPlayer.position = player[@"position"];
+                newPlayer.team = player[@"team"];
+                [self.quarterBacks addObject:newPlayer];
+                
+            }
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            
+                self.playerArray = self.quarterBacks;
+                [self.playerTableView reloadData];
+            }];
+        }];
+    } else {
+        self.playerArray = self.quarterBacks;
+    }
 }
 
 -(void)loadRunningbacks {
     
-    self.playerArray = [[NSMutableArray alloc]init];
+    if (self.runningBacks.count == 0) {
     
-    [FFFantasyAPIClient getActiveRBPlayersWithCompletion:^(NSDictionary *runningBacks) {
-        for (NSDictionary *player in runningBacks[@"Player"]) {
-            FISPlayer *newPlayer = [[FISPlayer alloc]init];
-            newPlayer.fullName = player[@"displayName"];
-            newPlayer.position = player[@"position"];
-            newPlayer.team = player[@"team"];
-            [self.playerArray addObject:newPlayer];
-        }
-    }];
+        [FFFantasyAPIClient getActiveRBPlayersWithCompletion:^(NSDictionary *runningBacks) {
+            
+            for (NSDictionary *player in runningBacks[@"Players"]) {
+                FISPlayer *newPlayer = [[FISPlayer alloc]init];
+                newPlayer.fullName = player[@"displayName"];
+                newPlayer.position = player[@"position"];
+                newPlayer.team = player[@"team"];
+                [self.runningBacks addObject:newPlayer];
+            }
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                self.playerArray = self.runningBacks;
+                [self.playerTableView reloadData];
+            }];
+        }];
+    } else {
+        self.playerArray = self.runningBacks;
+    }
 }
 
 -(void)loadWideReceivers {
+    
+    NSLog(@"loadWideReceivers is called.");
+
     
     self.playerArray = [[NSMutableArray alloc]init];
     
@@ -150,6 +215,9 @@
 
 -(void)loadTightEnds {
     
+    NSLog(@"loadTightEnds is called.");
+
+    
     self.playerArray = [[NSMutableArray alloc]init];
     
     [FFFantasyAPIClient getActiveTEPlayersWithCompletion:^(NSDictionary *tightEnds) {
@@ -165,6 +233,9 @@
 
 -(void)loadKickers {
     
+    NSLog(@"loadKickers is called.");
+
+    
     self.playerArray = [[NSMutableArray alloc]init];
     
     [FFFantasyAPIClient getActiveKPlayersWithCompletion:^(NSDictionary *kickers) {
@@ -179,6 +250,9 @@
 }
 
 -(void)loadDefense {
+    
+    NSLog(@"loadDefense is called.");
+
     
     self.playerArray = [[NSMutableArray alloc]init];
     
