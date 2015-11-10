@@ -84,7 +84,8 @@
      
      FISPlayer *player = self.playerArray[indexPath.row];
      
-     cell.textLabel.text = player.fullName;
+     UILabel *nameLabel = (UILabel *)[cell viewWithTag:0];
+     nameLabel.text = player.fullName;
      
      UILabel *positionLabel = (UILabel *)[cell viewWithTag:1];
      positionLabel.text = player.position;
@@ -132,9 +133,9 @@
 }
 
 
-//-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
-//    
-//}
+-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
 
 /*
 #pragma mark - Navigation
@@ -197,74 +198,91 @@
 
 -(void)loadWideReceivers {
     
-    NSLog(@"loadWideReceivers is called.");
-
+    if (self.wideReceivers.count == 0) {
     
-    self.playerArray = [[NSMutableArray alloc]init];
-    
-    [FFFantasyAPIClient getActiveWRPlayersWithCompletion:^(NSDictionary *wideReceivers) {
-        for (NSDictionary *player in wideReceivers[@"Player"]) {
-            FISPlayer *newPlayer = [[FISPlayer alloc]init];
-            newPlayer.fullName = player[@"displayName"];
-            newPlayer.position = player[@"position"];
-            newPlayer.team = player[@"team"];
-            [self.playerArray addObject:newPlayer];
-        }
-    }];
+        [FFFantasyAPIClient getActiveWRPlayersWithCompletion:^(NSDictionary *wideReceivers) {
+            
+            for (NSDictionary *player in wideReceivers[@"Players"]) {
+                FISPlayer *newPlayer = [[FISPlayer alloc]init];
+                newPlayer.fullName = player[@"displayName"];
+                newPlayer.position = player[@"position"];
+                newPlayer.team = player[@"team"];
+                [self.wideReceivers addObject:newPlayer];
+            }
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                self.playerArray = self.wideReceivers;
+                [self.playerTableView reloadData];
+            }];
+        }];
+    } else {
+        self.playerArray = self.wideReceivers;
+    }
 }
 
 -(void)loadTightEnds {
     
-    NSLog(@"loadTightEnds is called.");
-
+    if (self.tightEnds.count == 0) {
     
-    self.playerArray = [[NSMutableArray alloc]init];
-    
-    [FFFantasyAPIClient getActiveTEPlayersWithCompletion:^(NSDictionary *tightEnds) {
-        for (NSDictionary *player in tightEnds[@"Player"]) {
-            FISPlayer *newPlayer = [[FISPlayer alloc]init];
-            newPlayer.fullName = player[@"displayName"];
-            newPlayer.position = player[@"position"];
-            newPlayer.team = player[@"team"];
-            [self.playerArray addObject:newPlayer];
-        }
-    }];
+        [FFFantasyAPIClient getActiveTEPlayersWithCompletion:^(NSDictionary *tightEnds) {
+            for (NSDictionary *player in tightEnds[@"Players"]) {
+                FISPlayer *newPlayer = [[FISPlayer alloc]init];
+                newPlayer.fullName = player[@"displayName"];
+                newPlayer.position = player[@"position"];
+                newPlayer.team = player[@"team"];
+                [self.tightEnds addObject:newPlayer];
+            }
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                self.playerArray = self.tightEnds;
+                [self.playerTableView reloadData];
+            }];
+        }];
+    } else {
+        self.playerArray = self.tightEnds;
+    }
 }
 
 -(void)loadKickers {
     
-    NSLog(@"loadKickers is called.");
-
+    if (self.kickers.count == 0) {
     
-    self.playerArray = [[NSMutableArray alloc]init];
-    
-    [FFFantasyAPIClient getActiveKPlayersWithCompletion:^(NSDictionary *kickers) {
-        for (NSDictionary *player in kickers[@"Player"]) {
-            FISPlayer *newPlayer = [[FISPlayer alloc]init];
-            newPlayer.fullName = player[@"displayName"];
-            newPlayer.position = player[@"position"];
-            newPlayer.team = player[@"team"];
-            [self.playerArray addObject:newPlayer];
-        }
-    }];
+        [FFFantasyAPIClient getActiveKPlayersWithCompletion:^(NSDictionary *kickers) {
+            for (NSDictionary *player in kickers[@"Players"]) {
+                FISPlayer *newPlayer = [[FISPlayer alloc]init];
+                newPlayer.fullName = player[@"displayName"];
+                newPlayer.position = player[@"position"];
+                newPlayer.team = player[@"team"];
+                [self.kickers addObject:newPlayer];
+            }
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                self.playerArray = self.kickers;
+                [self.playerTableView reloadData];
+            }];
+        }];
+    } else {
+        self.playerArray = self.kickers;
+    }
 }
 
 -(void)loadDefense {
     
-    NSLog(@"loadDefense is called.");
-
+    if (self.defenses.count == 0) {
     
-    self.playerArray = [[NSMutableArray alloc]init];
-    
-    [FFFantasyAPIClient getActiveDEFPlayersWithCompletion:^(NSDictionary *defenses) {
-        for (NSDictionary *player in defenses[@"Player"]) {
-            FISPlayer *newPlayer = [[FISPlayer alloc]init];
-            newPlayer.fullName = player[@"displayName"];
-            newPlayer.position = player[@"position"];
-            newPlayer.team = player[@"team"];
-            [self.playerArray addObject:newPlayer];
-        }
-    }];
+        [FFFantasyAPIClient getActiveDEFPlayersWithCompletion:^(NSDictionary *defenses) {
+            for (NSDictionary *player in defenses[@"Players"]) {
+                FISPlayer *newPlayer = [[FISPlayer alloc]init];
+                newPlayer.fullName = player[@"displayName"];
+                newPlayer.position = player[@"position"];
+                newPlayer.team = player[@"team"];
+                [self.defenses addObject:newPlayer];
+            }
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                self.playerArray = self.defenses;
+                [self.playerTableView reloadData];
+            }];
+        }];
+    } else {
+        self.playerArray = self.defenses;
+    }
 }
 
 @end
