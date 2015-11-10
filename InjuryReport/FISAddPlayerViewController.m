@@ -23,7 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.positionArray = @[ @"Quarterback",
+    self.positionArray = @[ @"-",
+                            @"Quarterback",
                             @"Runningback",
                             @"Wide Receiver",
                             @"Tight End",
@@ -56,17 +57,17 @@
 - (void)reloadPlayersBasedOnPickerSelection {
     
     NSString *activePickerSelection = [self.positionArray objectAtIndex:[self.positionPickerView selectedRowInComponent:0]];
-    if ([activePickerSelection isEqualToString:self.positionArray[0]]) {
+    if ([activePickerSelection isEqualToString:self.positionArray[1]]) {
         [self loadQuarterbacks];
-    } else if ([activePickerSelection isEqualToString:self.positionArray[1]]) {
-        [self loadRunningbacks];
     } else if ([activePickerSelection isEqualToString:self.positionArray[2]]) {
-        [self loadWideReceivers];
+        [self loadRunningbacks];
     } else if ([activePickerSelection isEqualToString:self.positionArray[3]]) {
-        [self loadTightEnds];
+        [self loadWideReceivers];
     } else if ([activePickerSelection isEqualToString:self.positionArray[4]]) {
-        [self loadKickers];
+        [self loadTightEnds];
     } else if ([activePickerSelection isEqualToString:self.positionArray[5]]) {
+        [self loadKickers];
+    } else if ([activePickerSelection isEqualToString:self.positionArray[6]]) {
         [self loadDefense];
     }
 }
@@ -79,13 +80,14 @@
     return self.playerArray.count;
 }
 
-//-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-//    
-//}
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
 
-//-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
-//    
-//}
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
+    [self reloadPlayersBasedOnPickerSelection];
+    [self.playerTableView reloadData];
+}
 
 //-(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
 //    
