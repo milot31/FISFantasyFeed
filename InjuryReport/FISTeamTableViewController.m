@@ -22,14 +22,13 @@
     [super viewDidLoad];
     
     self.store = [FISTeamDataStore sharedDataStore];
-    NSLog(@"%li", self.store.team.count);
 }
 
-//-(void)viewWillAppear:(BOOL)animated {
-//    [super viewWillAppear:YES];
-//    NSLog(@"%li", self.store.team.count);
-//
-//}
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+
+    [self.tableView reloadData];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -57,7 +56,9 @@
     return cell;
 }
 
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 69.0;
+}
 
 
 /*

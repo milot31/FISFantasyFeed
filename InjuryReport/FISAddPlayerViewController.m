@@ -131,16 +131,11 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"Method started");
     FISPlayer *newPlayer = self.playerArray[indexPath.row];
-    NSLog(@"PlayerCreated");
     FISTeamDataStore *dataStore = [FISTeamDataStore sharedDataStore];
-    NSLog(@"data store created");
     [dataStore.team addObject:newPlayer];
-    NSLog(@"player added to data store:\n\n%@", dataStore.team);
     
     [self dismissViewControllerAnimated:YES completion:nil];
-    NSLog(@"view dismissed");
 }
 
 /*
@@ -293,6 +288,10 @@
 
 - (IBAction)cancelButtonTapper:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 69.0;
 }
 
 @end
