@@ -9,6 +9,7 @@
 #import "FISAddPlayerViewController.h"
 #import "FFFantasyAPIClient.h"
 #import "FISPlayer.h"
+#import "FISTeamDataStore.h"
 
 @interface FISAddPlayerViewController () <UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource>
 
@@ -72,8 +73,6 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-
-    
     return self.playerArray.count;
 }
 
@@ -84,13 +83,13 @@
      
      FISPlayer *player = self.playerArray[indexPath.row];
      
-     UILabel *nameLabel = (UILabel *)[cell viewWithTag:0];
+     UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
      nameLabel.text = player.fullName;
      
-     UILabel *positionLabel = (UILabel *)[cell viewWithTag:1];
+     UILabel *positionLabel = (UILabel *)[cell viewWithTag:2];
      positionLabel.text = player.position;
      
-     UILabel *teamLabel = (UILabel *)[cell viewWithTag:2];
+     UILabel *teamLabel = (UILabel *)[cell viewWithTag:3];
      teamLabel.text = player.team;
      
  return cell;
@@ -100,17 +99,14 @@
 
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
-    
     return 1;
 }
 
 -(NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {
-    
     return self.positionArray.count;
 }
 
 -(NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component {
-    
     return [self.positionArray objectAtIndex:row];
 }
 
@@ -133,8 +129,18 @@
 }
 
 
--(void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    NSLog(@"Method started");
+    FISPlayer *newPlayer = self.playerArray[indexPath.row];
+    NSLog(@"PlayerCreated");
+    FISTeamDataStore *dataStore = [FISTeamDataStore sharedDataStore];
+    NSLog(@"data store created");
+    [dataStore.team addObject:newPlayer];
+    NSLog(@"player added to data store:\n\n%@", dataStore.team);
+    
+    [self dismissViewControllerAnimated:YES completion:nil];
+    NSLog(@"view dismissed");
 }
 
 /*
@@ -283,6 +289,10 @@
     } else {
         self.playerArray = self.defenses;
     }
+}
+
+- (IBAction)cancelButtonTapper:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
