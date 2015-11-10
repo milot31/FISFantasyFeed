@@ -7,7 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <STTwitter.h>
+#import "Constants.h"
+#import "FISPlayerFeedTableViewController.h"
 
 @interface FFTwitterAPIClient : NSObject
 
+
++(void)getTwitterStatuses: (NSString *)playerName withCompletion: (void (^) (NSArray* playerFeed))completionBlock;
 @end

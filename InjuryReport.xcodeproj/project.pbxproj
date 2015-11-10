@@ -14,15 +14,16 @@
 		3B0A71FB1BF03CAA0010A257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3B0A71F91BF03CAA0010A257 /* LaunchScreen.storyboard */; };
 		3B0A72061BF03CAA0010A257 /* InjuryReportTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72051BF03CAA0010A257 /* InjuryReportTests.m */; };
 		3B0A72111BF03CAA0010A257 /* InjuryReportUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72101BF03CAA0010A257 /* InjuryReportUITests.m */; };
-		3B0A72201BF1359C0010A257 /* FISPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A721F1BF1359C0010A257 /* FISPlayer.m */; settings = {ASSET_TAGS = (); }; };
-		3B0A72231BF135C10010A257 /* FISTeamDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72221BF135C10010A257 /* FISTeamDataStore.m */; settings = {ASSET_TAGS = (); }; };
-		3B0A72271BF136B50010A257 /* FISTeamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72261BF136B50010A257 /* FISTeamTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		3B0A722D1BF138960010A257 /* FISPlayerFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A722C1BF138960010A257 /* FISPlayerFeedTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		3B0A72301BF13A2E0010A257 /* FFFantasyAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A722F1BF13A2E0010A257 /* FFFantasyAPIClient.m */; settings = {ASSET_TAGS = (); }; };
-		3B0A72331BF140020010A257 /* FFTwitterAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72321BF140020010A257 /* FFTwitterAPIClient.m */; settings = {ASSET_TAGS = (); }; };
-		3B0A72361BF193920010A257 /* FISAddPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72351BF193920010A257 /* FISAddPlayerViewController.m */; settings = {ASSET_TAGS = (); }; };
-		3B0A72391BF26E730010A257 /* testtest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72381BF26E730010A257 /* testtest.m */; settings = {ASSET_TAGS = (); }; };
+		3B0A72201BF1359C0010A257 /* FISPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A721F1BF1359C0010A257 /* FISPlayer.m */; };
+		3B0A72231BF135C10010A257 /* FISTeamDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72221BF135C10010A257 /* FISTeamDataStore.m */; };
+		3B0A72271BF136B50010A257 /* FISTeamTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72261BF136B50010A257 /* FISTeamTableViewController.m */; };
+		3B0A722D1BF138960010A257 /* FISPlayerFeedTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A722C1BF138960010A257 /* FISPlayerFeedTableViewController.m */; };
+		3B0A72301BF13A2E0010A257 /* FFFantasyAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A722F1BF13A2E0010A257 /* FFFantasyAPIClient.m */; };
+		3B0A72331BF140020010A257 /* FFTwitterAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72321BF140020010A257 /* FFTwitterAPIClient.m */; };
+		3B0A72361BF193920010A257 /* FISAddPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72351BF193920010A257 /* FISAddPlayerViewController.m */; };
+		3B0A72391BF26E730010A257 /* testtest.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72381BF26E730010A257 /* testtest.m */; };
 		5D35876587BAD6E22C441A62 /* libPods-InjuryReport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CDDD86C66E55A28B250CE8 /* libPods-InjuryReport.a */; };
+		BFE2C8271BF297BA00FD6623 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE2C8261BF297BA00FD6623 /* Constants.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,8 @@
 		4E2A5AABAF092444485F13A4 /* Pods-InjuryReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InjuryReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InjuryReport/Pods-InjuryReport.debug.xcconfig"; sourceTree = "<group>"; };
 		80CDDD86C66E55A28B250CE8 /* libPods-InjuryReport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InjuryReport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8607A8B8962F6699A7FB354F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BFE2C8251BF297BA00FD6623 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		BFE2C8261BF297BA00FD6623 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +163,8 @@
 			isa = PBXGroup;
 			children = (
 				3B0A71EC1BF03CAA0010A257 /* main.m */,
+				BFE2C8251BF297BA00FD6623 /* Constants.h */,
+				BFE2C8261BF297BA00FD6623 /* Constants.m */,
 				3B0A722E1BF13A2E0010A257 /* FFFantasyAPIClient.h */,
 				3B0A722F1BF13A2E0010A257 /* FFFantasyAPIClient.m */,
 				3B0A72311BF140020010A257 /* FFTwitterAPIClient.h */,
@@ -390,6 +395,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFE2C8271BF297BA00FD6623 /* Constants.m in Sources */,
 				3B0A72201BF1359C0010A257 /* FISPlayer.m in Sources */,
 				3B0A72231BF135C10010A257 /* FISTeamDataStore.m in Sources */,
 				3B0A72301BF13A2E0010A257 /* FFFantasyAPIClient.m in Sources */,

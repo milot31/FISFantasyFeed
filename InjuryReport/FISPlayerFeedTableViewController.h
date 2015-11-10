@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FFTwitterAPIClient.h"
 
 @interface FISPlayerFeedTableViewController : UITableViewController
+
+@property (nonatomic, strong) NSArray *playerStatuses;
 
 @end
