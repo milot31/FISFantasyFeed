@@ -11,7 +11,7 @@
 #import "FISPlayer.h"
 #import "FISTeamDataStore.h"
 
-@interface FISAddPlayerViewController () <UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource>
+@interface FISAddPlayerViewController () <UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
 @property (nonatomic, strong) NSArray *positionArray;
 @property (strong, nonatomic) IBOutlet UIPickerView *positionPickerView;
@@ -24,6 +24,8 @@
 @property (strong, nonatomic) NSMutableArray *kickers;
 @property (strong, nonatomic) NSMutableArray *defenses;
 
+@property (strong, nonatomic) NSMutableArray *filteredPlayerArray;
+@property (strong, nonatomic) IBOutlet UISearchBar *playerSearchBar;
 
 @end
 
@@ -44,10 +46,11 @@
     self.positionPickerView.dataSource = self;
     self.playerTableView.delegate = self;
     self.playerTableView.dataSource = self;
+    self.playerSearchBar.delegate = self;
     
     [self initalizeAllTheGroupsToDefaultValue];
     
-
+    self.filteredPlayerArray = [NSMutableArray arrayWithCapacity:[self.playerArray count]];
 }
 
 - (void)initalizeAllTheGroupsToDefaultValue {
@@ -293,5 +296,6 @@
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 69.0;
 }
+
 
 @end
