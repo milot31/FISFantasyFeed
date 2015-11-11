@@ -28,6 +28,7 @@
 
 @property (strong, nonatomic) NSMutableArray *filteredPlayerArray;
 @property (strong, nonatomic) IBOutlet UISearchBar *playerSearchBar;
+@property (strong, nonatomic) NSArray *originalArray;
 
 @end
 
@@ -52,7 +53,6 @@
     
     [self initalizeAllTheGroupsToDefaultValue];
     
-    self.filteredPlayerArray = [NSMutableArray arrayWithCapacity:[self.playerArray count]];
 }
 
 - (void)initalizeAllTheGroupsToDefaultValue {
@@ -69,6 +69,8 @@
     
     
     [self reloadPlayersBasedOnPickerSelection];
+    //self.filteredPlayerArray = [NSMutableArray arrayWithCapacity:[self.playerArray count]];
+
     [self.playerTableView reloadData];
 }
 
@@ -78,26 +80,46 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return self.playerArray.count;
+    
+    if ([self.playerSearchBar.text isEqualToString:@""]) {
+        return self.playerArray.count;
+    } else {
+        return self.filteredPlayerArray.count;
+    }
 }
 
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
  
+     if ([self.playerSearchBar.text isEqualToString: @""]) {
+         
+         Player *player = self.playerArray[indexPath.row];
+         
+         UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
+         nameLabel.text = player.fullName;
+         
+         UILabel *positionLabel = (UILabel *)[cell viewWithTag:2];
+         positionLabel.text = player.position;
+         
+         UILabel *teamLabel = (UILabel *)[cell viewWithTag:3];
+         teamLabel.text = player.team;
+     } else {
+         
+         //CRASH AHPPENING HERE
+         Player *player = self.filteredPlayerArray[indexPath.row];
+         
+         UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
+         nameLabel.text = player.fullName;
+         
+         UILabel *positionLabel = (UILabel *)[cell viewWithTag:2];
+         positionLabel.text = player.position;
+         
+         UILabel *teamLabel = (UILabel *)[cell viewWithTag:3];
+         teamLabel.text = player.team;
+     }
      
-     Player *player = self.playerArray[indexPath.row];
-     
-     UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
-     nameLabel.text = player.fullName;
-     
-     UILabel *positionLabel = (UILabel *)[cell viewWithTag:2];
-     positionLabel.text = player.position;
-     
-     UILabel *teamLabel = (UILabel *)[cell viewWithTag:3];
-     teamLabel.text = player.team;
-     
- return cell;
+     return cell;
  }
  
 
@@ -135,13 +157,24 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSManagedObjectContext *objectContext = [FISTeamDataStore sharedDataStore].managedObjectContext;
-    Player *selectedPlayer = self.playerArray[indexPath.row];
-    Player *newPlayer = [NSEntityDescription insertNewObjectForEntityForName:@"Player" inManagedObjectContext:objectContext];
-    newPlayer.fullName = selectedPlayer.fullName;
-    newPlayer.team = selectedPlayer.team;
-    newPlayer.position = selectedPlayer.position;
-    [[FISTeamDataStore sharedDataStore] saveContext];
+    
+    if ([self.playerSearchBar.text isEqualToString:@""]) {
+        NSManagedObjectContext *objectContext = [FISTeamDataStore sharedDataStore].managedObjectContext;
+        Player *selectedPlayer = self.playerArray[indexPath.row];
+        Player *newPlayer = [NSEntityDescription insertNewObjectForEntityForName:@"Player" inManagedObjectContext:objectContext];
+        newPlayer.fullName = selectedPlayer.fullName;
+        newPlayer.team = selectedPlayer.team;
+        newPlayer.position = selectedPlayer.position;
+        [[FISTeamDataStore sharedDataStore] saveContext];
+    } else {
+        NSManagedObjectContext *objectContext = [FISTeamDataStore sharedDataStore].managedObjectContext;
+        Player *selectedPlayer = self.filteredPlayerArray[indexPath.row];
+        Player *newPlayer = [NSEntityDescription insertNewObjectForEntityForName:@"Player" inManagedObjectContext:objectContext];
+        newPlayer.fullName = selectedPlayer.fullName;
+        newPlayer.team = selectedPlayer.team;
+        newPlayer.position = selectedPlayer.position;
+        [[FISTeamDataStore sharedDataStore] saveContext];
+    }
     
     
     [self dismissViewControllerAnimated:YES completion:nil];
@@ -180,6 +213,7 @@
         }];
     } else {
         self.playerArray = self.quarterBacks;
+        self.originalArray = self.playerArray;
     }
 }
 
@@ -203,6 +237,7 @@
         }];
     } else {
         self.playerArray = self.runningBacks;
+        self.originalArray = self.playerArray;
     }
 }
 
@@ -226,6 +261,7 @@
         }];
     } else {
         self.playerArray = self.wideReceivers;
+        self.originalArray = self.playerArray;
     }
 }
 
@@ -248,6 +284,7 @@
         }];
     } else {
         self.playerArray = self.tightEnds;
+        self.originalArray = self.playerArray;
     }
 }
 
@@ -270,6 +307,7 @@
         }];
     } else {
         self.playerArray = self.kickers;
+        self.originalArray = self.playerArray;
     }
 }
 
@@ -292,6 +330,7 @@
         }];
     } else {
         self.playerArray = self.defenses;
+        self.originalArray = self.playerArray;
     }
 }
 
@@ -303,5 +342,22 @@
     return 69.0;
 }
 
+-(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
+    
+    if ([searchText isEqualToString:@""]) {
+        self.filteredPlayerArray = self.originalArray;
+    }
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.fullName contains[c] %@", searchText];
+    self.filteredPlayerArray = [NSMutableArray arrayWithArray:[self.playerArray filteredArrayUsingPredicate:predicate]];
+    
+    [self.playerTableView reloadData];
+}
+
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
+    
+    searchBar.text = [NSString stringWithFormat:@""];
+    [searchBar resignFirstResponder];
+}
 
 @end
