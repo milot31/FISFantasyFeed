@@ -134,7 +134,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="4cl-7G-O0t" kind="show" id="kVP-XH-nDb"/>
+                                    <segue destination="4cl-7G-O0t" kind="show" identifier="playerFeedSegue" id="kVP-XH-nDb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

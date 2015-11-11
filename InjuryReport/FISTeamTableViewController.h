@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FISPlayerFeedTableViewController.h"
 
 @interface FISTeamTableViewController : UITableViewController
 

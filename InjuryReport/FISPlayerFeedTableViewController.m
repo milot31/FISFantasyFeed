@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [FFTwitterAPIClient getTwitterStatuses:self.player.fullName withCompletion:^(NSArray *playerFeed) {
+        NSLog(@"%@", playerFeed);
+    }];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
