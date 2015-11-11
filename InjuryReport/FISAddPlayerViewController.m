@@ -357,7 +357,16 @@
 -(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar {
     
     searchBar.text = [NSString stringWithFormat:@""];
+    self.filteredPlayerArray = self.originalArray;
+    [self.playerTableView reloadData];
     [searchBar resignFirstResponder];
+}
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar
+{
+    NSLog(@"search button clicked");
+    [searchBar resignFirstResponder];
+
 }
 
 @end
