@@ -12,15 +12,11 @@
 
 +(void)getTwitterStatuses: (NSString *)playerName withCompletion: (void (^) (NSArray* playerFeed))completionBlock{
     
-    NSArray *twitterHandles = @[ @"@Stephania_ESPN", @"@MatthewBerryTMR", @"@thepme", @"@Michael_Fabiano", @"@YahooFootball", @"@evansilva", @"@scotteRotoEx", @"@josinaanderson", @"@allinkid", @"@EricMackFantasy"];
-    
-    NSArray *keyword = @[ playerName ];
-    
 STTwitterAPI *twitter = [STTwitterAPI twitterAPIAppOnlyWithConsumerKey:@"R5G74WainMpMxCUDDbwystU95"
                                                         consumerSecret:@"waWp8K8JhHpJWp5eKcAMS65oTkL1RhjCKomScHma6nvV4ansTG"];
 
 [twitter verifyCredentialsWithUserSuccessBlock:^(NSString *username, NSString *userID) {
-    NSLog(@"-- Account: %@", username);
+    //NSLog(@"-- Account: %@", username);
     
 //    [twitter getSearchTweetsWithQuery:playerName successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
 //        
@@ -30,9 +26,18 @@ STTwitterAPI *twitter = [STTwitterAPI twitterAPIAppOnlyWithConsumerKey:@"R5G74Wa
 //    } errorBlock:^(NSError *error) {
 //        
 //    }];
+//    
+//    [twitter postStatusesFilterUserIDs:twitterHandles keywordsToTrack:keyword locationBoundingBoxes:nil stallWarnings:nil progressBlock:^(NSDictionary *json, STTwitterStreamJSONType type) {
+//        NSLog(@"%@", json);
+//    } errorBlock:^(NSError *error) {
+//        NSLog(@"%@", error);
+//    }];
     
-    [twitter postStatusesFilterUserIDs:twitterHandles keywordsToTrack:keyword locationBoundingBoxes:nil stallWarnings:nil progressBlock:^(NSDictionary *json, STTwitterStreamJSONType type) {
-        NSLog(@"%@", json);
+    NSString *searchQuery = [NSString stringWithFormat:@"(from:Stephania_ESPN OR from:MatthewBerryTMR OR from:thepme OR from:Michael_Fabiano OR from:YahooFootball OR from:evansilva OR from:scotteRotoEx OR from:josinaanderson OR from:allinkid OR from:EricMackFantasy) AND %@ since:2015-09-01", playerName];
+    
+    [twitter getSearchTweetsWithQuery:searchQuery successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
+        NSLog(@"%@", statuses);
+        completionBlock(statuses);
     } errorBlock:^(NSError *error) {
         NSLog(@"%@", error);
     }];
