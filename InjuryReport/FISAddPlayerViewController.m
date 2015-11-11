@@ -9,7 +9,9 @@
 #import "FISAddPlayerViewController.h"
 #import "FFFantasyAPIClient.h"
 #import "FISPlayer.h"
-#import "FISTeamDataStore.h"
+#import "Player+CoreDataProperties.h"
+#import "Player.h"
+
 
 @interface FISAddPlayerViewController () <UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
@@ -84,7 +86,7 @@
  UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
  
      
-     FISPlayer *player = self.playerArray[indexPath.row];
+     Player *player = self.playerArray[indexPath.row];
      
      UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
      nameLabel.text = player.fullName;
@@ -133,10 +135,14 @@
 
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSManagedObjectContext *objectContext = [FISTeamDataStore sharedDataStore].managedObjectContext;
+    Player *selectedPlayer = self.playerArray[indexPath.row];
+    Player *newPlayer = [NSEntityDescription insertNewObjectForEntityForName:@"Player" inManagedObjectContext:objectContext];
+    newPlayer.fullName = selectedPlayer.fullName;
+    newPlayer.team = selectedPlayer.team;
+    newPlayer.position = selectedPlayer.position;
+    [[FISTeamDataStore sharedDataStore] saveContext];
     
-    FISPlayer *newPlayer = self.playerArray[indexPath.row];
-    FISTeamDataStore *dataStore = [FISTeamDataStore sharedDataStore];
-    [dataStore.team addObject:newPlayer];
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }

@@ -22,12 +22,33 @@
     [super viewDidLoad];
     
     self.store = [FISTeamDataStore sharedDataStore];
+    [[FISTeamDataStore sharedDataStore] fetchData];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
-
+    [[FISTeamDataStore sharedDataStore] fetchData];
     [self.tableView reloadData];
+}
+
+- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
+    return YES;
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSManagedObjectContext *objectContext = [FISTeamDataStore sharedDataStore].managedObjectContext;
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        [objectContext deleteObject:[self.store.team objectAtIndex:indexPath.row]];
+        NSError *error = nil;
+        if (![objectContext save:&error]) {
+            NSLog(@"Can't Delete! %@ %@", error, [error localizedDescription]);
+            return;
+        }
+        
+        [self.store.team removeObjectAtIndex:indexPath.row];
+        [[FISTeamDataStore sharedDataStore] fetchData];
+        [self.tableView reloadData];
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -42,7 +63,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
     
-    FISPlayer *selectedPlayer = self.store.team[indexPath.row];
+    Player *selectedPlayer = self.store.team[indexPath.row];
     
     UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
     nameLabel.text = selectedPlayer.fullName;
@@ -61,14 +82,20 @@
 }
 
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
-}
-*/
+    
+    FISPlayerFeedTableViewController *destinationVC = segue.destinationViewController;
+    if ([segue.identifier isEqualToString:@"playerFeedSegue"]) {
+    NSIndexPath *indexPathOfRowTapped = self.tableView.indexPathForSelectedRow;
+    Player *playerAtIndex = self.store.team[indexPathOfRowTapped.row];
+    destinationVC.player = playerAtIndex;
+    }}
+
 
 @end

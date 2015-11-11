@@ -7,12 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Player.h"
+
 
 @interface FISTeamDataStore : NSObject
 
+@property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
 @property (nonatomic, strong) NSMutableArray *team;
 
 + (instancetype)sharedDataStore;
+- (void) saveContext;
+- (void) fetchData;
 
 
 

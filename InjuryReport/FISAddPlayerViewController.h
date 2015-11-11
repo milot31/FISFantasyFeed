@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FISTeamDataStore.h"
 
 @interface FISAddPlayerViewController : UIViewController
 
