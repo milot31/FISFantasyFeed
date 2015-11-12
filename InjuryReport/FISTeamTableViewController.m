@@ -9,10 +9,12 @@
 #import "FISTeamTableViewController.h"
 #import "FISTeamDataStore.h"
 #import "FISPlayer.h"
+#import "FISTweetsDataStore.h"
 
 @interface FISTeamTableViewController ()
 
 @property (nonatomic, strong) FISTeamDataStore *store;
+@property (nonatomic, strong) FISTweetsDataStore  *tweetStore;
 
 @end
 
@@ -23,12 +25,16 @@
     
     self.store = [FISTeamDataStore sharedDataStore];
     [[FISTeamDataStore sharedDataStore] fetchData];
+    self.tweetStore = [FISTweetsDataStore tweetsDataStore];
+    [self.tweetStore.tweets removeAllObjects];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:YES];
     [[FISTeamDataStore sharedDataStore] fetchData];
     [self.tableView reloadData];
+    [self.tweetStore.tweets removeAllObjects];
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

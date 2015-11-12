@@ -26,6 +26,8 @@
 		BFE2C82F1BF2A31500FD6623 /* Player+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE2C82C1BF2A31500FD6623 /* Player+CoreDataProperties.m */; };
 		BFE2C8301BF2A31500FD6623 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE2C82E1BF2A31500FD6623 /* Player.m */; };
 		BFE2C8331BF2AD7800FD6623 /* FISPlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE2C8321BF2AD7800FD6623 /* FISPlayer.m */; };
+		BFE2C8361BF4D93900FD6623 /* FISTweetsDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE2C8351BF4D93900FD6623 /* FISTweetsDataStore.m */; };
+		BFE2C8391BF4E26300FD6623 /* FFTweetStatus.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE2C8381BF4E26300FD6623 /* FFTweetStatus.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +87,10 @@
 		BFE2C82E1BF2A31500FD6623 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		BFE2C8311BF2AD6B00FD6623 /* FISPlayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISPlayer.h; sourceTree = "<group>"; };
 		BFE2C8321BF2AD7800FD6623 /* FISPlayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISPlayer.m; sourceTree = "<group>"; };
+		BFE2C8341BF4D93900FD6623 /* FISTweetsDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISTweetsDataStore.h; sourceTree = "<group>"; };
+		BFE2C8351BF4D93900FD6623 /* FISTweetsDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTweetsDataStore.m; sourceTree = "<group>"; };
+		BFE2C8371BF4E26300FD6623 /* FFTweetStatus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FFTweetStatus.h; sourceTree = "<group>"; };
+		BFE2C8381BF4E26300FD6623 /* FFTweetStatus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFTweetStatus.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -158,6 +164,8 @@
 				BFE2C8281BF2A10F00FD6623 /* FISPlayer.xcdatamodeld */,
 				3B0A72211BF135C10010A257 /* FISTeamDataStore.h */,
 				3B0A72221BF135C10010A257 /* FISTeamDataStore.m */,
+				BFE2C8341BF4D93900FD6623 /* FISTweetsDataStore.h */,
+				BFE2C8351BF4D93900FD6623 /* FISTweetsDataStore.m */,
 				3B0A71F71BF03CAA0010A257 /* Assets.xcassets */,
 				3B0A71F91BF03CAA0010A257 /* LaunchScreen.storyboard */,
 				3B0A71FC1BF03CAA0010A257 /* Info.plist */,
@@ -173,6 +181,8 @@
 				3B0A71EC1BF03CAA0010A257 /* main.m */,
 				BFE2C8251BF297BA00FD6623 /* Constants.h */,
 				BFE2C8261BF297BA00FD6623 /* Constants.m */,
+				BFE2C8371BF4E26300FD6623 /* FFTweetStatus.h */,
+				BFE2C8381BF4E26300FD6623 /* FFTweetStatus.m */,
 				3B0A722E1BF13A2E0010A257 /* FFFantasyAPIClient.h */,
 				3B0A722F1BF13A2E0010A257 /* FFFantasyAPIClient.m */,
 				3B0A72311BF140020010A257 /* FFTwitterAPIClient.h */,
@@ -405,6 +415,7 @@
 			files = (
 				BFE2C8271BF297BA00FD6623 /* Constants.m in Sources */,
 				BFE2C82F1BF2A31500FD6623 /* Player+CoreDataProperties.m in Sources */,
+				BFE2C8361BF4D93900FD6623 /* FISTweetsDataStore.m in Sources */,
 				3B0A72231BF135C10010A257 /* FISTeamDataStore.m in Sources */,
 				BFE2C8331BF2AD7800FD6623 /* FISPlayer.m in Sources */,
 				3B0A72301BF13A2E0010A257 /* FFFantasyAPIClient.m in Sources */,
@@ -416,6 +427,7 @@
 				3B0A72271BF136B50010A257 /* FISTeamTableViewController.m in Sources */,
 				BFE2C8301BF2A31500FD6623 /* Player.m in Sources */,
 				3B0A72361BF193920010A257 /* FISAddPlayerViewController.m in Sources */,
+				BFE2C8391BF4E26300FD6623 /* FFTweetStatus.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
