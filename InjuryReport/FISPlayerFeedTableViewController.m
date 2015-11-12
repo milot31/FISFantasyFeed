@@ -7,8 +7,13 @@
 //
 
 #import "FISPlayerFeedTableViewController.h"
+#import "FISTweetsDataStore.h"
+#import "FFTweetStatus.h"
 
 @interface FISPlayerFeedTableViewController ()
+
+@property (strong, nonatomic) FISTweetsDataStore *tweetStore;
+
 
 @end
 
@@ -16,16 +21,20 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [FFTwitterAPIClient getTwitterStatuses:self.player.fullName withCompletion:^(NSArray *playerFeed) {
-        NSLog(@"%@", playerFeed);
+    self.tweetStore = [FISTweetsDataStore tweetsDataStore];
+    [self.tweetStore loadPlayerFeedForPlayer:self.player.fullName withCompletion:^(BOOL success) {
+        if (success) {
+            
+            [self.tableView reloadData];
+        }
     }];
-    
+}
+//
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -34,25 +43,50 @@
 
 #pragma mark - Table view data source
 
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    return 90.0;
+//}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
-    return 0;
+
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+
+    return self.tweetStore.tweets.count;
 }
 
-/*
+
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"feedCell" forIndexPath:indexPath];
     
+    FFTweetStatus *status = self.tweetStore.tweets[indexPath.row];
+    UILabel *realNameLabel = (UILabel *)[cell viewWithTag:5];
+    realNameLabel.text = status.realName;
+    UILabel *twitterHandleLabel = (UILabel *)[cell viewWithTag:1];
+    twitterHandleLabel.text = status.twitterHandle;
+    UILabel *createdDateLabel = (UILabel *)[cell viewWithTag:2];
+    createdDateLabel.text = status.createdDate;
+    UILabel *tweetTextLabel = (UILabel *)[cell viewWithTag:3];
+    tweetTextLabel.text = status.tweetText;
+    dispatch_async(dispatch_get_global_queue(0,0), ^{
+        if ( status.imageData == nil )
+            return;
+        dispatch_async(dispatch_get_main_queue(), ^{
+            //            UIImage *profileImage = (UIImage *)[cell viewWithTag:4];
+            UIImage *profileImage = [[UIImage alloc] initWithData:status.imageData];
+            cell.imageView.image = profileImage;
+            [cell setNeedsLayout];
+        });
+        
+    });
+
     // Configure the cell...
     
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.

@@ -10,8 +10,8 @@
 
 @implementation Constants
 
-NSString *const consumerKey = @"90e5njGJwkT0vDUfmGiC8YUrm";
-NSString *const consumerSecret = @"cRNoUzizySOY7DLDFKexnqfgC6VIIxwrM5bsu1Wt4Tz4vE2fnC";
+NSString *const consumerKey = @"R5G74WainMpMxCUDDbwystU95";
+NSString *const consumerSecret = @"waWp8K8JhHpJWp5eKcAMS65oTkL1RhjCKomScHma6nvV4ansTG";
 
 
 @end

@@ -14,6 +14,5 @@
 
 @property (nonatomic, strong) Player *player;
 
-@property (nonatomic, strong) NSArray *playerStatuses;
 
 @end

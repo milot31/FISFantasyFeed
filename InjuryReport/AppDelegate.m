@@ -20,9 +20,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-//    [FFTwitterAPIClient getTwitterStatuses:@"Aaron Rodgers" withCompletion:^(NSArray *playerFeed) {
-//        NSLog(@"%@", playerFeed);
-//    }];
     return YES;
 }
 

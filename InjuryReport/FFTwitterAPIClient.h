@@ -14,5 +14,5 @@
 @interface FFTwitterAPIClient : NSObject
 
 
-+(void)getTwitterStatuses: (NSString *)playerName withCompletion: (void (^) (NSArray* playerFeed))completionBlock;
++(void)getTwitterStatuses: (NSString *)playerName withCompletion: (void (^) (NSArray* statuses))completionBlock;
 @end
