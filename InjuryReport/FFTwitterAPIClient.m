@@ -17,7 +17,7 @@ STTwitterAPI *twitter = [STTwitterAPI twitterAPIAppOnlyWithConsumerKey:consumerK
 
 [twitter verifyCredentialsWithUserSuccessBlock:^(NSString *username, NSString *userID) {
 
-    NSString *searchQuery = [NSString stringWithFormat:@"(from:Stephania_ESPN OR from:MatthewBerryTMR OR from:thepme OR from:Michael_Fabiano OR from:YahooFootball OR from:evansilva OR from:scotteRotoEx OR from:josinaanderson OR from:allinkid OR from:EricMackFantasy) AND %@ since:2015-09-01", playerName];
+    NSString *searchQuery = [NSString stringWithFormat:@"(from:Stephania_ESPN OR from:MatthewBerryTMR OR from:thepme OR from:Michael_Fabiano OR from:YahooFootball OR from:evansilva OR from:scotteRotoEx OR from:josinaanderson OR from:allinkid OR from:EricMackFantasy OR from:nfl OR from:espn OR from:sportscenter) AND %@ since:2015-09-01", playerName];
     
     [twitter getSearchTweetsWithQuery:searchQuery successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
         completionBlock(statuses);

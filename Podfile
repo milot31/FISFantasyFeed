@@ -6,7 +6,7 @@
 target 'InjuryReport' do
 
  pod 'STTwitter'
-
+ pod 'FontAwesomeKit', '~> 2.2.0'
 
 end
 

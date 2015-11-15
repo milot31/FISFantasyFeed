@@ -30,6 +30,7 @@
 @property (strong, nonatomic) IBOutlet UISearchBar *playerSearchBar;
 @property (strong, nonatomic) NSArray *originalArray;
 
+
 @end
 
 @implementation FISAddPlayerViewController
@@ -52,6 +53,9 @@
     self.playerSearchBar.delegate = self;
     
     [self initalizeAllTheGroupsToDefaultValue];
+    
+    self.playerTableView.backgroundColor = [UIColor darkGrayColor];
+
     
 }
 

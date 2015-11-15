@@ -7,175 +7,251 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0213737A14B1D12B3BDB93043B646FBA /* BAVPlistNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FBF1D52E48A00FAFEE84E87DF5C72FD0 /* BAVPlistNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		0647754C644235D516CAF86EAAA86B20 /* BAVPlistNode.h in Headers */ = {isa = PBXBuildFile; fileRef = A01F754C69F7B1354D085689B85E6114 /* BAVPlistNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		13CCBCEA1BD10B6D84397C1D924AB550 /* STTwitterOS.m in Sources */ = {isa = PBXBuildFile; fileRef = E740FC75636F503DF2C92B865BE29F20 /* STTwitterOS.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		1684EB7E892B8B4F23F0F855A9478B01 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E2078CFA7E6DB0B34411E2CA99A0BD /* Foundation.framework */; };
-		1BAFABF4C5F29A2E07DE50462015DB45 /* NSString+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = C0B62323B268E9F08ABBEC41474B57D5 /* NSString+STTwitter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		260A9B017A448F31552E0B62F2ED8630 /* STTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = C19FED4D5313C4269E963A7704145FA6 /* STTwitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29BDFFC0D3BEB4074229431B0C293C10 /* STTwitterHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 740A1C3C0C893088CDE7257D68703F5E /* STTwitterHTML.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		2D87946C6E5D6F051A737CD74F443003 /* STTwitterOS.h in Headers */ = {isa = PBXBuildFile; fileRef = A3303B4F5ECF713D22C5545DB4AA9C71 /* STTwitterOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		37D4BF7CC2CB20566F7D43FCC746590A /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B38CB0EED1C483F7500497F31623A0C0 /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		490A6AC3BECED077CC8C19DA2DE0B6E3 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 30AF8E38E4E102A7BA9A534546C98EA0 /* CoreGraphics.framework */; };
-		4D822CD2537D37ED141C3DDD95654A46 /* Pods-InjuryReport-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 606792D897FD414DC496468B5590CE75 /* Pods-InjuryReport-dummy.m */; };
-		4F37E6886EA4925E37D52A1B080AFFF8 /* STTwitterAppOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = FE32ABDE2EC88F20FBCBE85E1EEECB60 /* STTwitterAppOnly.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		5DFA1B4663E413B381781070FA33D740 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01E2806A819E0408B677AFF1CEE9D96D /* UIKit.framework */; };
-		642C59FB144195FB799ADB8FC09A46EA /* STTwitterStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 7C61CAACF1DC240D3C4F474C8841AF16 /* STTwitterStreamParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		68439ED908F7FCAC449135FE6EF6EEC5 /* JSONSyntaxHighlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 933A48D80BBFCE26DC1D127F5A404F61 /* JSONSyntaxHighlight.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		6ACAEF480B7EDCDC55DFE2E51732ABC3 /* STTwitterOSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C785FD0915099FCD0BC9654DC028C8 /* STTwitterOSRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		707D5BEBCF9180A662EB58E122E067B8 /* NSDateFormatter+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 580D7E49CC1E95047BB39624BEF4FCB8 /* NSDateFormatter+STTwitter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7340C4EDB04D298B138E5A1243639DA8 /* STTwitterAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 45FC38473A5FB1CD818794FA1D96A935 /* STTwitterAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7536C858057960C6513467491B08E39C /* NSError+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 983A55115DEA498BF2DE56795EA3927D /* NSError+STTwitter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		7C81F9E45B20E67D891F82D86E14E557 /* STTwitterOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 21D545DFFB489F18CCFC7C1E893022BA /* STTwitterOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7EFDF19A4BD26DDF3E91A7902AB38E8C /* JSONSyntaxHighlight.h in Headers */ = {isa = PBXBuildFile; fileRef = C2A4338C5F488579E05D5CFF00DA752D /* JSONSyntaxHighlight.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8638B15A8B975EDF1849E00CBBAEA810 /* NSError+STTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 982A7824E260E966E9F99F460F9DA97E /* NSError+STTwitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8BCC0C6E971AEB1FACC086F0A23B38EE /* STTwitterProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = B712C5C41513CDC1D5C9180FB3624FB8 /* STTwitterProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8EBD32AD023E2C1F48EFEC9916BBDEEC /* STTwitterOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = 0B6E8CAC1569A6CF4E33D2739A45B697 /* STTwitterOAuth.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		939CD0536D2582EB713211F39F579BC9 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D964B6F76C0463A62271E948B5DB87E8 /* Twitter.framework */; };
-		974208E087F7E04AC12CDFB2E74DE7E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24E2078CFA7E6DB0B34411E2CA99A0BD /* Foundation.framework */; };
-		99D333AB6C47084C112CCC5F9B2DE080 /* STTwitterAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB9E67313416C38C820EC1256BC6466 /* STTwitterAPI.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		9ECFBAD7D2AA6B10B8B43FAA8EBCD70A /* STTwitterAppOnly.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F2FC33C86D41B452B068F08D1517B4A /* STTwitterAppOnly.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A6E74F5B1BB5E858E272788399549CB9 /* STHTTPRequest+STTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 8012AFB8C4D96066ADDF8F3663C4515B /* STHTTPRequest+STTwitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A872AB675B7DA6AB93B545B4926FDB20 /* STHTTPRequest+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 7971FB630301FD9AB9AC7614817B5166 /* STHTTPRequest+STTwitter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		AFE7E2771D379F9020F29CD2152C3D46 /* STTwitterHTML.h in Headers */ = {isa = PBXBuildFile; fileRef = DB5BCCBC7E5A5C4BD8C5CE828A93F983 /* STTwitterHTML.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B40C6F923E74BF3494724B9B43563B19 /* STTwitterRequestProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = DE821BEA6E4DD4D691E6C4060BCA151A /* STTwitterRequestProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B447A26D8263787D89959E12B71C2032 /* NSDateFormatter+STTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 561DBA231D72E5509488D1B8BDAA5FE0 /* NSDateFormatter+STTwitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B4542CF0C9E5A9AEF7BE301DBFE2400A /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 62E558656AFCB7DF4310F8BA077DD165 /* QuartzCore.framework */; };
-		B983FB78DC56FED48F5BDBCB9D0B3696 /* STTwitterOSRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C1D32082D872DC133A754761BF4AAFA1 /* STTwitterOSRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C6DCD41FE21710C5A4E3EA5C01567CF5 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E49025524B420C4CA10BFED95BB5100 /* Accounts.framework */; };
-		CC1DF49BFF54C399EA288A5E41D80D1C /* NSString+STTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = CEA230353AD69850A6B9606F1C534B42 /* NSString+STTwitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D141048CECDA6674F55C6B96380D9BF2 /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 2021DDE01682B811CB7FBCAB4F921E8C /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DC30EC0EA8C2399CEE8C918057936922 /* STTwitter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C61B6385A82730AEEE82255960888C4 /* STTwitter-dummy.m */; };
-		DC389FAE3FC261504CA45A530E8F9B4F /* STTwitterStreamParser.h in Headers */ = {isa = PBXBuildFile; fileRef = 2969BF3C449EFD8F169C0EB94E7E724F /* STTwitterStreamParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		01FE8292CA6A1F9BC6516D7F41DE0553 /* STTwitterStreamParser.h in Headers */ = {isa = PBXBuildFile; fileRef = E60C756277C1C7A39EEB0003C73A02E8 /* STTwitterStreamParser.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		055F8E18A5FC8B81E8FCCCA3744BDD23 /* NSDateFormatter+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = F9E4245513A38ACE17E0829AEFE4F806 /* NSDateFormatter+STTwitter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		0A86BE956753A984632810FA81F438BC /* NSDateFormatter+STTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = C462E235C01B3D0D533954042941F5A2 /* NSDateFormatter+STTwitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0CD7E1E08D390C770E7BA010A9BF9F96 /* NSString+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C90A7002373262E7EE9C589A1529B15 /* NSString+STTwitter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		1064A1A86D27330C7FED2AB8B9BB3091 /* STTwitterHTML.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B9947F9DA51E72F943FC1CC6F5C91FF /* STTwitterHTML.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1DF458689FBB2725C66DE11AA6C1D6A1 /* STTwitterOSRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = C2E4D91392A29708834FC890574839E4 /* STTwitterOSRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		249BC9E81B0D7E6B30F288D4E8E52145 /* STTwitterOAuth.h in Headers */ = {isa = PBXBuildFile; fileRef = 03CE4E2E3308AEBAC83EB900C643C831 /* STTwitterOAuth.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24F96846664E55BE5F82886EDB921DB8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74E48B6EC27C46D90B886C6B8CEA057 /* UIKit.framework */; };
+		2CB2D4894C389419551903F8E09C0493 /* NSString+STTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 0443F682D248FAB5E035A4119D8856B2 /* NSString+STTwitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2DE16EB423471EB69E90304FA184D9F6 /* Pods-InjuryReport-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 606792D897FD414DC496468B5590CE75 /* Pods-InjuryReport-dummy.m */; };
+		36B4FA017720C6992F4056084AB5CB64 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286DE1691C08C9B7D9DD0EFB6510A22C /* CoreGraphics.framework */; };
+		399EE05AB7475C8C00D1C742C48AABE4 /* STTwitterAppOnly.h in Headers */ = {isa = PBXBuildFile; fileRef = FE2B12367B216E35D2660EA4D05481B7 /* STTwitterAppOnly.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		43BBAAD033BAE73298DFD732914337F2 /* JSONSyntaxHighlight.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B2413BE81FE7A8EFB2231B882040EDB /* JSONSyntaxHighlight.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		443CCE401CCB360E15825DD795AE1167 /* FAKFoundationIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 0227A623F55A435FB9B6CA62C9E2CD9A /* FAKFoundationIcons.m */; };
+		4D44C6B5CAFEF7D254FDA104B8324D7B /* STHTTPRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 538EE02D22218331A12F77CE1E42DE1D /* STHTTPRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4DFB36962B0F7951496AEE3347A00870 /* NSError+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2128F3579C882EA7B45D5E620B1AB1EF /* NSError+STTwitter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		56A61E9D7C5C5BD99BFF8C765C104A8D /* NSError+STTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E9A3205C20CB31EC83D3054EA535B72 /* NSError+STTwitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		580F3A708B2DBD20C3BA0A3DB8900DE8 /* FAKZocial.m in Sources */ = {isa = PBXBuildFile; fileRef = 6DE0A45E57D50DB7155574C2D672A504 /* FAKZocial.m */; };
+		5FB956B31DF117839DA0E00F87C0FF4E /* FAKFontAwesome.h in Headers */ = {isa = PBXBuildFile; fileRef = 6CC555DC80906539D6ED27045B08558D /* FAKFontAwesome.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		631F720E074D07F4F625CFCF764DBAE0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A31985346124E5A67F0BE9C4104283 /* QuartzCore.framework */; };
+		6378262FF291F8F36830CBD4D00BAF0E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67484996D4E1967C1F3E2A6424EB998A /* Foundation.framework */; };
+		7585E0E262A7AB8A113938F1522346B6 /* STTwitterOSRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = D08F6B94770D1493908161882923B1DD /* STTwitterOSRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		809D1AE6C63C47EC2740CAAA50DDDC7E /* BAVPlistNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2280BFA2D02ABEDC57CB138C9577A59D /* BAVPlistNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		843CA8CED816FEDCF2461239AEB2CD50 /* STTwitterOS.h in Headers */ = {isa = PBXBuildFile; fileRef = F536ECB76ADDF366A86C3EE117343A20 /* STTwitterOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		87EAD6E2EE5C9F0B8FD227FD63E7A430 /* FAKIonIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = C0B095405D11DBCEFE150A799FA3C9DC /* FAKIonIcons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8A6287B963D51F439C0EBE2D50F9391E /* FAKZocial.h in Headers */ = {isa = PBXBuildFile; fileRef = B7911AC94319B71B98E2342078AD0236 /* FAKZocial.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8E2018240C1AC3B123EB8663F5409A9A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67484996D4E1967C1F3E2A6424EB998A /* Foundation.framework */; };
+		975CFFF5A752B912DF7BECD97A8137E4 /* STTwitter-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EFB5AA127FAECC88E81087A1E0A0BB5 /* STTwitter-dummy.m */; };
+		9B8C09EC9DCB34E1AB37F6B2CF640F37 /* STTwitterStreamParser.m in Sources */ = {isa = PBXBuildFile; fileRef = E7CD9E5986AACC439C020FD0658D7959 /* STTwitterStreamParser.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		9D785D41A5EA691D9D67C5A80386CB6A /* STTwitterOAuth.m in Sources */ = {isa = PBXBuildFile; fileRef = E70304C42465167A1F48DA0F4836BE07 /* STTwitterOAuth.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A88D02610334A36200A1B03A85FA8A5C /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A21100271F438D4117159BC6DFE2824A /* CoreText.framework */; };
+		AA308EE0E3417B443432CE8806DC6146 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 778FFD96542E9813D6148931F14558FF /* Accounts.framework */; };
+		ADA7A69CEFE53DB15E9A3957BE272561 /* STHTTPRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = B55EE0B7B02801E859D2801FC743E07F /* STHTTPRequest.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B97BE7A1E83A600A5B67C1A23F053668 /* STTwitterAppOnly.m in Sources */ = {isa = PBXBuildFile; fileRef = 8D7952DF60332780DC1F352B0484B93D /* STTwitterAppOnly.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		B9DF428861AC402D12D933C451F03326 /* STTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2874CEEDF567F52C35472796EC9048C8 /* STTwitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		BF593F68874B813CC2A03DF34B5686B7 /* STTwitterHTML.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D525AFE1071CC210B94C4E35D9D82C /* STTwitterHTML.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		CDCC5F8C49D18065CE3610E7E8884FD5 /* FontAwesomeKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F018841F9C61BEF5A69BF1731CB0F71C /* FontAwesomeKit-dummy.m */; };
+		D15550CF5996F31B47EA5A1E33F007D9 /* FAKFontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = E393DEB4CF4A9540F0BFE197EB72C489 /* FAKFontAwesome.m */; };
+		DAB2D2971B08FD1B172F5083EACD0422 /* STHTTPRequest+STTwitter.h in Headers */ = {isa = PBXBuildFile; fileRef = 25B3B49682C322D5DBDE486286C87B6E /* STHTTPRequest+STTwitter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DD0AE7E61AF20073B6F07F7F6B4FBE64 /* STTwitterRequestProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = F70EF12E0B8CF2612B28D8C76D8FB33D /* STTwitterRequestProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DF9767FA70EBC37E6C9AE8B1D124D8C8 /* STHTTPRequest+STTwitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 90CDDB70CC72F15C2362F24B3DCD1269 /* STHTTPRequest+STTwitter.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E0E29147B7D8EC40D1A4F94C2C086B68 /* FAKFoundationIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = C3E6B672DD5D21E03FAF56FDAB94489F /* FAKFoundationIcons.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E32CF207B9374B3CC13D3DCBE67D5915 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 67484996D4E1967C1F3E2A6424EB998A /* Foundation.framework */; };
+		E3A588D3F754CBF713BBF228DEB0A0B5 /* STTwitterProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = C132C2BF20E12FB6CDDB550201ABC04C /* STTwitterProtocol.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E7DD124FC8C06181FC9601B9EC3C3210 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B74E48B6EC27C46D90B886C6B8CEA057 /* UIKit.framework */; };
+		E900704B162CAB9864C6241867EDDDA2 /* BAVPlistNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 401B701928010AC4D2D17D06DF3BFCB8 /* BAVPlistNode.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		E9A1EE995542E5BC653F4106F8B631E2 /* STTwitterAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = C73D7D1CB35BD05394DEF7F53D08F26C /* STTwitterAPI.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		EFCBE0293ADC066697EE6638F6AA543D /* STTwitterAPI.h in Headers */ = {isa = PBXBuildFile; fileRef = 683B8333189FC682CB314A1145A2F8E9 /* STTwitterAPI.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F27EB4E6F9B670F7F0E7892CEFF84EB5 /* Twitter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 66A737EDF53E323EAB35568216512091 /* Twitter.framework */; };
+		F3CAAA253E2293EE587412503D8934CA /* FAKIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8236CE4DBDA75F01A5BA81801BEF8072 /* FAKIcon.m */; };
+		F4FA150B34A76E334EA6E07F1C22AAD6 /* FontAwesomeKit.h in Headers */ = {isa = PBXBuildFile; fileRef = B6DA1AEF98FB2067477134B32CD68FC1 /* FontAwesomeKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F89880759BAB2E38B268F456CECDA73B /* FAKIonIcons.m in Sources */ = {isa = PBXBuildFile; fileRef = 4AD28A31357301C36F6486D0E1A05102 /* FAKIonIcons.m */; };
+		F96FBE728F26D37101770EDD673A9C5A /* STTwitterOS.m in Sources */ = {isa = PBXBuildFile; fileRef = EC3431EAE2762990D987E5D4EF2A40DA /* STTwitterOS.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		FBF89427609542D56EC6215DD09F9F64 /* FAKIcon.h in Headers */ = {isa = PBXBuildFile; fileRef = F3696318B473A15C3E2E634D3CE36D8F /* FAKIcon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FD11DF41E1A61C1D362F91AF94AFBD15 /* JSONSyntaxHighlight.h in Headers */ = {isa = PBXBuildFile; fileRef = 23030CE91F07005D1468D7F2DF24CB93 /* JSONSyntaxHighlight.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		201CE3CA31835718ABB212FADF3E0EF7 /* PBXContainerItemProxy */ = {
+		84F24BCF102879F13DBD191B50520532 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AB7EA61E7CF5F7F37CB3A93576BECA99;
+			remoteGlobalIDString = D9F1B3A3281633797F27632DF12DBFC6;
+			remoteInfo = FontAwesomeKit;
+		};
+		F0F5F5F097F7F8BA4A35D89796A74C8D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5556C0EDA966416C8BE49123CA47B79D;
 			remoteInfo = STTwitter;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01E2806A819E0408B677AFF1CEE9D96D /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		0B6E8CAC1569A6CF4E33D2739A45B697 /* STTwitterOAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterOAuth.m; path = STTwitter/STTwitterOAuth.m; sourceTree = "<group>"; };
-		11A5B1E009E4FDA3E298C53AA43E0AC1 /* libPods-InjuryReport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InjuryReport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2021DDE01682B811CB7FBCAB4F921E8C /* STHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STHTTPRequest.h; path = STTwitter/Vendor/STHTTPRequest.h; sourceTree = "<group>"; };
-		21D545DFFB489F18CCFC7C1E893022BA /* STTwitterOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterOAuth.h; path = STTwitter/STTwitterOAuth.h; sourceTree = "<group>"; };
-		24E2078CFA7E6DB0B34411E2CA99A0BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		2969BF3C449EFD8F169C0EB94E7E724F /* STTwitterStreamParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterStreamParser.h; path = STTwitter/STTwitterStreamParser.h; sourceTree = "<group>"; };
+		007E5B4482C948360419FC917F138DC5 /* libPods-InjuryReport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InjuryReport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0227A623F55A435FB9B6CA62C9E2CD9A /* FAKFoundationIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKFoundationIcons.m; path = FontAwesomeKit/FAKFoundationIcons.m; sourceTree = "<group>"; };
+		03CE4E2E3308AEBAC83EB900C643C831 /* STTwitterOAuth.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterOAuth.h; path = STTwitter/STTwitterOAuth.h; sourceTree = "<group>"; };
+		0443F682D248FAB5E035A4119D8856B2 /* NSString+STTwitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+STTwitter.h"; path = "STTwitter/NSString+STTwitter.h"; sourceTree = "<group>"; };
+		050CF76BEFE08EB5513682FD8E90AD60 /* libSTTwitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSTTwitter.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0771289B2FF4F8244E3508866D372939 /* libFontAwesomeKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libFontAwesomeKit.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		09A31985346124E5A67F0BE9C4104283 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		1A508FFCF58A5B24EABAE65CD6838FCB /* foundation-icons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "foundation-icons.ttf"; path = "FontAwesomeKit/foundation-icons.ttf"; sourceTree = "<group>"; };
+		1B6FE9EE26C37CA5A07E8F041707CA2E /* STTwitter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = STTwitter.xcconfig; sourceTree = "<group>"; };
+		1C90A7002373262E7EE9C589A1529B15 /* NSString+STTwitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+STTwitter.m"; path = "STTwitter/NSString+STTwitter.m"; sourceTree = "<group>"; };
+		2128F3579C882EA7B45D5E620B1AB1EF /* NSError+STTwitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+STTwitter.m"; path = "STTwitter/NSError+STTwitter.m"; sourceTree = "<group>"; };
+		2280BFA2D02ABEDC57CB138C9577A59D /* BAVPlistNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BAVPlistNode.h; path = STTwitter/Vendor/BAVPlistNode.h; sourceTree = "<group>"; };
+		23030CE91F07005D1468D7F2DF24CB93 /* JSONSyntaxHighlight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONSyntaxHighlight.h; path = STTwitter/Vendor/JSONSyntaxHighlight.h; sourceTree = "<group>"; };
+		25B3B49682C322D5DBDE486286C87B6E /* STHTTPRequest+STTwitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "STHTTPRequest+STTwitter.h"; path = "STTwitter/STHTTPRequest+STTwitter.h"; sourceTree = "<group>"; };
+		286DE1691C08C9B7D9DD0EFB6510A22C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
+		2874CEEDF567F52C35472796EC9048C8 /* STTwitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitter.h; path = STTwitter/STTwitter.h; sourceTree = "<group>"; };
+		2B9947F9DA51E72F943FC1CC6F5C91FF /* STTwitterHTML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterHTML.h; path = STTwitter/STTwitterHTML.h; sourceTree = "<group>"; };
 		2BE1B2061998193B7482132D94559FE3 /* Pods-InjuryReport-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InjuryReport-frameworks.sh"; sourceTree = "<group>"; };
-		30AF8E38E4E102A7BA9A534546C98EA0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		3133BCA5F4899668DFB746002EBE3DFF /* STTwitter.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = STTwitter.xcconfig; sourceTree = "<group>"; };
-		45FC38473A5FB1CD818794FA1D96A935 /* STTwitterAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterAPI.h; path = STTwitter/STTwitterAPI.h; sourceTree = "<group>"; };
+		34683D07000B177FCA25C049C13837C3 /* FontAwesomeKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FontAwesomeKit.xcconfig; sourceTree = "<group>"; };
+		3EB8D165EA63677044A6B70E33D94482 /* zocial-regular-webfont.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = "zocial-regular-webfont.ttf"; path = "FontAwesomeKit/zocial-regular-webfont.ttf"; sourceTree = "<group>"; };
+		401B701928010AC4D2D17D06DF3BFCB8 /* BAVPlistNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BAVPlistNode.m; path = STTwitter/Vendor/BAVPlistNode.m; sourceTree = "<group>"; };
+		4AD28A31357301C36F6486D0E1A05102 /* FAKIonIcons.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIonIcons.m; path = FontAwesomeKit/FAKIonIcons.m; sourceTree = "<group>"; };
+		4E9A3205C20CB31EC83D3054EA535B72 /* NSError+STTwitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+STTwitter.h"; path = "STTwitter/NSError+STTwitter.h"; sourceTree = "<group>"; };
 		517966D43618F06023E199520121B84C /* Pods-InjuryReport-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-InjuryReport-resources.sh"; sourceTree = "<group>"; };
-		561DBA231D72E5509488D1B8BDAA5FE0 /* NSDateFormatter+STTwitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDateFormatter+STTwitter.h"; path = "STTwitter/NSDateFormatter+STTwitter.h"; sourceTree = "<group>"; };
-		580D7E49CC1E95047BB39624BEF4FCB8 /* NSDateFormatter+STTwitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDateFormatter+STTwitter.m"; path = "STTwitter/NSDateFormatter+STTwitter.m"; sourceTree = "<group>"; };
-		5C61B6385A82730AEEE82255960888C4 /* STTwitter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "STTwitter-dummy.m"; sourceTree = "<group>"; };
+		538EE02D22218331A12F77CE1E42DE1D /* STHTTPRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STHTTPRequest.h; path = STTwitter/Vendor/STHTTPRequest.h; sourceTree = "<group>"; };
 		606792D897FD414DC496468B5590CE75 /* Pods-InjuryReport-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-InjuryReport-dummy.m"; sourceTree = "<group>"; };
-		62E558656AFCB7DF4310F8BA077DD165 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		60D525AFE1071CC210B94C4E35D9D82C /* STTwitterHTML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterHTML.m; path = STTwitter/STTwitterHTML.m; sourceTree = "<group>"; };
+		66A737EDF53E323EAB35568216512091 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Twitter.framework; sourceTree = DEVELOPER_DIR; };
+		67484996D4E1967C1F3E2A6424EB998A /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		683B8333189FC682CB314A1145A2F8E9 /* STTwitterAPI.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterAPI.h; path = STTwitter/STTwitterAPI.h; sourceTree = "<group>"; };
 		68A143F469BEC3D22280A5BAA0240C1B /* Pods-InjuryReport-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-InjuryReport-acknowledgements.plist"; sourceTree = "<group>"; };
+		6B2413BE81FE7A8EFB2231B882040EDB /* JSONSyntaxHighlight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONSyntaxHighlight.m; path = STTwitter/Vendor/JSONSyntaxHighlight.m; sourceTree = "<group>"; };
+		6CC555DC80906539D6ED27045B08558D /* FAKFontAwesome.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKFontAwesome.h; path = FontAwesomeKit/FAKFontAwesome.h; sourceTree = "<group>"; };
+		6DE0A45E57D50DB7155574C2D672A504 /* FAKZocial.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKZocial.m; path = FontAwesomeKit/FAKZocial.m; sourceTree = "<group>"; };
 		6DEC877C1B31DD63B542695B02A4A9F8 /* Pods-InjuryReport-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-InjuryReport-acknowledgements.markdown"; sourceTree = "<group>"; };
-		740A1C3C0C893088CDE7257D68703F5E /* STTwitterHTML.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterHTML.m; path = STTwitter/STTwitterHTML.m; sourceTree = "<group>"; };
-		7971FB630301FD9AB9AC7614817B5166 /* STHTTPRequest+STTwitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "STHTTPRequest+STTwitter.m"; path = "STTwitter/STHTTPRequest+STTwitter.m"; sourceTree = "<group>"; };
-		79C785FD0915099FCD0BC9654DC028C8 /* STTwitterOSRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterOSRequest.m; path = STTwitter/STTwitterOSRequest.m; sourceTree = "<group>"; };
-		7C61CAACF1DC240D3C4F474C8841AF16 /* STTwitterStreamParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterStreamParser.m; path = STTwitter/STTwitterStreamParser.m; sourceTree = "<group>"; };
+		778FFD96542E9813D6148931F14558FF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Accounts.framework; sourceTree = DEVELOPER_DIR; };
 		7E58B2F2BAFF4F407AD08A7EDDD3FC64 /* Pods-InjuryReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InjuryReport.debug.xcconfig"; sourceTree = "<group>"; };
-		8012AFB8C4D96066ADDF8F3663C4515B /* STHTTPRequest+STTwitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "STHTTPRequest+STTwitter.h"; path = "STTwitter/STHTTPRequest+STTwitter.h"; sourceTree = "<group>"; };
-		8F2FC33C86D41B452B068F08D1517B4A /* STTwitterAppOnly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterAppOnly.h; path = STTwitter/STTwitterAppOnly.h; sourceTree = "<group>"; };
-		933A48D80BBFCE26DC1D127F5A404F61 /* JSONSyntaxHighlight.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JSONSyntaxHighlight.m; path = STTwitter/Vendor/JSONSyntaxHighlight.m; sourceTree = "<group>"; };
-		982A7824E260E966E9F99F460F9DA97E /* NSError+STTwitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSError+STTwitter.h"; path = "STTwitter/NSError+STTwitter.h"; sourceTree = "<group>"; };
-		983A55115DEA498BF2DE56795EA3927D /* NSError+STTwitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSError+STTwitter.m"; path = "STTwitter/NSError+STTwitter.m"; sourceTree = "<group>"; };
+		7EFB5AA127FAECC88E81087A1E0A0BB5 /* STTwitter-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "STTwitter-dummy.m"; sourceTree = "<group>"; };
+		7F15102BA6E12534CF86D3C873634EE8 /* ionicons.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = ionicons.ttf; path = FontAwesomeKit/ionicons.ttf; sourceTree = "<group>"; };
+		8236CE4DBDA75F01A5BA81801BEF8072 /* FAKIcon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKIcon.m; path = FontAwesomeKit/FAKIcon.m; sourceTree = "<group>"; };
+		8D7952DF60332780DC1F352B0484B93D /* STTwitterAppOnly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterAppOnly.m; path = STTwitter/STTwitterAppOnly.m; sourceTree = "<group>"; };
+		90CDDB70CC72F15C2362F24B3DCD1269 /* STHTTPRequest+STTwitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "STHTTPRequest+STTwitter.m"; path = "STTwitter/STHTTPRequest+STTwitter.m"; sourceTree = "<group>"; };
+		98FEE397072101EBDC135DAACDDA7C5B /* FontAwesome.otf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.otf; path = FontAwesomeKit/FontAwesome.otf; sourceTree = "<group>"; };
 		9B61308BF508CE5EAD66EF1C3420D60C /* Pods-InjuryReport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-InjuryReport.release.xcconfig"; sourceTree = "<group>"; };
-		9E49025524B420C4CA10BFED95BB5100 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Accounts.framework; sourceTree = DEVELOPER_DIR; };
-		A01F754C69F7B1354D085689B85E6114 /* BAVPlistNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = BAVPlistNode.h; path = STTwitter/Vendor/BAVPlistNode.h; sourceTree = "<group>"; };
-		A3303B4F5ECF713D22C5545DB4AA9C71 /* STTwitterOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterOS.h; path = STTwitter/STTwitterOS.h; sourceTree = "<group>"; };
-		B19021E15ED03995D990A74269D7A463 /* STTwitter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "STTwitter-prefix.pch"; sourceTree = "<group>"; };
-		B38CB0EED1C483F7500497F31623A0C0 /* STHTTPRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STHTTPRequest.m; path = STTwitter/Vendor/STHTTPRequest.m; sourceTree = "<group>"; };
-		B712C5C41513CDC1D5C9180FB3624FB8 /* STTwitterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterProtocol.h; path = STTwitter/STTwitterProtocol.h; sourceTree = "<group>"; };
+		A21100271F438D4117159BC6DFE2824A /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		B55EE0B7B02801E859D2801FC743E07F /* STHTTPRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STHTTPRequest.m; path = STTwitter/Vendor/STHTTPRequest.m; sourceTree = "<group>"; };
+		B6DA1AEF98FB2067477134B32CD68FC1 /* FontAwesomeKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FontAwesomeKit.h; path = FontAwesomeKit/FontAwesomeKit.h; sourceTree = "<group>"; };
+		B74E48B6EC27C46D90B886C6B8CEA057 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		B7911AC94319B71B98E2342078AD0236 /* FAKZocial.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKZocial.h; path = FontAwesomeKit/FAKZocial.h; sourceTree = "<group>"; };
 		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C0B62323B268E9F08ABBEC41474B57D5 /* NSString+STTwitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSString+STTwitter.m"; path = "STTwitter/NSString+STTwitter.m"; sourceTree = "<group>"; };
-		C19FED4D5313C4269E963A7704145FA6 /* STTwitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitter.h; path = STTwitter/STTwitter.h; sourceTree = "<group>"; };
-		C1D32082D872DC133A754761BF4AAFA1 /* STTwitterOSRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterOSRequest.h; path = STTwitter/STTwitterOSRequest.h; sourceTree = "<group>"; };
-		C2A4338C5F488579E05D5CFF00DA752D /* JSONSyntaxHighlight.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JSONSyntaxHighlight.h; path = STTwitter/Vendor/JSONSyntaxHighlight.h; sourceTree = "<group>"; };
-		CEA230353AD69850A6B9606F1C534B42 /* NSString+STTwitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSString+STTwitter.h"; path = "STTwitter/NSString+STTwitter.h"; sourceTree = "<group>"; };
-		D52F4F2E6133B4B0E5839C8D28BFCF68 /* libSTTwitter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSTTwitter.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D964B6F76C0463A62271E948B5DB87E8 /* Twitter.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Twitter.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Twitter.framework; sourceTree = DEVELOPER_DIR; };
-		DB5BCCBC7E5A5C4BD8C5CE828A93F983 /* STTwitterHTML.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterHTML.h; path = STTwitter/STTwitterHTML.h; sourceTree = "<group>"; };
-		DE821BEA6E4DD4D691E6C4060BCA151A /* STTwitterRequestProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterRequestProtocol.h; path = STTwitter/STTwitterRequestProtocol.h; sourceTree = "<group>"; };
-		DFB9E67313416C38C820EC1256BC6466 /* STTwitterAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterAPI.m; path = STTwitter/STTwitterAPI.m; sourceTree = "<group>"; };
-		E740FC75636F503DF2C92B865BE29F20 /* STTwitterOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterOS.m; path = STTwitter/STTwitterOS.m; sourceTree = "<group>"; };
-		FBF1D52E48A00FAFEE84E87DF5C72FD0 /* BAVPlistNode.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = BAVPlistNode.m; path = STTwitter/Vendor/BAVPlistNode.m; sourceTree = "<group>"; };
-		FE32ABDE2EC88F20FBCBE85E1EEECB60 /* STTwitterAppOnly.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterAppOnly.m; path = STTwitter/STTwitterAppOnly.m; sourceTree = "<group>"; };
+		C0B095405D11DBCEFE150A799FA3C9DC /* FAKIonIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKIonIcons.h; path = FontAwesomeKit/FAKIonIcons.h; sourceTree = "<group>"; };
+		C132C2BF20E12FB6CDDB550201ABC04C /* STTwitterProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterProtocol.h; path = STTwitter/STTwitterProtocol.h; sourceTree = "<group>"; };
+		C2E4D91392A29708834FC890574839E4 /* STTwitterOSRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterOSRequest.h; path = STTwitter/STTwitterOSRequest.h; sourceTree = "<group>"; };
+		C3E6B672DD5D21E03FAF56FDAB94489F /* FAKFoundationIcons.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKFoundationIcons.h; path = FontAwesomeKit/FAKFoundationIcons.h; sourceTree = "<group>"; };
+		C462E235C01B3D0D533954042941F5A2 /* NSDateFormatter+STTwitter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "NSDateFormatter+STTwitter.h"; path = "STTwitter/NSDateFormatter+STTwitter.h"; sourceTree = "<group>"; };
+		C6E4F8CB256D080A7FC3492684E72061 /* FontAwesomeKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FontAwesomeKit-prefix.pch"; sourceTree = "<group>"; };
+		C73D7D1CB35BD05394DEF7F53D08F26C /* STTwitterAPI.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterAPI.m; path = STTwitter/STTwitterAPI.m; sourceTree = "<group>"; };
+		D08F6B94770D1493908161882923B1DD /* STTwitterOSRequest.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterOSRequest.m; path = STTwitter/STTwitterOSRequest.m; sourceTree = "<group>"; };
+		E393DEB4CF4A9540F0BFE197EB72C489 /* FAKFontAwesome.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FAKFontAwesome.m; path = FontAwesomeKit/FAKFontAwesome.m; sourceTree = "<group>"; };
+		E60C756277C1C7A39EEB0003C73A02E8 /* STTwitterStreamParser.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterStreamParser.h; path = STTwitter/STTwitterStreamParser.h; sourceTree = "<group>"; };
+		E70304C42465167A1F48DA0F4836BE07 /* STTwitterOAuth.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterOAuth.m; path = STTwitter/STTwitterOAuth.m; sourceTree = "<group>"; };
+		E7CD9E5986AACC439C020FD0658D7959 /* STTwitterStreamParser.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterStreamParser.m; path = STTwitter/STTwitterStreamParser.m; sourceTree = "<group>"; };
+		EC3431EAE2762990D987E5D4EF2A40DA /* STTwitterOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = STTwitterOS.m; path = STTwitter/STTwitterOS.m; sourceTree = "<group>"; };
+		EC4251CE34FCC740E76B0A0D48F6C107 /* STTwitter-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "STTwitter-prefix.pch"; sourceTree = "<group>"; };
+		F018841F9C61BEF5A69BF1731CB0F71C /* FontAwesomeKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FontAwesomeKit-dummy.m"; sourceTree = "<group>"; };
+		F3696318B473A15C3E2E634D3CE36D8F /* FAKIcon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FAKIcon.h; path = FontAwesomeKit/FAKIcon.h; sourceTree = "<group>"; };
+		F536ECB76ADDF366A86C3EE117343A20 /* STTwitterOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterOS.h; path = STTwitter/STTwitterOS.h; sourceTree = "<group>"; };
+		F70EF12E0B8CF2612B28D8C76D8FB33D /* STTwitterRequestProtocol.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterRequestProtocol.h; path = STTwitter/STTwitterRequestProtocol.h; sourceTree = "<group>"; };
+		F9E4245513A38ACE17E0829AEFE4F806 /* NSDateFormatter+STTwitter.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSDateFormatter+STTwitter.m"; path = "STTwitter/NSDateFormatter+STTwitter.m"; sourceTree = "<group>"; };
+		FE2B12367B216E35D2660EA4D05481B7 /* STTwitterAppOnly.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = STTwitterAppOnly.h; path = STTwitter/STTwitterAppOnly.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		009DEBEFB597BEFED03D83EDE76578DF /* Frameworks */ = {
+		26DA2FF231FA803F7E43239BD05816A8 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C6DCD41FE21710C5A4E3EA5C01567CF5 /* Accounts.framework in Frameworks */,
-				490A6AC3BECED077CC8C19DA2DE0B6E3 /* CoreGraphics.framework in Frameworks */,
-				1684EB7E892B8B4F23F0F855A9478B01 /* Foundation.framework in Frameworks */,
-				B4542CF0C9E5A9AEF7BE301DBFE2400A /* QuartzCore.framework in Frameworks */,
-				939CD0536D2582EB713211F39F579BC9 /* Twitter.framework in Frameworks */,
-				5DFA1B4663E413B381781070FA33D740 /* UIKit.framework in Frameworks */,
+				8E2018240C1AC3B123EB8663F5409A9A /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		42BE8147DE1E6A2037286595C64E2047 /* Frameworks */ = {
+		8448DF6C6076D74248D29AA2AC4C51C6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				974208E087F7E04AC12CDFB2E74DE7E1 /* Foundation.framework in Frameworks */,
+				A88D02610334A36200A1B03A85FA8A5C /* CoreText.framework in Frameworks */,
+				6378262FF291F8F36830CBD4D00BAF0E /* Foundation.framework in Frameworks */,
+				24F96846664E55BE5F82886EDB921DB8 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DDCB12653D45A8804415EF0A3F68785C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AA308EE0E3417B443432CE8806DC6146 /* Accounts.framework in Frameworks */,
+				36B4FA017720C6992F4056084AB5CB64 /* CoreGraphics.framework in Frameworks */,
+				E32CF207B9374B3CC13D3DCBE67D5915 /* Foundation.framework in Frameworks */,
+				631F720E074D07F4F625CFCF764DBAE0 /* QuartzCore.framework in Frameworks */,
+				F27EB4E6F9B670F7F0E7892CEFF84EB5 /* Twitter.framework in Frameworks */,
+				E7DD124FC8C06181FC9601B9EC3C3210 /* UIKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */ = {
+		0B3AA12D4D6E11C9D6C73192E2D408BE /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				6DAB607C116CCDA6010B851775CA3336 /* iOS */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		2F3E30AE7D8F2AB0AA2EE709B64B0D12 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				3133BCA5F4899668DFB746002EBE3DFF /* STTwitter.xcconfig */,
-				5C61B6385A82730AEEE82255960888C4 /* STTwitter-dummy.m */,
-				B19021E15ED03995D990A74269D7A463 /* STTwitter-prefix.pch */,
+				1B6FE9EE26C37CA5A07E8F041707CA2E /* STTwitter.xcconfig */,
+				7EFB5AA127FAECC88E81087A1E0A0BB5 /* STTwitter-dummy.m */,
+				EC4251CE34FCC740E76B0A0D48F6C107 /* STTwitter-prefix.pch */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/STTwitter";
 			sourceTree = "<group>";
 		};
-		64A94D42F6CEE37A941E7A7CA3D6F0AF /* Products */ = {
+		1112370BECDB11226020BC5B7A5A79C6 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				11A5B1E009E4FDA3E298C53AA43E0AC1 /* libPods-InjuryReport.a */,
-				D52F4F2E6133B4B0E5839C8D28BFCF68 /* libSTTwitter.a */,
+				0771289B2FF4F8244E3508866D372939 /* libFontAwesomeKit.a */,
+				007E5B4482C948360419FC917F138DC5 /* libPods-InjuryReport.a */,
+				050CF76BEFE08EB5513682FD8E90AD60 /* libSTTwitter.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		6DAB607C116CCDA6010B851775CA3336 /* iOS */ = {
+		200B94533E0E6D748EFA1455E48C8B85 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				9E49025524B420C4CA10BFED95BB5100 /* Accounts.framework */,
-				30AF8E38E4E102A7BA9A534546C98EA0 /* CoreGraphics.framework */,
-				24E2078CFA7E6DB0B34411E2CA99A0BD /* Foundation.framework */,
-				62E558656AFCB7DF4310F8BA077DD165 /* QuartzCore.framework */,
-				D964B6F76C0463A62271E948B5DB87E8 /* Twitter.framework */,
-				01E2806A819E0408B677AFF1CEE9D96D /* UIKit.framework */,
+				98FEE397072101EBDC135DAACDDA7C5B /* FontAwesome.otf */,
 			);
-			name = iOS;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		303BBA00E1A9B8FC1F28D0092E29D90C /* FoundationIcons */ = {
+			isa = PBXGroup;
+			children = (
+				C3E6B672DD5D21E03FAF56FDAB94489F /* FAKFoundationIcons.h */,
+				0227A623F55A435FB9B6CA62C9E2CD9A /* FAKFoundationIcons.m */,
+				549C9C988CD239A9873A988BEA91E194 /* Resources */,
+			);
+			name = FoundationIcons;
+			sourceTree = "<group>";
+		};
+		471CAD01038B4AA2DDF657B9ABE8BC28 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7F15102BA6E12534CF86D3C873634EE8 /* ionicons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		549C9C988CD239A9873A988BEA91E194 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A508FFCF58A5B24EABAE65CD6838FCB /* foundation-icons.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		5C47A86F26B53D128F3BFDD06C4CDC8A /* IonIcons */ = {
+			isa = PBXGroup;
+			children = (
+				C0B095405D11DBCEFE150A799FA3C9DC /* FAKIonIcons.h */,
+				4AD28A31357301C36F6486D0E1A05102 /* FAKIonIcons.m */,
+				471CAD01038B4AA2DDF657B9ABE8BC28 /* Resources */,
+			);
+			name = IonIcons;
 			sourceTree = "<group>";
 		};
 		76E4111A688D951FC05D088CA509FFF8 /* Targets Support Files */ = {
@@ -186,15 +262,38 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		7C53856626C3CF20A3400D1196E8C6C2 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				778FFD96542E9813D6148931F14558FF /* Accounts.framework */,
+				286DE1691C08C9B7D9DD0EFB6510A22C /* CoreGraphics.framework */,
+				A21100271F438D4117159BC6DFE2824A /* CoreText.framework */,
+				67484996D4E1967C1F3E2A6424EB998A /* Foundation.framework */,
+				09A31985346124E5A67F0BE9C4104283 /* QuartzCore.framework */,
+				66A737EDF53E323EAB35568216512091 /* Twitter.framework */,
+				B74E48B6EC27C46D90B886C6B8CEA057 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
 			children = (
 				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
-				0F75DF6C7C5F002280EC53F48E80B587 /* Frameworks */,
-				E9F2194FF21AAD6BDA6C0485E6E30190 /* Pods */,
-				64A94D42F6CEE37A941E7A7CA3D6F0AF /* Products */,
+				F4CDA5FA9197A41E0081E84F932906EB /* Frameworks */,
+				957CAA6FD233203A92DAF3F987BDB9CE /* Pods */,
+				1112370BECDB11226020BC5B7A5A79C6 /* Products */,
 				76E4111A688D951FC05D088CA509FFF8 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		957CAA6FD233203A92DAF3F987BDB9CE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF5FB87EEFE1AD68C7B4E372AF4876B6 /* FontAwesomeKit */,
+				AB65DDA889985030ABDD07391B1771DE /* STTwitter */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		99AAF49F2369C7A8F4EA9F460EAF36F4 /* Pods-InjuryReport */ = {
@@ -212,90 +311,165 @@
 			path = "Target Support Files/Pods-InjuryReport";
 			sourceTree = "<group>";
 		};
-		D7283BDB506AF193012921F7369F0F03 /* STTwitter */ = {
+		9A8537B8E6060DC8592B18DFE2528F76 /* FontAwesome */ = {
 			isa = PBXGroup;
 			children = (
-				A01F754C69F7B1354D085689B85E6114 /* BAVPlistNode.h */,
-				FBF1D52E48A00FAFEE84E87DF5C72FD0 /* BAVPlistNode.m */,
-				C2A4338C5F488579E05D5CFF00DA752D /* JSONSyntaxHighlight.h */,
-				933A48D80BBFCE26DC1D127F5A404F61 /* JSONSyntaxHighlight.m */,
-				561DBA231D72E5509488D1B8BDAA5FE0 /* NSDateFormatter+STTwitter.h */,
-				580D7E49CC1E95047BB39624BEF4FCB8 /* NSDateFormatter+STTwitter.m */,
-				982A7824E260E966E9F99F460F9DA97E /* NSError+STTwitter.h */,
-				983A55115DEA498BF2DE56795EA3927D /* NSError+STTwitter.m */,
-				CEA230353AD69850A6B9606F1C534B42 /* NSString+STTwitter.h */,
-				C0B62323B268E9F08ABBEC41474B57D5 /* NSString+STTwitter.m */,
-				2021DDE01682B811CB7FBCAB4F921E8C /* STHTTPRequest.h */,
-				B38CB0EED1C483F7500497F31623A0C0 /* STHTTPRequest.m */,
-				8012AFB8C4D96066ADDF8F3663C4515B /* STHTTPRequest+STTwitter.h */,
-				7971FB630301FD9AB9AC7614817B5166 /* STHTTPRequest+STTwitter.m */,
-				C19FED4D5313C4269E963A7704145FA6 /* STTwitter.h */,
-				45FC38473A5FB1CD818794FA1D96A935 /* STTwitterAPI.h */,
-				DFB9E67313416C38C820EC1256BC6466 /* STTwitterAPI.m */,
-				8F2FC33C86D41B452B068F08D1517B4A /* STTwitterAppOnly.h */,
-				FE32ABDE2EC88F20FBCBE85E1EEECB60 /* STTwitterAppOnly.m */,
-				DB5BCCBC7E5A5C4BD8C5CE828A93F983 /* STTwitterHTML.h */,
-				740A1C3C0C893088CDE7257D68703F5E /* STTwitterHTML.m */,
-				21D545DFFB489F18CCFC7C1E893022BA /* STTwitterOAuth.h */,
-				0B6E8CAC1569A6CF4E33D2739A45B697 /* STTwitterOAuth.m */,
-				A3303B4F5ECF713D22C5545DB4AA9C71 /* STTwitterOS.h */,
-				E740FC75636F503DF2C92B865BE29F20 /* STTwitterOS.m */,
-				C1D32082D872DC133A754761BF4AAFA1 /* STTwitterOSRequest.h */,
-				79C785FD0915099FCD0BC9654DC028C8 /* STTwitterOSRequest.m */,
-				B712C5C41513CDC1D5C9180FB3624FB8 /* STTwitterProtocol.h */,
-				DE821BEA6E4DD4D691E6C4060BCA151A /* STTwitterRequestProtocol.h */,
-				2969BF3C449EFD8F169C0EB94E7E724F /* STTwitterStreamParser.h */,
-				7C61CAACF1DC240D3C4F474C8841AF16 /* STTwitterStreamParser.m */,
-				2F3E30AE7D8F2AB0AA2EE709B64B0D12 /* Support Files */,
+				6CC555DC80906539D6ED27045B08558D /* FAKFontAwesome.h */,
+				E393DEB4CF4A9540F0BFE197EB72C489 /* FAKFontAwesome.m */,
+				200B94533E0E6D748EFA1455E48C8B85 /* Resources */,
+			);
+			name = FontAwesome;
+			sourceTree = "<group>";
+		};
+		A734EB9D197ACF155F97CCFBBBCCE80B /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				34683D07000B177FCA25C049C13837C3 /* FontAwesomeKit.xcconfig */,
+				F018841F9C61BEF5A69BF1731CB0F71C /* FontAwesomeKit-dummy.m */,
+				C6E4F8CB256D080A7FC3492684E72061 /* FontAwesomeKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/FontAwesomeKit";
+			sourceTree = "<group>";
+		};
+		AB65DDA889985030ABDD07391B1771DE /* STTwitter */ = {
+			isa = PBXGroup;
+			children = (
+				2280BFA2D02ABEDC57CB138C9577A59D /* BAVPlistNode.h */,
+				401B701928010AC4D2D17D06DF3BFCB8 /* BAVPlistNode.m */,
+				23030CE91F07005D1468D7F2DF24CB93 /* JSONSyntaxHighlight.h */,
+				6B2413BE81FE7A8EFB2231B882040EDB /* JSONSyntaxHighlight.m */,
+				C462E235C01B3D0D533954042941F5A2 /* NSDateFormatter+STTwitter.h */,
+				F9E4245513A38ACE17E0829AEFE4F806 /* NSDateFormatter+STTwitter.m */,
+				4E9A3205C20CB31EC83D3054EA535B72 /* NSError+STTwitter.h */,
+				2128F3579C882EA7B45D5E620B1AB1EF /* NSError+STTwitter.m */,
+				0443F682D248FAB5E035A4119D8856B2 /* NSString+STTwitter.h */,
+				1C90A7002373262E7EE9C589A1529B15 /* NSString+STTwitter.m */,
+				538EE02D22218331A12F77CE1E42DE1D /* STHTTPRequest.h */,
+				B55EE0B7B02801E859D2801FC743E07F /* STHTTPRequest.m */,
+				25B3B49682C322D5DBDE486286C87B6E /* STHTTPRequest+STTwitter.h */,
+				90CDDB70CC72F15C2362F24B3DCD1269 /* STHTTPRequest+STTwitter.m */,
+				2874CEEDF567F52C35472796EC9048C8 /* STTwitter.h */,
+				683B8333189FC682CB314A1145A2F8E9 /* STTwitterAPI.h */,
+				C73D7D1CB35BD05394DEF7F53D08F26C /* STTwitterAPI.m */,
+				FE2B12367B216E35D2660EA4D05481B7 /* STTwitterAppOnly.h */,
+				8D7952DF60332780DC1F352B0484B93D /* STTwitterAppOnly.m */,
+				2B9947F9DA51E72F943FC1CC6F5C91FF /* STTwitterHTML.h */,
+				60D525AFE1071CC210B94C4E35D9D82C /* STTwitterHTML.m */,
+				03CE4E2E3308AEBAC83EB900C643C831 /* STTwitterOAuth.h */,
+				E70304C42465167A1F48DA0F4836BE07 /* STTwitterOAuth.m */,
+				F536ECB76ADDF366A86C3EE117343A20 /* STTwitterOS.h */,
+				EC3431EAE2762990D987E5D4EF2A40DA /* STTwitterOS.m */,
+				C2E4D91392A29708834FC890574839E4 /* STTwitterOSRequest.h */,
+				D08F6B94770D1493908161882923B1DD /* STTwitterOSRequest.m */,
+				C132C2BF20E12FB6CDDB550201ABC04C /* STTwitterProtocol.h */,
+				F70EF12E0B8CF2612B28D8C76D8FB33D /* STTwitterRequestProtocol.h */,
+				E60C756277C1C7A39EEB0003C73A02E8 /* STTwitterStreamParser.h */,
+				E7CD9E5986AACC439C020FD0658D7959 /* STTwitterStreamParser.m */,
+				0B3AA12D4D6E11C9D6C73192E2D408BE /* Support Files */,
 			);
 			path = STTwitter;
 			sourceTree = "<group>";
 		};
-		E9F2194FF21AAD6BDA6C0485E6E30190 /* Pods */ = {
+		C82FDD1234D098922BE916593E4C5197 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D7283BDB506AF193012921F7369F0F03 /* STTwitter */,
+				3EB8D165EA63677044A6B70E33D94482 /* zocial-regular-webfont.ttf */,
 			);
-			name = Pods;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		D2EE5A7BFD94A902639BC4A04B0CCF77 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				F3696318B473A15C3E2E634D3CE36D8F /* FAKIcon.h */,
+				8236CE4DBDA75F01A5BA81801BEF8072 /* FAKIcon.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		F4CDA5FA9197A41E0081E84F932906EB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7C53856626C3CF20A3400D1196E8C6C2 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FF5FB87EEFE1AD68C7B4E372AF4876B6 /* FontAwesomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				B6DA1AEF98FB2067477134B32CD68FC1 /* FontAwesomeKit.h */,
+				D2EE5A7BFD94A902639BC4A04B0CCF77 /* Core */,
+				9A8537B8E6060DC8592B18DFE2528F76 /* FontAwesome */,
+				303BBA00E1A9B8FC1F28D0092E29D90C /* FoundationIcons */,
+				5C47A86F26B53D128F3BFDD06C4CDC8A /* IonIcons */,
+				A734EB9D197ACF155F97CCFBBBCCE80B /* Support Files */,
+				FFA26353D6D22D5E55AA75D19798CD66 /* Zocial */,
+			);
+			path = FontAwesomeKit;
+			sourceTree = "<group>";
+		};
+		FFA26353D6D22D5E55AA75D19798CD66 /* Zocial */ = {
+			isa = PBXGroup;
+			children = (
+				B7911AC94319B71B98E2342078AD0236 /* FAKZocial.h */,
+				6DE0A45E57D50DB7155574C2D672A504 /* FAKZocial.m */,
+				C82FDD1234D098922BE916593E4C5197 /* Resources */,
+			);
+			name = Zocial;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		56E22D02FDF9E342650FC6C369FD8920 /* Headers */ = {
+		4558BEB6B0B751BD943408A60F2D8493 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0647754C644235D516CAF86EAAA86B20 /* BAVPlistNode.h in Headers */,
-				7EFDF19A4BD26DDF3E91A7902AB38E8C /* JSONSyntaxHighlight.h in Headers */,
-				B447A26D8263787D89959E12B71C2032 /* NSDateFormatter+STTwitter.h in Headers */,
-				8638B15A8B975EDF1849E00CBBAEA810 /* NSError+STTwitter.h in Headers */,
-				CC1DF49BFF54C399EA288A5E41D80D1C /* NSString+STTwitter.h in Headers */,
-				A6E74F5B1BB5E858E272788399549CB9 /* STHTTPRequest+STTwitter.h in Headers */,
-				D141048CECDA6674F55C6B96380D9BF2 /* STHTTPRequest.h in Headers */,
-				260A9B017A448F31552E0B62F2ED8630 /* STTwitter.h in Headers */,
-				7340C4EDB04D298B138E5A1243639DA8 /* STTwitterAPI.h in Headers */,
-				9ECFBAD7D2AA6B10B8B43FAA8EBCD70A /* STTwitterAppOnly.h in Headers */,
-				AFE7E2771D379F9020F29CD2152C3D46 /* STTwitterHTML.h in Headers */,
-				7C81F9E45B20E67D891F82D86E14E557 /* STTwitterOAuth.h in Headers */,
-				2D87946C6E5D6F051A737CD74F443003 /* STTwitterOS.h in Headers */,
-				B983FB78DC56FED48F5BDBCB9D0B3696 /* STTwitterOSRequest.h in Headers */,
-				8BCC0C6E971AEB1FACC086F0A23B38EE /* STTwitterProtocol.h in Headers */,
-				B40C6F923E74BF3494724B9B43563B19 /* STTwitterRequestProtocol.h in Headers */,
-				DC389FAE3FC261504CA45A530E8F9B4F /* STTwitterStreamParser.h in Headers */,
+				809D1AE6C63C47EC2740CAAA50DDDC7E /* BAVPlistNode.h in Headers */,
+				FD11DF41E1A61C1D362F91AF94AFBD15 /* JSONSyntaxHighlight.h in Headers */,
+				0A86BE956753A984632810FA81F438BC /* NSDateFormatter+STTwitter.h in Headers */,
+				56A61E9D7C5C5BD99BFF8C765C104A8D /* NSError+STTwitter.h in Headers */,
+				2CB2D4894C389419551903F8E09C0493 /* NSString+STTwitter.h in Headers */,
+				DAB2D2971B08FD1B172F5083EACD0422 /* STHTTPRequest+STTwitter.h in Headers */,
+				4D44C6B5CAFEF7D254FDA104B8324D7B /* STHTTPRequest.h in Headers */,
+				B9DF428861AC402D12D933C451F03326 /* STTwitter.h in Headers */,
+				EFCBE0293ADC066697EE6638F6AA543D /* STTwitterAPI.h in Headers */,
+				399EE05AB7475C8C00D1C742C48AABE4 /* STTwitterAppOnly.h in Headers */,
+				1064A1A86D27330C7FED2AB8B9BB3091 /* STTwitterHTML.h in Headers */,
+				249BC9E81B0D7E6B30F288D4E8E52145 /* STTwitterOAuth.h in Headers */,
+				843CA8CED816FEDCF2461239AEB2CD50 /* STTwitterOS.h in Headers */,
+				1DF458689FBB2725C66DE11AA6C1D6A1 /* STTwitterOSRequest.h in Headers */,
+				E3A588D3F754CBF713BBF228DEB0A0B5 /* STTwitterProtocol.h in Headers */,
+				DD0AE7E61AF20073B6F07F7F6B4FBE64 /* STTwitterRequestProtocol.h in Headers */,
+				01FE8292CA6A1F9BC6516D7F41DE0553 /* STTwitterStreamParser.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		926A427BA7782E3BFB0D6E7289D921C7 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FB956B31DF117839DA0E00F87C0FF4E /* FAKFontAwesome.h in Headers */,
+				E0E29147B7D8EC40D1A4F94C2C086B68 /* FAKFoundationIcons.h in Headers */,
+				FBF89427609542D56EC6215DD09F9F64 /* FAKIcon.h in Headers */,
+				87EAD6E2EE5C9F0B8FD227FD63E7A430 /* FAKIonIcons.h in Headers */,
+				8A6287B963D51F439C0EBE2D50F9391E /* FAKZocial.h in Headers */,
+				F4FA150B34A76E334EA6E07F1C22AAD6 /* FontAwesomeKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		AB7EA61E7CF5F7F37CB3A93576BECA99 /* STTwitter */ = {
+		5556C0EDA966416C8BE49123CA47B79D /* STTwitter */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2290A686D710FBD7FAE6FD4DEDFBE46F /* Build configuration list for PBXNativeTarget "STTwitter" */;
+			buildConfigurationList = C56B5CD77A9042822D9B8048B9E6CCBA /* Build configuration list for PBXNativeTarget "STTwitter" */;
 			buildPhases = (
-				38D3471FA5DBC134BE5F3550C2EF9D27 /* Sources */,
-				009DEBEFB597BEFED03D83EDE76578DF /* Frameworks */,
-				56E22D02FDF9E342650FC6C369FD8920 /* Headers */,
+				60F8E0574135136500B33D43CE2E62C1 /* Sources */,
+				DDCB12653D45A8804415EF0A3F68785C /* Frameworks */,
+				4558BEB6B0B751BD943408A60F2D8493 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -303,24 +477,42 @@
 			);
 			name = STTwitter;
 			productName = STTwitter;
-			productReference = D52F4F2E6133B4B0E5839C8D28BFCF68 /* libSTTwitter.a */;
+			productReference = 050CF76BEFE08EB5513682FD8E90AD60 /* libSTTwitter.a */;
 			productType = "com.apple.product-type.library.static";
 		};
-		DC426519AC914D4B21C5DD1EB776B8C5 /* Pods-InjuryReport */ = {
+		D9F1B3A3281633797F27632DF12DBFC6 /* FontAwesomeKit */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 80E1ED0CAF6EC93ED81B539613D58F20 /* Build configuration list for PBXNativeTarget "Pods-InjuryReport" */;
+			buildConfigurationList = FF7AF7AA01D254433277670BA389A011 /* Build configuration list for PBXNativeTarget "FontAwesomeKit" */;
 			buildPhases = (
-				A9BE65DCCDC3DF39A075A8B340C2E451 /* Sources */,
-				42BE8147DE1E6A2037286595C64E2047 /* Frameworks */,
+				0DD399D1164635079CA1E8777F5CFE28 /* Sources */,
+				8448DF6C6076D74248D29AA2AC4C51C6 /* Frameworks */,
+				926A427BA7782E3BFB0D6E7289D921C7 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				367F767DA25F651948BADC76153C11DB /* PBXTargetDependency */,
+			);
+			name = FontAwesomeKit;
+			productName = FontAwesomeKit;
+			productReference = 0771289B2FF4F8244E3508866D372939 /* libFontAwesomeKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		E558730DAF0D93BB9FECB51B333E145C /* Pods-InjuryReport */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C80193370BECC2840BCE3D89EC0DE1AF /* Build configuration list for PBXNativeTarget "Pods-InjuryReport" */;
+			buildPhases = (
+				A03A34CB063089504636A240CF876D24 /* Sources */,
+				26DA2FF231FA803F7E43239BD05816A8 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				DBBC16FF953903D44841BCE7D35799B9 /* PBXTargetDependency */,
+				70AC7FFBBAF960B77016F3F1B0D62AA6 /* PBXTargetDependency */,
 			);
 			name = "Pods-InjuryReport";
 			productName = "Pods-InjuryReport";
-			productReference = 11A5B1E009E4FDA3E298C53AA43E0AC1 /* libPods-InjuryReport.a */;
+			productReference = 007E5B4482C948360419FC917F138DC5 /* libPods-InjuryReport.a */;
 			productType = "com.apple.product-type.library.static";
 		};
 /* End PBXNativeTarget section */
@@ -340,75 +532,96 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 64A94D42F6CEE37A941E7A7CA3D6F0AF /* Products */;
+			productRefGroup = 1112370BECDB11226020BC5B7A5A79C6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DC426519AC914D4B21C5DD1EB776B8C5 /* Pods-InjuryReport */,
-				AB7EA61E7CF5F7F37CB3A93576BECA99 /* STTwitter */,
+				D9F1B3A3281633797F27632DF12DBFC6 /* FontAwesomeKit */,
+				E558730DAF0D93BB9FECB51B333E145C /* Pods-InjuryReport */,
+				5556C0EDA966416C8BE49123CA47B79D /* STTwitter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		38D3471FA5DBC134BE5F3550C2EF9D27 /* Sources */ = {
+		0DD399D1164635079CA1E8777F5CFE28 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0213737A14B1D12B3BDB93043B646FBA /* BAVPlistNode.m in Sources */,
-				68439ED908F7FCAC449135FE6EF6EEC5 /* JSONSyntaxHighlight.m in Sources */,
-				707D5BEBCF9180A662EB58E122E067B8 /* NSDateFormatter+STTwitter.m in Sources */,
-				7536C858057960C6513467491B08E39C /* NSError+STTwitter.m in Sources */,
-				1BAFABF4C5F29A2E07DE50462015DB45 /* NSString+STTwitter.m in Sources */,
-				A872AB675B7DA6AB93B545B4926FDB20 /* STHTTPRequest+STTwitter.m in Sources */,
-				37D4BF7CC2CB20566F7D43FCC746590A /* STHTTPRequest.m in Sources */,
-				DC30EC0EA8C2399CEE8C918057936922 /* STTwitter-dummy.m in Sources */,
-				99D333AB6C47084C112CCC5F9B2DE080 /* STTwitterAPI.m in Sources */,
-				4F37E6886EA4925E37D52A1B080AFFF8 /* STTwitterAppOnly.m in Sources */,
-				29BDFFC0D3BEB4074229431B0C293C10 /* STTwitterHTML.m in Sources */,
-				8EBD32AD023E2C1F48EFEC9916BBDEEC /* STTwitterOAuth.m in Sources */,
-				13CCBCEA1BD10B6D84397C1D924AB550 /* STTwitterOS.m in Sources */,
-				6ACAEF480B7EDCDC55DFE2E51732ABC3 /* STTwitterOSRequest.m in Sources */,
-				642C59FB144195FB799ADB8FC09A46EA /* STTwitterStreamParser.m in Sources */,
+				D15550CF5996F31B47EA5A1E33F007D9 /* FAKFontAwesome.m in Sources */,
+				443CCE401CCB360E15825DD795AE1167 /* FAKFoundationIcons.m in Sources */,
+				F3CAAA253E2293EE587412503D8934CA /* FAKIcon.m in Sources */,
+				F89880759BAB2E38B268F456CECDA73B /* FAKIonIcons.m in Sources */,
+				580F3A708B2DBD20C3BA0A3DB8900DE8 /* FAKZocial.m in Sources */,
+				CDCC5F8C49D18065CE3610E7E8884FD5 /* FontAwesomeKit-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9BE65DCCDC3DF39A075A8B340C2E451 /* Sources */ = {
+		60F8E0574135136500B33D43CE2E62C1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4D822CD2537D37ED141C3DDD95654A46 /* Pods-InjuryReport-dummy.m in Sources */,
+				E900704B162CAB9864C6241867EDDDA2 /* BAVPlistNode.m in Sources */,
+				43BBAAD033BAE73298DFD732914337F2 /* JSONSyntaxHighlight.m in Sources */,
+				055F8E18A5FC8B81E8FCCCA3744BDD23 /* NSDateFormatter+STTwitter.m in Sources */,
+				4DFB36962B0F7951496AEE3347A00870 /* NSError+STTwitter.m in Sources */,
+				0CD7E1E08D390C770E7BA010A9BF9F96 /* NSString+STTwitter.m in Sources */,
+				DF9767FA70EBC37E6C9AE8B1D124D8C8 /* STHTTPRequest+STTwitter.m in Sources */,
+				ADA7A69CEFE53DB15E9A3957BE272561 /* STHTTPRequest.m in Sources */,
+				975CFFF5A752B912DF7BECD97A8137E4 /* STTwitter-dummy.m in Sources */,
+				E9A1EE995542E5BC653F4106F8B631E2 /* STTwitterAPI.m in Sources */,
+				B97BE7A1E83A600A5B67C1A23F053668 /* STTwitterAppOnly.m in Sources */,
+				BF593F68874B813CC2A03DF34B5686B7 /* STTwitterHTML.m in Sources */,
+				9D785D41A5EA691D9D67C5A80386CB6A /* STTwitterOAuth.m in Sources */,
+				F96FBE728F26D37101770EDD673A9C5A /* STTwitterOS.m in Sources */,
+				7585E0E262A7AB8A113938F1522346B6 /* STTwitterOSRequest.m in Sources */,
+				9B8C09EC9DCB34E1AB37F6B2CF640F37 /* STTwitterStreamParser.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A03A34CB063089504636A240CF876D24 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2DE16EB423471EB69E90304FA184D9F6 /* Pods-InjuryReport-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		367F767DA25F651948BADC76153C11DB /* PBXTargetDependency */ = {
+		70AC7FFBBAF960B77016F3F1B0D62AA6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = STTwitter;
-			target = AB7EA61E7CF5F7F37CB3A93576BECA99 /* STTwitter */;
-			targetProxy = 201CE3CA31835718ABB212FADF3E0EF7 /* PBXContainerItemProxy */;
+			target = 5556C0EDA966416C8BE49123CA47B79D /* STTwitter */;
+			targetProxy = F0F5F5F097F7F8BA4A35D89796A74C8D /* PBXContainerItemProxy */;
+		};
+		DBBC16FF953903D44841BCE7D35799B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FontAwesomeKit;
+			target = D9F1B3A3281633797F27632DF12DBFC6 /* FontAwesomeKit */;
+			targetProxy = 84F24BCF102879F13DBD191B50520532 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		227B8C5AE66B99065FF39261CEBC7ADF /* Release */ = {
+		51103129E33B703F469C4493BBDC6E52 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9B61308BF508CE5EAD66EF1C3420D60C /* Pods-InjuryReport.release.xcconfig */;
+			baseConfigurationReference = 1B6FE9EE26C37CA5A07E8F041707CA2E /* STTwitter.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/STTwitter/STTwitter-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MACH_O_TYPE = staticlib;
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Release;
+			name = Debug;
 		};
 		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -449,9 +662,9 @@
 			};
 			name = Debug;
 		};
-		6529B396B9DAB660FC941061022A72BC /* Release */ = {
+		63804E711E259541C241971CFC4734E8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3133BCA5F4899668DFB746002EBE3DFF /* STTwitter.xcconfig */;
+			baseConfigurationReference = 1B6FE9EE26C37CA5A07E8F041707CA2E /* STTwitter.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_PREFIX_HEADER = "Target Support Files/STTwitter/STTwitter-prefix.pch";
@@ -466,6 +679,24 @@
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
+		};
+		692EFB7CAE0661FB4870B6163C9DEA4D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34683D07000B177FCA25C049C13837C3 /* FontAwesomeKit.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FontAwesomeKit/FontAwesomeKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
 		};
 		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -501,25 +732,24 @@
 			};
 			name = Release;
 		};
-		AE8BAE077FBDBF423E0BEBE08B2282B0 /* Debug */ = {
+		7CF4DD61D92EC5AF8C8C785C41899901 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3133BCA5F4899668DFB746002EBE3DFF /* STTwitter.xcconfig */;
+			baseConfigurationReference = 9B61308BF508CE5EAD66EF1C3420D60C /* Pods-InjuryReport.release.xcconfig */;
 			buildSettings = {
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/STTwitter/STTwitter-prefix.pch";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
-				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PUBLIC_HEADERS_FOLDER_PATH = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 			};
-			name = Debug;
+			name = Release;
 		};
-		D91C20B889228E4831C70D0C5C13CCAE /* Debug */ = {
+		8DECE0175DE89C876AB7DCB6F68BF28D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7E58B2F2BAFF4F407AD08A7EDDD3FC64 /* Pods-InjuryReport.debug.xcconfig */;
 			buildSettings = {
@@ -536,18 +766,27 @@
 			};
 			name = Debug;
 		};
+		EC023375722D7F26D3012B77A1BD87B5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 34683D07000B177FCA25C049C13837C3 /* FontAwesomeKit.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/FontAwesomeKit/FontAwesomeKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2290A686D710FBD7FAE6FD4DEDFBE46F /* Build configuration list for PBXNativeTarget "STTwitter" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AE8BAE077FBDBF423E0BEBE08B2282B0 /* Debug */,
-				6529B396B9DAB660FC941061022A72BC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -557,11 +796,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		80E1ED0CAF6EC93ED81B539613D58F20 /* Build configuration list for PBXNativeTarget "Pods-InjuryReport" */ = {
+		C56B5CD77A9042822D9B8048B9E6CCBA /* Build configuration list for PBXNativeTarget "STTwitter" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				D91C20B889228E4831C70D0C5C13CCAE /* Debug */,
-				227B8C5AE66B99065FF39261CEBC7ADF /* Release */,
+				51103129E33B703F469C4493BBDC6E52 /* Debug */,
+				63804E711E259541C241971CFC4734E8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C80193370BECC2840BCE3D89EC0DE1AF /* Build configuration list for PBXNativeTarget "Pods-InjuryReport" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8DECE0175DE89C876AB7DCB6F68BF28D /* Debug */,
+				7CF4DD61D92EC5AF8C8C785C41899901 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FF7AF7AA01D254433277670BA389A011 /* Build configuration list for PBXNativeTarget "FontAwesomeKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				692EFB7CAE0661FB4870B6163C9DEA4D /* Debug */,
+				EC023375722D7F26D3012B77A1BD87B5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

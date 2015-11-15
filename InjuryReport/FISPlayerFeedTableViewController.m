@@ -9,8 +9,10 @@
 #import "FISPlayerFeedTableViewController.h"
 #import "FISTweetsDataStore.h"
 #import "FFTweetStatus.h"
+#import <FontAwesomeKit/FontAwesomeKit.h>
 
-@interface FISPlayerFeedTableViewController ()
+
+@interface FISPlayerFeedTableViewController () <UINavigationBarDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) FISTweetsDataStore *tweetStore;
 
@@ -28,6 +30,7 @@
             [self.tableView reloadData];
         }
     }];
+    
 }
 //
     // Uncomment the following line to preserve selection between presentations.

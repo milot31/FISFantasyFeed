@@ -28,6 +28,7 @@
     self.tweetStore = [FISTweetsDataStore tweetsDataStore];
     [self.tweetStore.tweets removeAllObjects];
     
+    self.tableView.backgroundColor = [UIColor darkGrayColor];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
