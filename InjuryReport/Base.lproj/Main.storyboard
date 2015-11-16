@@ -69,7 +69,9 @@
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejC-B6-rJ1">
                                 <rect key="frame" x="20" y="20" width="55" height="30"/>
-                                <state key="normal" title="Cancel"/>
+                                <state key="normal" title="Cancel">
+                                    <color key="titleColor" red="0.0" green="0.33024364229999997" blue="0.0001010954365" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                                 <connections>
                                     <action selector="cancelButtonTapper:" destination="2Ir-qN-yMv" eventType="touchUpInside" id="oX3-th-QZs"/>
                                 </connections>
@@ -169,7 +171,7 @@
             </objects>
             <point key="canvasLocation" x="1077" y="255"/>
         </scene>
-        <!--Player Feed Table View Controller-->
+        <!--JIMBO-->
         <scene sceneID="O0u-Ix-hE9">
             <objects>
                 <tableViewController id="4cl-7G-O0t" customClass="FISPlayerFeedTableViewController" sceneMemberID="viewController">
@@ -222,7 +224,11 @@
                             <outlet property="delegate" destination="4cl-7G-O0t" id="AjP-xU-WuL"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="JIMBO" id="Ni1-X1-UPw"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="navBar" destination="Ni1-X1-UPw" id="Oaq-yJ-5BP"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8YZ-nr-JG4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

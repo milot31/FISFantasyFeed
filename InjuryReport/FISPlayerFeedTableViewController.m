@@ -15,6 +15,7 @@
 @interface FISPlayerFeedTableViewController () <UINavigationBarDelegate, UINavigationControllerDelegate>
 
 @property (strong, nonatomic) FISTweetsDataStore *tweetStore;
+@property (strong, nonatomic) IBOutlet UINavigationItem *navBar;
 
 
 @end
@@ -31,6 +32,9 @@
         }
     }];
     
+    self.navigationController.navigationBar.tintColor = [UIColor colorWithHue:0.33 saturation:1 brightness:0.33 alpha:1];
+    
+    self.navBar.title = [NSString stringWithFormat:@"%@", self.player.fullName];
 }
 //
     // Uncomment the following line to preserve selection between presentations.
@@ -90,6 +94,8 @@
     
     return cell;
 }
+
+
 
 /*
 // Override to support conditional editing of the table view.
