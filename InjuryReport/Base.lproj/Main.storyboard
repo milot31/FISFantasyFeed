@@ -226,6 +226,12 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="JIMBO" id="Ni1-X1-UPw"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="T5Z-qW-bTU">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <connections>
+                            <action selector="refresh:" destination="4cl-7G-O0t" eventType="valueChanged" id="YeI-q7-WXn"/>
+                        </connections>
+                    </refreshControl>
                     <connections>
                         <outlet property="navBar" destination="Ni1-X1-UPw" id="Oaq-yJ-5BP"/>
                     </connections>

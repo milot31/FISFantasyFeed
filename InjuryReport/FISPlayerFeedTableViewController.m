@@ -16,6 +16,7 @@
 
 @property (strong, nonatomic) FISTweetsDataStore *tweetStore;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navBar;
+- (IBAction)refresh:(UIRefreshControl *)sender;
 
 
 @end
@@ -141,4 +142,13 @@
 }
 */
 
+- (IBAction)refresh:(UIRefreshControl *)sender {
+    [self.tweetStore loadPlayerFeedForPlayer:self.player.fullName withCompletion:^(BOOL success) {
+        if (success) {
+            
+            [self.tableView reloadData];
+        }
+        [sender endRefreshing];
+    }];
+}
 @end
