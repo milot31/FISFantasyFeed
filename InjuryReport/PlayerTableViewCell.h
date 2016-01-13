@@ -15,6 +15,7 @@
 @property (strong, nonatomic) IBOutlet UILabel *playersPositionLabel;
 @property (strong, nonatomic) IBOutlet UILabel *teamLabel;
 @property (strong, nonatomic) IBOutlet UILabel *playersTeamLabel;
+@property (strong, nonatomic) IBOutlet UIImageView *logoView;
 
 
 
