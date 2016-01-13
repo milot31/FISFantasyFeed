@@ -24,7 +24,11 @@
     // Configure the view for the selected state
 }
 
-
+-(void)updateLabels:(Player *)player {
+    self.playerNameLabel.text = player.fullName;
+    self.playersPositionLabel.text = player.position;
+    self.playersTeamLabel.text = player.team;
+}
 
 + (void)drawGradient:(PCGradient *)gradient withFrame:(CGRect)frame
 {

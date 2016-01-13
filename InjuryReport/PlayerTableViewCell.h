@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Player.h"
 
 @interface PlayerTableViewCell : UITableViewCell
 
@@ -19,5 +20,7 @@
 @property (strong, nonatomic) IBOutlet UIView *layerView;
 
 
+
+-(void)updateLabels:(Player *)player;
 
 @end
