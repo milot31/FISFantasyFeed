@@ -20,6 +20,7 @@
 		3B0A72301BF13A2E0010A257 /* FFFantasyAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A722F1BF13A2E0010A257 /* FFFantasyAPIClient.m */; };
 		3B0A72331BF140020010A257 /* FFTwitterAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72321BF140020010A257 /* FFTwitterAPIClient.m */; };
 		3B0A72361BF193920010A257 /* FISAddPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72351BF193920010A257 /* FISAddPlayerViewController.m */; };
+		3BD6AE4C1C45D3D70058C0BE /* PlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6AE4B1C45D3D70058C0BE /* PlayerTableViewCell.m */; };
 		5D35876587BAD6E22C441A62 /* libPods-InjuryReport.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 80CDDD86C66E55A28B250CE8 /* libPods-InjuryReport.a */; };
 		BFE2C8271BF297BA00FD6623 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = BFE2C8261BF297BA00FD6623 /* Constants.m */; };
 		BFE2C82A1BF2A10F00FD6623 /* FISPlayer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BFE2C8281BF2A10F00FD6623 /* FISPlayer.xcdatamodeld */; };
@@ -75,6 +76,8 @@
 		3B0A72321BF140020010A257 /* FFTwitterAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFTwitterAPIClient.m; sourceTree = "<group>"; };
 		3B0A72341BF193920010A257 /* FISAddPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISAddPlayerViewController.h; sourceTree = "<group>"; };
 		3B0A72351BF193920010A257 /* FISAddPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISAddPlayerViewController.m; sourceTree = "<group>"; };
+		3BD6AE4A1C45D3D70058C0BE /* PlayerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTableViewCell.h; sourceTree = "<group>"; };
+		3BD6AE4B1C45D3D70058C0BE /* PlayerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTableViewCell.m; sourceTree = "<group>"; };
 		4E2A5AABAF092444485F13A4 /* Pods-InjuryReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InjuryReport.debug.xcconfig"; path = "Pods/Target Support Files/Pods-InjuryReport/Pods-InjuryReport.debug.xcconfig"; sourceTree = "<group>"; };
 		80CDDD86C66E55A28B250CE8 /* libPods-InjuryReport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-InjuryReport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8607A8B8962F6699A7FB354F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,6 +222,8 @@
 				3B0A722C1BF138960010A257 /* FISPlayerFeedTableViewController.m */,
 				3B0A72341BF193920010A257 /* FISAddPlayerViewController.h */,
 				3B0A72351BF193920010A257 /* FISAddPlayerViewController.m */,
+				3BD6AE4A1C45D3D70058C0BE /* PlayerTableViewCell.h */,
+				3BD6AE4B1C45D3D70058C0BE /* PlayerTableViewCell.m */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -413,6 +418,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD6AE4C1C45D3D70058C0BE /* PlayerTableViewCell.m in Sources */,
 				BFE2C8271BF297BA00FD6623 /* Constants.m in Sources */,
 				BFE2C82F1BF2A31500FD6623 /* Player+CoreDataProperties.m in Sources */,
 				BFE2C8361BF4D93900FD6623 /* FISTweetsDataStore.m in Sources */,
