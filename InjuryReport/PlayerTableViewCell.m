@@ -8,6 +8,7 @@
 
 #import "PlayerTableViewCell.h"
 #import "FeedStyleKit.h"
+#import "Player.h"
 
 @implementation PlayerTableViewCell
 
@@ -25,6 +26,8 @@
 }
 
 -(void)updateLabels:(Player *)player {
+    
+    NSLog(@"\n\n\n\n UPDATING LABELS \n\n\n\n");
     self.playerNameLabel.text = player.fullName;
     self.playersPositionLabel.text = player.position;
     self.playersTeamLabel.text = player.team;

@@ -55,7 +55,7 @@
     [self initalizeAllTheGroupsToDefaultValue];
     
     self.playerTableView.backgroundColor = [UIColor darkGrayColor];
-
+    
     
 }
 
@@ -94,42 +94,25 @@
 
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- PlayerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
+     PlayerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
  
      if ([self.playerSearchBar.text isEqualToString: @""]) {
          
          Player *player = self.playerArray[indexPath.row];
          
-//         UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
-//         nameLabel.text = player.fullName;
-//         cell.playerNameLabel.text = player.fullName;
-         [cell updateLabels:player];
-         
-//         UILabel *positionLabel = (UILabel *)[cell viewWithTag:2];
-//         positionLabel.text = player.position;
+         cell.playerNameLabel.text = player.fullName;
          cell.playersPositionLabel.text = player.position;
-         
-//         UILabel *teamLabel = (UILabel *)[cell viewWithTag:3];
-//         teamLabel.text = player.team;
          cell.playersTeamLabel.text = player.team;
+
      } else {
          
          Player *player = self.filteredPlayerArray[indexPath.row];
-         
-//         UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
-//         nameLabel.text = player.fullName;
-//         cell.playerNameLabel.text = player.fullName;
 
-        
-//         UILabel *positionLabel = (UILabel *)[cell viewWithTag:2];
-//         positionLabel.text = player.position;
+         cell.playerNameLabel.text = player.fullName;
          cell.playersPositionLabel.text = player.position;
-      
-//         UILabel *teamLabel = (UILabel *)[cell viewWithTag:3];
-//         teamLabel.text = player.team;
          cell.playersTeamLabel.text = player.team;
+
      }
-     
      return cell;
  }
  

@@ -49,7 +49,7 @@
                                                         <constraint firstItem="hzy-si-coL" firstAttribute="centerY" secondItem="3jq-88-x6S" secondAttribute="centerY" id="gKV-HE-ZZf"/>
                                                     </constraints>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="3"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="6"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWZ-h8-GAj">
@@ -124,6 +124,10 @@
                                         <connections>
                                             <outlet property="layerView" destination="3jq-88-x6S" id="QsT-of-Lgf"/>
                                             <outlet property="logoView" destination="hzy-si-coL" id="zWm-eD-nMD"/>
+                                            <outlet property="playerNameLabel" destination="aWZ-h8-GAj" id="dDy-ez-a0e"/>
+                                            <outlet property="playersPositionLabel" destination="uLc-ik-crU" id="qHM-bI-3x2"/>
+                                            <outlet property="playersTeamLabel" destination="2uF-AE-gxM" id="Rif-O8-YTD"/>
+                                            <outlet property="positionLabel" destination="iy7-zn-CDx" id="6OB-hh-GCz"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
