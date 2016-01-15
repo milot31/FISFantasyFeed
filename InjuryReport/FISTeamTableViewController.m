@@ -10,6 +10,7 @@
 #import "FISTeamDataStore.h"
 #import "FISPlayer.h"
 #import "FISTweetsDataStore.h"
+#import "PlayerTableViewCell.h"
 
 @interface FISTeamTableViewController ()
 
@@ -67,18 +68,22 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
+    PlayerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
     
     Player *selectedPlayer = self.store.team[indexPath.row];
     
-    UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
-    nameLabel.text = selectedPlayer.fullName;
+    cell.playerNameLabel.text = selectedPlayer.fullName;
+    cell.playersPositionLabel.text = selectedPlayer.position;
+    cell.playersTeamLabel.text = selectedPlayer.team;
     
-    UILabel *positionLabel = (UILabel *)[cell viewWithTag:2];
-    positionLabel.text = selectedPlayer.position;
-    
-    UILabel *teamLabel = (UILabel *)[cell viewWithTag:3];
-    teamLabel.text = selectedPlayer.team;
+//    UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
+//    nameLabel.text = selectedPlayer.fullName;
+//    
+//    UILabel *positionLabel = (UILabel *)[cell viewWithTag:2];
+//    positionLabel.text = selectedPlayer.position;
+//    
+//    UILabel *teamLabel = (UILabel *)[cell viewWithTag:3];
+//    teamLabel.text = selectedPlayer.team;
     
     return cell;
 }
@@ -87,7 +92,9 @@
     return 69.0;
 }
 
-
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+}
 
 #pragma mark - Navigation
 

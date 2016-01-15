@@ -20,7 +20,8 @@
 @property (strong, nonatomic) IBOutlet UIView *layerView;
 
 
-
 -(void)updateLabels:(Player *)player;
+
+-(UIColor *)getAnimationColor:(PlayerTableViewCell *)cell;
 
 @end
