@@ -25,7 +25,7 @@
     // Configure the view for the selected state
 }
 
--(UIColor *)getAnimationColor:(PlayerTableViewCell *)cell {
++(UIColor *)getAnimationColor:(PlayerTableViewCell *)cell {
     if ([cell.playersTeamLabel.text isEqual:@"BUF"] ||
         [cell.playersTeamLabel.text isEqual:@"NE"] ||
         [cell.playersTeamLabel.text isEqual:@"IND"] ||

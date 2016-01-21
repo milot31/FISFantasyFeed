@@ -103,6 +103,7 @@
          cell.playerNameLabel.text = player.fullName;
          cell.playersPositionLabel.text = player.position;
          cell.playersTeamLabel.text = player.team;
+         cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
 
      } else {
          
@@ -111,12 +112,11 @@
          cell.playerNameLabel.text = player.fullName;
          cell.playersPositionLabel.text = player.position;
          cell.playersTeamLabel.text = player.team;
+         cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
 
      }
      return cell;
  }
- 
-
 
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
@@ -169,6 +169,13 @@
         newPlayer.position = selectedPlayer.position;
         [[FISTeamDataStore sharedDataStore] saveContext];
     }
+    
+    PlayerTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [UIView animateKeyframesWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionAutoreverse animations:^{
+        cell.layerView.backgroundColor = cell.layerAnimationColor;
+    } completion:^(BOOL finished) {
+        
+    }];
     
     
     [self dismissViewControllerAnimated:YES completion:nil];

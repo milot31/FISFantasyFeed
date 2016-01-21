@@ -18,10 +18,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *playersTeamLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *logoView;
 @property (strong, nonatomic) IBOutlet UIView *layerView;
+@property (strong, nonatomic) UIColor *layerAnimationColor;
 
 
--(void)updateLabels:(Player *)player;
-
--(UIColor *)getAnimationColor:(PlayerTableViewCell *)cell;
++(UIColor *)getAnimationColor:(PlayerTableViewCell *)cell;
 
 @end
