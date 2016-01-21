@@ -171,10 +171,12 @@
     }
     
     PlayerTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
-    [UIView animateKeyframesWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionAutoreverse animations:^{
+    UIImage *cellGradient = [PlayerTableViewCell imageOfGradient:[FeedStyleKit gradient] size:cell.layerView.frame.size];
+
+    [UIView animateKeyframesWithDuration:0.2 delay:0.0 options:nil animations:^{
         cell.layerView.backgroundColor = cell.layerAnimationColor;
     } completion:^(BOOL finished) {
-        
+        cell.layerView.backgroundColor = [UIColor colorWithPatternImage:cellGradient];
     }];
     
     
