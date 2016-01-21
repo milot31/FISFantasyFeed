@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Player.h"
+#import "FeedStyleKit.h"
+
 
 @interface PlayerTableViewCell : UITableViewCell
 
@@ -17,7 +20,10 @@
 @property (strong, nonatomic) IBOutlet UILabel *playersTeamLabel;
 @property (strong, nonatomic) IBOutlet UIImageView *logoView;
 @property (strong, nonatomic) IBOutlet UIView *layerView;
+@property (strong, nonatomic) UIColor *layerAnimationColor;
 
 
++(UIColor *)getAnimationColor:(PlayerTableViewCell *)cell;
 
++ (UIImage*)imageOfGradient:(PCGradient *)gradient size:(CGSize)size;
 @end

@@ -11,7 +11,7 @@
 #import "FISPlayer.h"
 #import "Player+CoreDataProperties.h"
 #import "Player.h"
-
+#import "PlayerTableViewCell.h"
 
 @interface FISAddPlayerViewController () <UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
 
@@ -55,7 +55,7 @@
     [self initalizeAllTheGroupsToDefaultValue];
     
     self.playerTableView.backgroundColor = [UIColor darkGrayColor];
-
+    
     
 }
 
@@ -94,39 +94,29 @@
 
 
  - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
- UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
+     PlayerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
  
      if ([self.playerSearchBar.text isEqualToString: @""]) {
          
          Player *player = self.playerArray[indexPath.row];
          
-         UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
-         nameLabel.text = player.fullName;
-         
-         UILabel *positionLabel = (UILabel *)[cell viewWithTag:2];
-         positionLabel.text = player.position;
-         
-         UILabel *teamLabel = (UILabel *)[cell viewWithTag:3];
-         teamLabel.text = player.team;
+         cell.playerNameLabel.text = player.fullName;
+         cell.playersPositionLabel.text = player.position;
+         cell.playersTeamLabel.text = player.team;
+         cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
+
      } else {
          
-         //CRASH AHPPENING HERE
          Player *player = self.filteredPlayerArray[indexPath.row];
-         
-         UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
-         nameLabel.text = player.fullName;
-         
-         UILabel *positionLabel = (UILabel *)[cell viewWithTag:2];
-         positionLabel.text = player.position;
-         
-         UILabel *teamLabel = (UILabel *)[cell viewWithTag:3];
-         teamLabel.text = player.team;
+
+         cell.playerNameLabel.text = player.fullName;
+         cell.playersPositionLabel.text = player.position;
+         cell.playersTeamLabel.text = player.team;
+         cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
+
      }
-     
      return cell;
  }
- 
-
 
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
@@ -179,6 +169,13 @@
         newPlayer.position = selectedPlayer.position;
         [[FISTeamDataStore sharedDataStore] saveContext];
     }
+    
+    PlayerTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [UIView animateKeyframesWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionAutoreverse animations:^{
+        cell.layerView.backgroundColor = cell.layerAnimationColor;
+    } completion:^(BOOL finished) {
+        
+    }];
     
     
     [self dismissViewControllerAnimated:YES completion:nil];

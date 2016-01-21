@@ -10,6 +10,9 @@
 #import "FISTeamDataStore.h"
 #import "FISPlayer.h"
 #import "FISTweetsDataStore.h"
+#import "PlayerTableViewCell.h"
+#import "FeedStyleKit.h"
+
 
 @interface FISTeamTableViewController ()
 
@@ -67,27 +70,44 @@
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
+    PlayerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
     
     Player *selectedPlayer = self.store.team[indexPath.row];
     
-    UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
-    nameLabel.text = selectedPlayer.fullName;
+    cell.playerNameLabel.text = selectedPlayer.fullName;
+    cell.playersPositionLabel.text = selectedPlayer.position;
+    cell.playersTeamLabel.text = selectedPlayer.team;
+    cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
+
     
-    UILabel *positionLabel = (UILabel *)[cell viewWithTag:2];
-    positionLabel.text = selectedPlayer.position;
-    
-    UILabel *teamLabel = (UILabel *)[cell viewWithTag:3];
-    teamLabel.text = selectedPlayer.team;
+//    UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
+//    nameLabel.text = selectedPlayer.fullName;
+//    
+//    UILabel *positionLabel = (UILabel *)[cell viewWithTag:2];
+//    positionLabel.text = selectedPlayer.position;
+//    
+//    UILabel *teamLabel = (UILabel *)[cell viewWithTag:3];
+//    teamLabel.text = selectedPlayer.team;
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    PlayerTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    UIImage *cellGradient = [PlayerTableViewCell imageOfGradient:[FeedStyleKit gradient] size:cell.layerView.frame.size];
+
+    [UIView animateKeyframesWithDuration:0.2 delay:0.0 options:nil animations:^{
+        cell.layerView.backgroundColor = cell.layerAnimationColor;
+    } completion:^(BOOL finished) {
+        cell.layerView.backgroundColor = [UIColor colorWithPatternImage:cellGradient];
+    }];
+    
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     return 69.0;
 }
-
-
 
 #pragma mark - Navigation
 
