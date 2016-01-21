@@ -77,6 +77,8 @@
     cell.playerNameLabel.text = selectedPlayer.fullName;
     cell.playersPositionLabel.text = selectedPlayer.position;
     cell.playersTeamLabel.text = selectedPlayer.team;
+    cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
+
     
 //    UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
 //    nameLabel.text = selectedPlayer.fullName;
@@ -95,7 +97,7 @@
     PlayerTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     UIImage *cellGradient = [PlayerTableViewCell imageOfGradient:[FeedStyleKit gradient] size:cell.layerView.frame.size];
 
-    [UIView animateKeyframesWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionAutoreverse animations:^{
+    [UIView animateKeyframesWithDuration:0.2 delay:0.0 options:nil animations:^{
         cell.layerView.backgroundColor = cell.layerAnimationColor;
     } completion:^(BOOL finished) {
         cell.layerView.backgroundColor = [UIColor colorWithPatternImage:cellGradient];
