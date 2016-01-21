@@ -7,7 +7,6 @@
 //
 
 #import "PlayerTableViewCell.h"
-#import "FeedStyleKit.h"
 #import "Player.h"
 
 @implementation PlayerTableViewCell

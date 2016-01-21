@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 #import "Player.h"
+#import "FeedStyleKit.h"
+
 
 @interface PlayerTableViewCell : UITableViewCell
 
@@ -23,4 +25,5 @@
 
 +(UIColor *)getAnimationColor:(PlayerTableViewCell *)cell;
 
++ (UIImage*)imageOfGradient:(PCGradient *)gradient size:(CGSize)size;
 @end

@@ -11,6 +11,8 @@
 #import "FISPlayer.h"
 #import "FISTweetsDataStore.h"
 #import "PlayerTableViewCell.h"
+#import "FeedStyleKit.h"
+
 
 @interface FISTeamTableViewController ()
 
@@ -88,12 +90,21 @@
     return cell;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 69.0;
-}
-
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
+    PlayerTableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    UIImage *cellGradient = [PlayerTableViewCell imageOfGradient:[FeedStyleKit gradient] size:cell.layerView.frame.size];
+
+    [UIView animateKeyframesWithDuration:0.1 delay:0.0 options:UIViewAnimationOptionAutoreverse animations:^{
+        cell.layerView.backgroundColor = cell.layerAnimationColor;
+    } completion:^(BOOL finished) {
+        cell.layerView.backgroundColor = [UIColor colorWithPatternImage:cellGradient];
+    }];
+    
+}
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 69.0;
 }
 
 #pragma mark - Navigation
