@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "FFFantasyAPIClient.h"
 #import "FFTwitterAPIClient.h"
+#import "FFRotoNewsAPI.h"
 
 @interface AppDelegate ()
 
@@ -19,7 +20,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    
+    [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray) {
+        NSLog(@"%@", rotoNewsArray);
+    }];
     return YES;
 }
 
