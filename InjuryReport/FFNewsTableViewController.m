@@ -27,7 +27,6 @@
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             for (NSDictionary *dict in rotoNewsArray) {
                 FFNewsArticle *new = [FFNewsArticle newsFromDictionary:dict];
-                NSLog(@"%@", new);
                 [self.newsArray addObject:new];
             }
             [self.tableView reloadData];

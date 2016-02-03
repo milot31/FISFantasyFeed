@@ -18,11 +18,16 @@
     new.title = dict[@"Title"];
     
     NSMutableString *date = dict[@"Updated"];
+    NSLog(@"%@", date);
     [date substringToIndex:11];
     NSDateFormatter *format = [[NSDateFormatter alloc ]init];
-    [format setDateFormat:@"MM dd yy"];
+    [format setDateFormat:@"yyyy-MM-dd'T'HH:mm:ss"];
     NSDate *updated = [format dateFromString:date];
-    NSString *newDate = [format stringFromDate:updated];
+    NSLog(@"%@", updated);
+    NSDateFormatter *format2 = [[NSDateFormatter alloc]init];
+    [format2 setDateFormat:@"MMM dd yy"];
+    NSString *newDate = [format2 stringFromDate:updated];
+    NSLog(@"%@", newDate);
     new.date = newDate;
     
     new.url = dict[@"Url"];

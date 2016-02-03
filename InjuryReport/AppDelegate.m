@@ -20,9 +20,7 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray) {
-        NSLog(@"%@", rotoNewsArray);
-    }];
+    
     return YES;
 }
 
