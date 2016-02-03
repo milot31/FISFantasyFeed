@@ -13,7 +13,8 @@
 +(FFNewsArticle *)newsFromDictionary:(NSDictionary *)dict {
     
     FFNewsArticle *new = [[FFNewsArticle alloc]init];
-    new.site = dict[@"Source"];    
+    
+    new.site = dict[@"Source"];
     new.team = dict[@"Team"];
     new.title = dict[@"Title"];
     
@@ -30,7 +31,8 @@
     NSLog(@"%@", newDate);
     new.date = newDate;
     
-    new.url = dict[@"Url"];
+    NSURL *url = [NSURL URLWithString:dict[@"Url"]];
+    new.url = url;
     return new;
 }
 

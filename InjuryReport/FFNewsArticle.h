@@ -14,7 +14,7 @@
 @property (nonatomic, strong) NSString *team;
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *date;
-@property (nonatomic, strong) NSString *url;
+@property (nonatomic, strong) NSURL *url;
 
 +(FFNewsArticle *)newsFromDictionary:(NSDictionary *)dict;
 

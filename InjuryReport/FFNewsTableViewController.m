@@ -9,6 +9,7 @@
 #import "FFNewsTableViewController.h"
 #import "FFRotoNewsAPI.h"
 #import "FFNewsArticle.h"
+#import <SafariServices/SafariServices.h>
 
 @interface FFNewsTableViewController ()
 
@@ -60,6 +61,14 @@
     dateLabel.text = new.date;
     
     return cell;
+}
+
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    FFNewsArticle *news = self.newsArray[indexPath.row];
+    SFSafariViewController *sfvc = [[SFSafariViewController alloc]initWithURL:news.url entersReaderIfAvailable:YES];
+    [sfvc setModalPresentationStyle:UIModalTransitionStylePartialCurl];
+    [self presentViewController:sfvc animated:YES completion:nil];
 }
 
 
