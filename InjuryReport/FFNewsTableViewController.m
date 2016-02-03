@@ -7,10 +7,12 @@
 //
 
 #import "FFNewsTableViewController.h"
+#import "FFRotoNewsAPI.h"
+#import "FFNewsArticle.h"
 
 @interface FFNewsTableViewController ()
 
-@property (nonatomic, strong) NSArray *newsArray;
+@property (nonatomic, strong) NSMutableArray *newsArray;
 
 @end
 
@@ -19,7 +21,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.newsArray = [@[] mutableCopy];
     
+    [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray) {
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            for (NSDictionary *dict in rotoNewsArray) {
+                FFNewsArticle *new = [FFNewsArticle newsFromDictionary:dict];
+                NSLog(@"%@", new);
+                [self.newsArray addObject:new];
+            }
+            [self.tableView reloadData];
+        }];
+    }];
 }
 
 
@@ -29,15 +42,23 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return 0;
+    return self.newsArray.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newsCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    FFNewsArticle *new = self.newsArray[indexPath.row];
+    
+    UILabel *titleLabel = (UILabel *)[cell viewWithTag:1];
+    titleLabel.text = new.title;
+    
+    UILabel *siteLabel = (UILabel *)[cell viewWithTag:2];
+    siteLabel.text = new.site;
+    
+    UILabel *dateLabel = (UILabel *)[cell viewWithTag:3];
+    dateLabel.text = new.date;
     
     return cell;
 }

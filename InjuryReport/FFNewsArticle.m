@@ -11,11 +11,20 @@
 @implementation FFNewsArticle
 
 +(FFNewsArticle *)newsFromDictionary:(NSDictionary *)dict {
+    
     FFNewsArticle *new = [[FFNewsArticle alloc]init];
-    new.site = dict[@"Source"];
+    new.site = dict[@"Source"];    
     new.team = dict[@"Team"];
     new.title = dict[@"Title"];
-    new.date = dict[@"Updated"];
+    
+    NSMutableString *date = dict[@"Updated"];
+    [date substringToIndex:11];
+    NSDateFormatter *format = [[NSDateFormatter alloc ]init];
+    [format setDateFormat:@"MM dd yy"];
+    NSDate *updated = [format dateFromString:date];
+    NSString *newDate = [format stringFromDate:updated];
+    new.date = newDate;
+    
     new.url = dict[@"Url"];
     return new;
 }
