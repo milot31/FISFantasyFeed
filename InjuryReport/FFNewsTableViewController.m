@@ -22,6 +22,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.tableView reloadData];
+    
     self.newsArray = [@[] mutableCopy];
     
     [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray) {
@@ -35,7 +37,15 @@
     }];
 }
 
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:YES];
+    [self.tableView reloadData];
+}
 
+-(void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:YES];
+    [self.tableView reloadData];
+}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return 1;
@@ -81,5 +91,21 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)refresh:(UIRefreshControl *)sender {
+    self.newsArray = [@[] mutableCopy];
+    
+    [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray) {
+        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            for (NSDictionary *dict in rotoNewsArray) {
+                FFNewsArticle *new = [FFNewsArticle newsFromDictionary:dict];
+                [self.newsArray addObject:new];
+            }
+            [self.tableView reloadData];
+            [sender endRefreshing];
+        }];
+    }];
+}
+
 
 @end
