@@ -105,7 +105,7 @@
     SFSafariViewController *sfvc = [[SFSafariViewController alloc]initWithURL:URL entersReaderIfAvailable:YES];
     [sfvc setModalPresentationStyle:UIModalTransitionStylePartialCurl];
     [self presentViewController:sfvc animated:YES completion:nil];
-    return YES;
+    return NO;
 }
 
 
