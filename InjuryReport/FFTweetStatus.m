@@ -22,7 +22,7 @@
     [dateFormatter setDateFormat:@"EEE MMM dd HH:mm:ss ZZZ yyyy"];
     NSDate* createdDate = [dateFormatter dateFromString:dictionary[@"created_at"]];
     NSDateFormatter *visibleDate = [[NSDateFormatter alloc]init];
-    [visibleDate setDateFormat:@"MMM dd yy hh:mm a zzz"];
+    [visibleDate setDateFormat:@"MMM dd yy hh:mm"];
     someStatus.createdDate = [visibleDate stringFromDate:createdDate];
     return someStatus;
 }

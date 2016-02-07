@@ -10,6 +10,7 @@
 #import "FISTweetsDataStore.h"
 #import "FFTweetStatus.h"
 #import <FontAwesomeKit/FontAwesomeKit.h>
+#import "TwitterTableViewCell.h"
 
 
 @interface FISPlayerFeedTableViewController () <UINavigationBarDelegate, UINavigationControllerDelegate>
@@ -65,28 +66,29 @@
     return self.tweetStore.tweets.count;
 }
 
-
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 125.5;
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"feedCell" forIndexPath:indexPath];
+    TwitterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"feedCell" forIndexPath:indexPath];
     
     FFTweetStatus *status = self.tweetStore.tweets[indexPath.row];
-    UILabel *realNameLabel = (UILabel *)[cell viewWithTag:5];
-    realNameLabel.text = status.realName;
-    UILabel *twitterHandleLabel = (UILabel *)[cell viewWithTag:1];
-    twitterHandleLabel.text = status.twitterHandle;
-    UILabel *createdDateLabel = (UILabel *)[cell viewWithTag:2];
-    createdDateLabel.text = status.createdDate;
-    UILabel *tweetTextLabel = (UILabel *)[cell viewWithTag:3];
-    tweetTextLabel.text = status.tweetText;
+    cell.displayName.text = status.realName;
+    
+    cell.twitterHandle.text = status.twitterHandle;
+    
+    cell.timePosted.text = status.createdDate;
+    
+    cell.tweetBody.text = status.tweetText;
+    
     dispatch_async(dispatch_get_global_queue(0,0), ^{
         if ( status.imageData == nil )
             return;
         dispatch_async(dispatch_get_main_queue(), ^{
-            //            UIImage *profileImage = (UIImage *)[cell viewWithTag:4];
             UIImage *profileImage = [[UIImage alloc] initWithData:status.imageData];
-            cell.imageView.image = profileImage;
-            [cell setNeedsLayout];
+            cell.twitterAvi.image = profileImage;
+            //[cell setNeedsLayout];
         });
         
     });
@@ -98,49 +100,7 @@
 
 
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)refresh:(UIRefreshControl *)sender {
     [self.tweetStore loadPlayerFeedForPlayer:self.player.fullName withCompletion:^(BOOL success) {

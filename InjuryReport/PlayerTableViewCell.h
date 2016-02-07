@@ -25,5 +25,5 @@
 
 +(UIColor *)getAnimationColor:(PlayerTableViewCell *)cell;
 
-+ (UIImage*)imageOfGradient:(PCGradient *)gradient size:(CGSize)size;
++(UIImage*)imageOfGradient:(PCGradient *)gradient size:(CGSize)size;
 @end
