@@ -8,10 +8,15 @@
 
 #import "TwitterTableViewCell.h"
 
-@implementation TwitterTableViewCell
+//@interface TwitterTableViewCell () <UITextViewDelegate>
+//
+//@end
+
+@implementation TwitterTableViewCell 
 
 - (void)awakeFromNib {
     
+    //self.tweetBody.delegate = self;
     self.tweetBody.editable = NO;
     self.tweetBody.dataDetectorTypes = UIDataDetectorTypeLink;
 
@@ -22,5 +27,9 @@
 
     // Configure the view for the selected state
 }
+
+//-(BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
+//    
+//}
 
 @end

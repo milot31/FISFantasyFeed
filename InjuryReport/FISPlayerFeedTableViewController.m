@@ -11,9 +11,10 @@
 #import "FFTweetStatus.h"
 #import <FontAwesomeKit/FontAwesomeKit.h>
 #import "TwitterTableViewCell.h"
+#import <SafariServices/SafariServices.h>
 
 
-@interface FISPlayerFeedTableViewController () <UINavigationBarDelegate, UINavigationControllerDelegate>
+@interface FISPlayerFeedTableViewController () <UINavigationBarDelegate, UINavigationControllerDelegate, UITextViewDelegate>
 
 @property (strong, nonatomic) FISTweetsDataStore *tweetStore;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navBar;
@@ -37,6 +38,7 @@
     self.navigationController.navigationBar.tintColor = [UIColor colorWithHue:0.33 saturation:1 brightness:0.33 alpha:1];
     
     self.navBar.title = [NSString stringWithFormat:@"%@", self.player.fullName];
+    
 }
 //
     // Uncomment the following line to preserve selection between presentations.
@@ -81,6 +83,7 @@
     cell.timePosted.text = status.createdDate;
     
     cell.tweetBody.text = status.tweetText;
+    cell.tweetBody.delegate = self;
     
     dispatch_async(dispatch_get_global_queue(0,0), ^{
         if ( status.imageData == nil )
@@ -98,7 +101,12 @@
     return cell;
 }
 
-
+-(BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
+    SFSafariViewController *sfvc = [[SFSafariViewController alloc]initWithURL:URL entersReaderIfAvailable:YES];
+    [sfvc setModalPresentationStyle:UIModalTransitionStylePartialCurl];
+    [self presentViewController:sfvc animated:YES completion:nil];
+    return YES;
+}
 
 
 
