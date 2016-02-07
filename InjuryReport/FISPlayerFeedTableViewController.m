@@ -77,8 +77,10 @@
     
     FFTweetStatus *status = self.tweetStore.tweets[indexPath.row];
     cell.displayName.text = status.realName;
+    [cell.displayName sizeToFit];
     
     cell.twitterHandle.text = status.twitterHandle;
+    [cell.twitterHandle sizeToFit];
     
     cell.timePosted.text = status.createdDate;
     
