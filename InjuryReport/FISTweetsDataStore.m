@@ -32,8 +32,8 @@
     return self;
 }
 
--(void)loadPlayerFeedForPlayer:(NSString *)player withCompletion:(void (^)(BOOL success))completionBlock{
-    [FFTwitterAPIClient getTwitterStatuses:player withCompletion:^(NSArray *statuses) {
+-(void)loadPlayerFeedForPlayer:(NSString *)player fromTeam:(NSString*)team withCompletion:(void (^)(BOOL success))completionBlock{
+    [FFTwitterAPIClient getTwitterStatuses:player fromTeam:team withCompletion:^(NSArray *statuses) {
         for (NSDictionary *dictionary in statuses) {
             FFTweetStatus *newStatus = [FFTweetStatus statusesFromDictionary:dictionary];
             if (![self.tweets containsObject:newStatus]) {

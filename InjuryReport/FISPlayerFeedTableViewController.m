@@ -28,7 +28,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.tweetStore = [FISTweetsDataStore tweetsDataStore];
-    [self.tweetStore loadPlayerFeedForPlayer:self.player.fullName withCompletion:^(BOOL success) {
+    [self.tweetStore loadPlayerFeedForPlayer:self.player.fullName fromTeam:self.player.team withCompletion:^(BOOL success) {
         if (success) {
             
             [self.tableView reloadData];
@@ -113,7 +113,7 @@
 
 
 - (IBAction)refresh:(UIRefreshControl *)sender {
-    [self.tweetStore loadPlayerFeedForPlayer:self.player.fullName withCompletion:^(BOOL success) {
+    [self.tweetStore loadPlayerFeedForPlayer:self.player.fullName fromTeam:self.player.team withCompletion:^(BOOL success) {
         if (success) {
             
             [self.tableView reloadData];

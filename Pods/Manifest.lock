@@ -1,4 +1,5 @@
 PODS:
+  - Backendless-ios-SDK (1.15.0)
   - FontAwesomeKit (2.2.0):
     - FontAwesomeKit/Core (= 2.2.0)
     - FontAwesomeKit/FontAwesome (= 2.2.0)
@@ -14,14 +15,16 @@ PODS:
     - FontAwesomeKit/Core
   - FontAwesomeKit/Zocial (2.2.0):
     - FontAwesomeKit/Core
-  - STTwitter (0.2.2)
+  - STTwitter (0.2.3)
 
 DEPENDENCIES:
+  - Backendless-ios-SDK (~> 1.15.0)
   - FontAwesomeKit (~> 2.2.0)
   - STTwitter
 
 SPEC CHECKSUMS:
+  Backendless-ios-SDK: 707586ce195e811f4f138705e971d9d72dd0a7c7
   FontAwesomeKit: 025fd4dd1017fe4e3f8d47b03e024deedbb33cd4
-  STTwitter: eb85d8770ddb0f8989f341cf41ea875e90ac6e7f
+  STTwitter: 77386cb6f1807fbfc0e321b9233bdecc9786195d
 
 COCOAPODS: 0.39.0

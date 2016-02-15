@@ -1,6 +1,10 @@
 # Acknowledgements
 This application makes use of the following third party libraries:
 
+## Backendless-ios-SDK
+
+Copyright (c) 2012-2014 by Backendless.com
+
 ## FontAwesomeKit
 
 Copyright (C) 2013 Pride Chung

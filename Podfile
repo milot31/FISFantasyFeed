@@ -7,6 +7,7 @@ target 'InjuryReport' do
 
  pod 'STTwitter'
  pod 'FontAwesomeKit', '~> 2.2.0'
+ pod 'Backendless-ios-SDK', '~>1.15.0'
 
 end
 
