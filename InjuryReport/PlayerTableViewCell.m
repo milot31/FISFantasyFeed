@@ -70,12 +70,96 @@
 }
 
 +(UIImage *)getTeamLogo:(PlayerTableViewCell *)cell {
-    if ([cell.playersTeamLabel.text isEqual:@"BAL"]) {
-        return [UIImage imageNamed:@"ravens"];
+    
+    NSString *team = cell.playersTeamLabel.text;
+    NSString *first = [team substringToIndex:1];
+    
+    if ([first isEqual:@"A"]) {
+        if ([team isEqual:@"ARI"]) {
+            return [UIImage imageNamed:@"cardinals"];
+        } else {
+            return [UIImage imageNamed:@"falcons"];
+        }
+    } else if ([first isEqual:@"B"]) {
+        if ([team isEqual:@"BAL"]) {
+            return [UIImage imageNamed:@"ravens"];
+        } else {
+            return [UIImage imageNamed:@"bills"];
+        }
+    } else if ([first isEqual:@"C"]) {
+        if ([team isEqual:@"CAR"]) {
+            return [UIImage imageNamed:@"panthers"];
+        } else if ([team isEqual:@"CHI"]) {
+            return [UIImage imageNamed:@"bears"];
+        } else if ([team isEqual:@"CIN"]) {
+            return [UIImage imageNamed:@"bengals"];
+        } else {
+            return [UIImage imageNamed:@"browns"];
+        }
+    } else if ([first isEqual:@"D"]) {
+        if ([team isEqual:@"DAL"]) {
+            return [UIImage imageNamed:@"cowboys"];
+        } else if ([team isEqual:@"DEN"]) {
+            return [UIImage imageNamed:@"broncos"];
+        } else {
+            return [UIImage imageNamed:@"lions"];
+        }
+    } else if ([first isEqual:@"M"]) {
+        if ([team isEqual:@"MIA"]) {
+            return [UIImage imageNamed:@"dolphins"];
+        } else {
+            return [UIImage imageNamed:@"vikings"];
+        }
+    } else if ([first isEqual:@"N"]) {
+        if ([team isEqual:@"NE"]) {
+            return [UIImage imageNamed:@"patriots"];
+        } else if ([team isEqual:@"NO"]) {
+            return [UIImage imageNamed:@"saints"];
+        } else if ([team isEqual:@"NYG"]) {
+            return [UIImage imageNamed:@"giants"];
+        } else {
+            return [UIImage imageNamed:@"jets"];
+        }
+    } else if ([first isEqual:@"P"]) {
+        if ([team isEqual:@"PHI"]) {
+            return [UIImage imageNamed:@"eagles"];
+        } else {
+            return [UIImage imageNamed:@"steelers"];
+        }
+    } else if ([first isEqual:@"S"]) {
+        if ([team isEqual:@"SD"]) {
+            return [UIImage imageNamed:@"chargers"];
+        } else if ([team isEqual:@"SEA"]) {
+            return [UIImage imageNamed:@"seahawks"];
+        } else if ([team isEqual:@"SF"]) {
+            return [UIImage imageNamed:@"49ers"];
+        } else {
+            return [UIImage imageNamed:@"rams"];
+        }
+    } else if ([first isEqual:@"T"]) {
+        if ([team isEqual:@"TB"]) {
+            return [UIImage imageNamed:@"bucs"];
+        } else {
+            return [UIImage imageNamed:@"titans"];
+        }
+    } else {
+        if ([team isEqual:@"GB"]) {
+            return [UIImage imageNamed:@"packers"];
+        } else if ([team isEqual:@"HOU"]) {
+            return [UIImage imageNamed:@"texans"];
+        } else if ([team isEqual:@"IND"]) {
+            return [UIImage imageNamed:@"colts"];
+        } else if ([team isEqual:@"JAC"]) {
+            return [UIImage imageNamed:@"jaguars"];
+        } else if ([team isEqual:@"KC"]) {
+            return [UIImage imageNamed:@"chiefs"];
+        } else if ([team isEqual:@"OAK"]) {
+            return [UIImage imageNamed:@"raiders"];
+        } else {
+            return [UIImage imageNamed:@"redskins"];
+        }
     }
-    if ([cell.playersTeamLabel.text isEqual:@"PIT"]) {
-        return [UIImage imageNamed:@"steelers"];
-    }
+    
     return nil;
 }
 

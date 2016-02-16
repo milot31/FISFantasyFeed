@@ -106,6 +106,7 @@
          cell.playersPositionLabel.text = player.position;
          cell.playersTeamLabel.text = player.team;
          cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
+         cell.logoView.image = [PlayerTableViewCell getTeamLogo:cell];
 
      } else {
          
@@ -115,6 +116,7 @@
          cell.playersPositionLabel.text = player.position;
          cell.playersTeamLabel.text = player.team;
          cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
+         cell.logoView.image = [PlayerTableViewCell getTeamLogo:cell];
 
      }
      return cell;
