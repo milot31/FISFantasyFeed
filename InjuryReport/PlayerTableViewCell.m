@@ -16,6 +16,7 @@
     
     UIImage *cellGradient = [PlayerTableViewCell imageOfGradient:[FeedStyleKit gradient] size:self.layerView.frame.size];
     self.layerView.backgroundColor = [UIColor colorWithPatternImage:cellGradient];
+    [self.logoView setClipsToBounds:YES];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -66,6 +67,16 @@
     } else {
         return [UIColor blackColor];
     }
+}
+
++(UIImage *)getTeamLogo:(PlayerTableViewCell *)cell {
+    if ([cell.playersTeamLabel.text isEqual:@"BAL"]) {
+        return [UIImage imageNamed:@"ravens"];
+    }
+    if ([cell.playersTeamLabel.text isEqual:@"PIT"]) {
+        return [UIImage imageNamed:@"steelers"];
+    }
+    return nil;
 }
 
 + (void)drawGradient:(PCGradient *)gradient withFrame:(CGRect)frame

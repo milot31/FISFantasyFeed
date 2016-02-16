@@ -82,7 +82,7 @@
     cell.playersPositionLabel.text = selectedPlayer.position;
     cell.playersTeamLabel.text = selectedPlayer.team;
     cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
-
+    cell.logoView.image = [PlayerTableViewCell getTeamLogo:cell];
     
 //    UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
 //    nameLabel.text = selectedPlayer.fullName;
