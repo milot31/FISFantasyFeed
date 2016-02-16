@@ -35,6 +35,9 @@
             [self.tableView reloadData];
         }];
     }];
+    
+    self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
+    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor blackColor]}];
 }
 
 -(void)viewWillAppear:(BOOL)animated {

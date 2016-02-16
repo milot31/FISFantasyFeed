@@ -31,6 +31,10 @@
     self.tweetStore = [FISTweetsDataStore tweetsDataStore];
     [self.tweetStore.tweets removeAllObjects];
     
+    self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
+    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor blackColor]}];
+
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {

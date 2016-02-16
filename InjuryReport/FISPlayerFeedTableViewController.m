@@ -35,9 +35,13 @@
         }
     }];
     
-    self.navigationController.navigationBar.tintColor = [UIColor colorWithHue:0.33 saturation:1 brightness:0.33 alpha:1];
+    //self.navigationController.navigationBar.tintColor = [UIColor colorWithHue:0.33 saturation:1 brightness:0.33 alpha:1];
     
     self.navBar.title = [NSString stringWithFormat:@"%@", self.player.fullName];
+    
+    self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
+    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor blackColor]}];
+
     
 }
 //
