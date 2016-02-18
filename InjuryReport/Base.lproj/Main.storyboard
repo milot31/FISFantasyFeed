@@ -78,7 +78,7 @@
                             <fragment content="loading news">
                                 <attributes>
                                     <font key="NSFont" metaFont="smallSystem"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
@@ -121,10 +121,10 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3jq-88-x6S">
                                                     <rect key="frame" x="5" y="4" width="404" height="61"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hzy-si-coL">
+                                                        <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hzy-si-coL">
                                                             <rect key="frame" x="0.0" y="0.0" width="175" height="61"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="103" id="CPo-t3-zrl"/>
+                                                                <constraint firstAttribute="width" constant="175" id="CPo-t3-zrl"/>
                                                                 <constraint firstAttribute="height" constant="61" id="JrF-Tc-hFG"/>
                                                             </constraints>
                                                         </imageView>
@@ -263,9 +263,9 @@
                                             <rect key="frame" x="5" y="4" width="404" height="61"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" alpha="0.20000000000000001" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Fr3-ly-29d">
-                                                    <rect key="frame" x="0.0" y="0.0" width="172" height="61"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="175" height="61"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="172" id="FqN-wz-ONK"/>
+                                                        <constraint firstAttribute="width" constant="175" id="FqN-wz-ONK"/>
                                                         <constraint firstAttribute="height" constant="61" id="y5n-6Z-w64"/>
                                                     </constraints>
                                                 </imageView>
@@ -296,7 +296,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Team" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D21-sd-PmZ">
-                                            <rect key="frame" x="339" y="8" width="36" height="21"/>
+                                            <rect key="frame" x="339" y="8" width="35.5" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="3W2-Tt-crw"/>
                                             </constraints>
@@ -304,7 +304,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GB" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdg-ha-eHG">
-                                            <rect key="frame" x="336" y="37" width="42" height="21"/>
+                                            <rect key="frame" x="336" y="37" width="41.5" height="21"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="21" id="GQU-ty-7bA"/>
                                             </constraints>
@@ -409,8 +409,18 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <view alpha="0.40000000000000002" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lyz-de-m6S" userLabel="Shadow">
+                                            <rect key="frame" x="11" y="46" width="54" height="54"/>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </view>
                                         <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RBJ-Qq-b2R">
                                             <rect key="frame" x="8" y="43" width="54" height="54"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="4"/>
+                                            </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Twitter Handle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzx-P5-QBH">
                                             <rect key="frame" x="277" y="13" width="120" height="13"/>
@@ -443,7 +453,7 @@
                             <fragment content="loading tweets...">
                                 <attributes>
                                     <font key="NSFont" metaFont="smallSystem"/>
-                                    <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                 </attributes>
                             </fragment>
                         </attributedString>
