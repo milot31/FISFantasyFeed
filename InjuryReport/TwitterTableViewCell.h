@@ -15,5 +15,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *timePosted;
 @property (strong, nonatomic) IBOutlet UITextView *tweetBody;
 @property (strong, nonatomic) IBOutlet UIImageView *twitterAvi;
+@property (strong, nonatomic) IBOutlet UILabel *retweetLabel;
 
 @end

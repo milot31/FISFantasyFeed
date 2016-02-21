@@ -16,6 +16,8 @@
 @property (nonatomic, strong) NSString* realName;
 @property (nonatomic, strong) NSData* imageData;
 
+@property (nonatomic) BOOL isRetweet;
+@property (nonatomic, strong) NSString* retweetHandle;
 
 +(instancetype)statusesFromDictionary:(NSDictionary *)dictionary;
 

@@ -12,9 +12,20 @@
 
 +(instancetype)statusesFromDictionary:(NSDictionary *)dictionary{
     FFTweetStatus *someStatus = [[FFTweetStatus alloc]init];
+    
+    if (dictionary[@"retweeted_status"] != nil) {
+        someStatus.isRetweet = YES;
+        someStatus.retweetHandle = dictionary[@"retweeted_status"][@"user"][@"name"];
+        NSLog(@"%@", someStatus.retweetHandle);
+        someStatus.tweetText = dictionary[@"retweeted_status"][@"text"];
+        NSLog(@"%@", someStatus.tweetText);
+    } else {
+        someStatus.isRetweet = NO;
+        someStatus.retweetHandle = nil;
+        someStatus.tweetText = dictionary[@"text"];
+    }
 
  
-    someStatus.tweetText = dictionary[@"text"];
     someStatus.realName = [dictionary valueForKeyPath:@"user.name"];
     someStatus.twitterHandle = [NSString stringWithFormat:@"@%@", [dictionary valueForKeyPath:@"user.screen_name"]];
     someStatus.imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:[dictionary valueForKeyPath:@"user.profile_image_url_https"]]];

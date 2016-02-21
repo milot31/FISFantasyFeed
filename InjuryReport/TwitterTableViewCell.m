@@ -19,6 +19,10 @@
     //self.tweetBody.delegate = self;
     self.tweetBody.editable = NO;
     self.tweetBody.dataDetectorTypes = UIDataDetectorTypeLink;
+    //[self.tweetBody sizeToFit];
+    //[self.tweetBody layoutIfNeeded];
+    [self.tweetBody sizeThatFits:CGSizeMake(self.tweetBody.frame.size.width, CGFLOAT_MAX)];
+    self.retweetLabel.hidden = YES;
 
 }
 

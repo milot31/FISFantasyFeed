@@ -73,13 +73,35 @@
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//    static TwitterTableViewCell *cell = nil;
+//    static dispatch_once_t onceToken;
+//    
+//    dispatch_once(&onceToken, ^{
+//        cell = [self.tableView dequeueReusableCellWithIdentifier:@"feedCell"];
+//    });
+//    
+//    return [self calculateHeightForConfiguredSizingCell:cell];
     return 125.5;
 }
+
+//- (CGFloat)calculateHeightForConfiguredSizingCell:(UITableViewCell *)sizingCell {
+//
+//    CGSize size = [sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+//    return size.height;
+//}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TwitterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"feedCell" forIndexPath:indexPath];
     
     FFTweetStatus *status = self.tweetStore.tweets[indexPath.row];
+    
+    if (status.isRetweet == YES) {
+        cell.retweetLabel.hidden = NO;
+        cell.retweetLabel.text = [NSString stringWithFormat:@"retweeted from: %@", status.retweetHandle];
+    } else {
+        cell.retweetLabel.hidden = YES;
+    }
+    
     cell.displayName.text = status.realName;
     [cell.displayName sizeToFit];
     
@@ -90,6 +112,10 @@
     
     cell.tweetBody.text = status.tweetText;
     cell.tweetBody.delegate = self;
+    //NSLog(@"%@", cell.tweetBody.text);
+    
+//    [cell.tweetBody sizeToFit];
+//    [cell.tweetBody layoutIfNeeded];
     
     dispatch_async(dispatch_get_global_queue(0,0), ^{
         if ( status.imageData == nil )
