@@ -382,6 +382,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="pZU-dx-sVb">
+                            <rect key="frame" x="0.0" y="218" width="414" height="332"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="126" id="pW2-Hz-1Ny" customClass="TwitterTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="414" height="126"/>
@@ -470,6 +474,7 @@
                     </refreshControl>
                     <connections>
                         <outlet property="navBar" destination="Ni1-X1-UPw" id="Oaq-yJ-5BP"/>
+                        <outlet property="noTweetImage" destination="pZU-dx-sVb" id="lf2-P6-Fsc"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8YZ-nr-JG4" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -12,6 +12,7 @@
 #import <FontAwesomeKit/FontAwesomeKit.h>
 #import "TwitterTableViewCell.h"
 #import <SafariServices/SafariServices.h>
+#import "FeedStyleKit.h"
 
 
 @interface FISPlayerFeedTableViewController () <UINavigationBarDelegate, UINavigationControllerDelegate, UITextViewDelegate>
@@ -19,6 +20,7 @@
 @property (strong, nonatomic) FISTweetsDataStore *tweetStore;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navBar;
 - (IBAction)refresh:(UIRefreshControl *)sender;
+@property (strong, nonatomic) IBOutlet UIImageView *noTweetImage;
 
 
 @end
@@ -27,11 +29,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.noTweetImage.hidden = YES;
+    [self.noTweetImage setImage:[FeedStyleKit imageOfCanvas3]];
     self.tweetStore = [FISTweetsDataStore tweetsDataStore];
     [self.tweetStore loadPlayerFeedForPlayer:self.player.fullName fromTeam:self.player.team withCompletion:^(BOOL success) {
         if (success) {
             
             [self.tableView reloadData];
+            
+            if (self.tweetStore.tweets.count == 0) {
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    self.noTweetImage.hidden = NO;
+                }];
+            } else {
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    self.noTweetImage.hidden = YES;
+                }];
+            }
         }
     }];
     
