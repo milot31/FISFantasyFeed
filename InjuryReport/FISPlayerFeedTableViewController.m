@@ -23,6 +23,7 @@
 @property (strong, nonatomic) IBOutlet UIImageView *noTweetImage;
 
 
+
 @end
 
 @implementation FISPlayerFeedTableViewController
@@ -30,8 +31,14 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.noTweetImage.hidden = YES;
-    [self.noTweetImage setImage:[FeedStyleKit imageOfCanvas3]];
+    CGRect orig = self.noTweetImage.frame;
+    CGRect temp = self.noTweetImage.frame;
+    temp.size.height = 20;
+    
+    self.noTweetImage.frame = temp;
+    [self.noTweetImage setImage:[FeedStyleKit imageOfLoading]];
+    self.noTweetImage.hidden = NO;
+    
     self.tweetStore = [FISTweetsDataStore tweetsDataStore];
     [self.tweetStore loadPlayerFeedForPlayer:self.player.fullName fromTeam:self.player.team withCompletion:^(BOOL success) {
         if (success) {
@@ -40,6 +47,8 @@
             
             if (self.tweetStore.tweets.count == 0) {
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [self.noTweetImage setImage:[FeedStyleKit imageOfCanvas3]];
+                    self.noTweetImage.frame = orig;
                     self.noTweetImage.hidden = NO;
                 }];
             } else {
