@@ -10,10 +10,13 @@
 #import "FFRotoNewsAPI.h"
 #import "FFNewsArticle.h"
 #import <SafariServices/SafariServices.h>
+#import "FeedStyleKit.h"
 
 @interface FFNewsTableViewController ()
 
 @property (nonatomic, strong) NSMutableArray *newsArray;
+@property (strong, nonatomic) IBOutlet UIImageView *loadingImage;
+
 
 @end
 
@@ -24,13 +27,17 @@
     
     [self.tableView reloadData];
     
-    self.newsArray = [@[] mutableCopy];
+    self.newsArray = [NSMutableArray new];
+    
+    [self.loadingImage setImage:[FeedStyleKit imageOfLoading]];
+    self.loadingImage.hidden = NO;
     
     [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray) {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
             for (NSDictionary *dict in rotoNewsArray) {
                 FFNewsArticle *new = [FFNewsArticle newsFromDictionary:dict];
                 [self.newsArray addObject:new];
+                self.loadingImage.hidden = YES;
             }
             [self.tableView reloadData];
         }];
@@ -38,6 +45,9 @@
     
     self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
     [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor blackColor]}];
+    
+    self.refreshControl.tintColor = [UIColor whiteColor];
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -96,7 +106,7 @@
 */
 
 - (IBAction)refresh:(UIRefreshControl *)sender {
-    self.newsArray = [@[] mutableCopy];
+    self.newsArray = [NSMutableArray new];
     
     [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray) {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{

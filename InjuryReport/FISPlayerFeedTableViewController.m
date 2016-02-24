@@ -22,8 +22,6 @@
 - (IBAction)refresh:(UIRefreshControl *)sender;
 @property (strong, nonatomic) IBOutlet UIImageView *noTweetImage;
 
-
-
 @end
 
 @implementation FISPlayerFeedTableViewController
