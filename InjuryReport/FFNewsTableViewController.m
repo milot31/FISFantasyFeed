@@ -43,8 +43,8 @@
         }];
     }];
     
-    self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
-    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor blackColor]}];
+//    self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
+//    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor blackColor]}];
     
     self.refreshControl.tintColor = [UIColor whiteColor];
     
