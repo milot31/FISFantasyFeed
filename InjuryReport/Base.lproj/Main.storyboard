@@ -121,7 +121,7 @@
                         <viewControllerLayoutGuide type="top" id="KhC-6c-FFC"/>
                         <viewControllerLayoutGuide type="bottom" id="Q4J-53-tV4"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="g4Q-j7-Jyh">
+                    <view key="view" contentMode="scaleToFill" id="g4Q-j7-Jyh" userLabel="Add Player">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -135,7 +135,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ejC-B6-rJ1">
                                 <rect key="frame" x="20" y="20" width="55" height="30"/>
                                 <state key="normal" title="Cancel">
-                                    <color key="titleColor" red="0.0" green="0.33024364229999997" blue="0.0001010954365" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="cancelButtonTapper:" destination="2Ir-qN-yMv" eventType="touchUpInside" id="oX3-th-QZs"/>
@@ -248,7 +248,7 @@
                                 </prototypes>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="d4d-QR-0QA" firstAttribute="top" secondItem="2ab-mv-kr8" secondAttribute="bottom" id="3K7-Fz-Lbr"/>
                             <constraint firstAttribute="trailingMargin" secondItem="2JG-6K-e8x" secondAttribute="trailing" constant="-20" id="DHI-s4-Bxi"/>
@@ -389,7 +389,7 @@
                     <tabBarItem key="tabBarItem" title="Item" id="lwA-nD-qcr"/>
                     <navigationItem key="navigationItem" title="My Team" id="aPr-4k-eQa">
                         <barButtonItem key="rightBarButtonItem" style="plain" systemItem="add" id="ILm-9w-glq">
-                            <color key="tintColor" red="0.0" green="0.50196081399917603" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <segue destination="2Ir-qN-yMv" kind="presentation" id="szN-jh-ZwZ"/>
                             </connections>
@@ -477,20 +477,20 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleAspectFit" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4x-EY-Mcf">
-                                            <rect key="frame" x="70" y="33" width="336" height="92.5"/>
+                                            <rect key="frame" x="70" y="26" width="336" height="95.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="92.5" id="A9e-Ui-r7b"/>
+                                                <constraint firstAttribute="height" constant="95.5" id="A9e-Ui-r7b"/>
                                             </constraints>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.73509349634388732" green="0.92434581656148829" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
                                         <constraint firstItem="Lyy-be-RM8" firstAttribute="top" secondItem="TPa-KG-oqN" secondAttribute="bottom" constant="-2" id="7Yw-NF-fOa"/>
-                                        <constraint firstItem="T4x-EY-Mcf" firstAttribute="top" secondItem="Lyy-be-RM8" secondAttribute="bottom" constant="1" id="ABz-vq-oyI"/>
+                                        <constraint firstItem="T4x-EY-Mcf" firstAttribute="top" secondItem="Lyy-be-RM8" secondAttribute="bottom" constant="-6" id="ABz-vq-oyI"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="Lyy-be-RM8" secondAttribute="leading" id="Ajj-4f-2xz"/>
                                         <constraint firstItem="Lyz-de-m6S" firstAttribute="top" secondItem="RBJ-Qq-b2R" secondAttribute="bottom" constant="-51" id="ENY-Tg-09M"/>
                                         <constraint firstItem="TPa-KG-oqN" firstAttribute="top" secondItem="WYi-U5-og6" secondAttribute="topMargin" constant="-4" id="Ltk-ae-uD4"/>
@@ -522,7 +522,14 @@
                             <outlet property="delegate" destination="4cl-7G-O0t" id="AjP-xU-WuL"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Ni1-X1-UPw"/>
+                    <navigationItem key="navigationItem" id="Ni1-X1-UPw">
+                        <barButtonItem key="leftBarButtonItem" image="left_Arrow" id="xQL-3c-XiO">
+                            <color key="tintColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="backButtonTapped:" destination="4cl-7G-O0t" id="xjg-wS-ICQ"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <refreshControl key="refreshControl" opaque="NO" multipleTouchEnabled="YES" contentMode="center" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" id="T5Z-qW-bTU">
                         <autoresizingMask key="autoresizingMask"/>
@@ -591,4 +598,7 @@
             <point key="canvasLocation" x="439" y="1458"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="left_Arrow" width="22" height="16"/>
+    </resources>
 </document>
