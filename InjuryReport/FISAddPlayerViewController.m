@@ -37,6 +37,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    self.title = @"Add Player";
 
     self.positionArray = @[ @"-",
                             @"Quarterback",
@@ -55,9 +57,6 @@
     [self initalizeAllTheGroupsToDefaultValue];
     
     self.playerTableView.backgroundColor = [UIColor darkGrayColor];
-    
-//    self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
-//    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor blackColor]}];
 
 }
 
@@ -75,7 +74,6 @@
     
     
     [self reloadPlayersBasedOnPickerSelection];
-    //self.filteredPlayerArray = [NSMutableArray arrayWithCapacity:[self.playerArray count]];
 
     [self.playerTableView reloadData];
 }
@@ -186,16 +184,6 @@
     
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 -(void)loadQuarterbacks {
     

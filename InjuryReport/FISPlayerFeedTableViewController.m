@@ -57,32 +57,9 @@
         }
     }];
     
-    //self.navigationController.navigationBar.tintColor = [UIColor colorWithHue:0.33 saturation:1 brightness:0.33 alpha:1];
-    
     self.navBar.title = [NSString stringWithFormat:@"%@", self.player.fullName];
     
-    //self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
-    //[self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor blackColor]}];
-
-    
 }
-//
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
-}
-
-#pragma mark - Table view data source
-
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    return 90.0;
-//}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
@@ -134,10 +111,6 @@
     
     cell.tweetBody.text = status.tweetText;
     cell.tweetBody.delegate = self;
-    //NSLog(@"%@", cell.tweetBody.text);
-    
-//    [cell.tweetBody sizeToFit];
-//    [cell.tweetBody layoutIfNeeded];
     
     dispatch_async(dispatch_get_global_queue(0,0), ^{
         if ( status.imageData == nil )
@@ -145,12 +118,9 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             UIImage *profileImage = [[UIImage alloc] initWithData:status.imageData];
             cell.twitterAvi.image = profileImage;
-            //[cell setNeedsLayout];
         });
         
     });
-
-    // Configure the cell...
     
     return cell;
 }

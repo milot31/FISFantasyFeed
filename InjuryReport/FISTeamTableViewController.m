@@ -31,10 +31,6 @@
     self.tweetStore = [FISTweetsDataStore tweetsDataStore];
     [self.tweetStore.tweets removeAllObjects];
     
-//    self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
-//    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor blackColor]}];
-
-    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -84,15 +80,6 @@
     cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
     cell.logoView.image = [PlayerTableViewCell getTeamLogo:cell];
     
-//    UILabel *nameLabel = (UILabel *)[cell viewWithTag:1];
-//    nameLabel.text = selectedPlayer.fullName;
-//    
-//    UILabel *positionLabel = (UILabel *)[cell viewWithTag:2];
-//    positionLabel.text = selectedPlayer.position;
-//    
-//    UILabel *teamLabel = (UILabel *)[cell viewWithTag:3];
-//    teamLabel.text = selectedPlayer.team;
-    
     return cell;
 }
 
@@ -113,12 +100,8 @@
     return 69.0;
 }
 
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
     
     FISPlayerFeedTableViewController *destinationVC = segue.destinationViewController;
     if ([segue.identifier isEqualToString:@"playerFeedSegue"]) {

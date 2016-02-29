@@ -43,9 +43,6 @@
         }];
     }];
     
-//    self.navigationController.navigationBar.backgroundColor = [UIColor greenColor];
-//    [self.navigationController.navigationBar setTitleTextAttributes: @{NSForegroundColorAttributeName:[UIColor blackColor]}];
-    
     self.refreshControl.tintColor = [UIColor whiteColor];
     
 }
@@ -68,7 +65,7 @@
     return self.newsArray.count;
 }
 
-
+//ARRAY W CAPACITY TO FIX CRASH?
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newsCell" forIndexPath:indexPath];
     
@@ -93,17 +90,6 @@
     [sfvc setModalPresentationStyle:UIModalTransitionStylePartialCurl];
     [self presentViewController:sfvc animated:YES completion:nil];
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 - (IBAction)refresh:(UIRefreshControl *)sender {
     self.newsArray = [NSMutableArray new];
