@@ -405,20 +405,20 @@
         <scene sceneID="O0u-Ix-hE9">
             <objects>
                 <tableViewController id="4cl-7G-O0t" customClass="FISPlayerFeedTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="126" sectionHeaderHeight="28" sectionFooterHeight="28" id="q5D-Ft-u3Y">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="109" sectionHeaderHeight="28" sectionFooterHeight="28" id="q5D-Ft-u3Y">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.73509349629999998" green="0.92434581660000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="pZU-dx-sVb">
-                            <rect key="frame" x="0.0" y="218" width="414" height="269"/>
+                            <rect key="frame" x="0.0" y="201" width="414" height="269"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="126" id="pW2-Hz-1Ny" customClass="TwitterTableViewCell">
-                                <rect key="frame" x="0.0" y="92" width="414" height="126"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="feedCell" rowHeight="109" id="pW2-Hz-1Ny" customClass="TwitterTableViewCell">
+                                <rect key="frame" x="0.0" y="92" width="414" height="109"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="pW2-Hz-1Ny" id="WYi-U5-og6">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="125.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="108.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPa-KG-oqN">
@@ -480,7 +480,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleAspectFit" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4x-EY-Mcf">
-                                            <rect key="frame" x="70" y="26" width="336" height="95.5"/>
+                                            <rect key="frame" x="70" y="26" width="336" height="71.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -492,20 +492,20 @@
                                         <constraint firstItem="Lyy-be-RM8" firstAttribute="top" secondItem="TPa-KG-oqN" secondAttribute="bottom" constant="-2" id="7Yw-NF-fOa"/>
                                         <constraint firstItem="T4x-EY-Mcf" firstAttribute="top" secondItem="Lyy-be-RM8" secondAttribute="bottom" constant="-6" id="ABz-vq-oyI"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="Lyy-be-RM8" secondAttribute="leading" id="Ajj-4f-2xz"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="T4x-EY-Mcf" secondAttribute="bottom" constant="-4" id="Amj-sZ-eky"/>
                                         <constraint firstItem="Lyz-de-m6S" firstAttribute="top" secondItem="RBJ-Qq-b2R" secondAttribute="bottom" constant="-51" id="ENY-Tg-09M"/>
                                         <constraint firstItem="TPa-KG-oqN" firstAttribute="top" secondItem="WYi-U5-og6" secondAttribute="topMargin" constant="-4" id="Ltk-ae-uD4"/>
                                         <constraint firstItem="T4x-EY-Mcf" firstAttribute="leading" secondItem="Lyz-de-m6S" secondAttribute="trailing" constant="5" id="V5l-fN-kjQ"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="TPa-KG-oqN" secondAttribute="leading" id="ZVz-tl-5i2"/>
                                         <constraint firstItem="Fzx-P5-QBH" firstAttribute="top" secondItem="WYi-U5-og6" secondAttribute="topMargin" constant="-4" id="b9g-k0-q7Q"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="fav-MK-CFc" secondAttribute="trailing" constant="9" id="h9c-lo-m0j"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="T4x-EY-Mcf" secondAttribute="bottom" constant="3" id="kKJ-Mc-RNw"/>
                                         <constraint firstItem="Fzx-P5-QBH" firstAttribute="leading" secondItem="TPa-KG-oqN" secondAttribute="trailing" constant="1" id="mZe-5I-FoF"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="T4x-EY-Mcf" secondAttribute="trailing" id="pad-LS-VDQ"/>
                                         <constraint firstAttribute="trailingMargin" secondItem="Fzx-P5-QBH" secondAttribute="trailing" constant="9" id="s8j-24-a56"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Lyz-de-m6S" secondAttribute="bottom" constant="24.5" id="sGt-l6-5Et"/>
                                         <constraint firstItem="Lyz-de-m6S" firstAttribute="leading" secondItem="RBJ-Qq-b2R" secondAttribute="trailing" constant="-51" id="xCw-iK-7mU"/>
                                         <constraint firstItem="fav-MK-CFc" firstAttribute="top" secondItem="Fzx-P5-QBH" secondAttribute="bottom" constant="1" id="xHh-S2-sRm"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="RBJ-Qq-b2R" secondAttribute="leading" id="xib-P2-crO"/>
+                                        <constraint firstItem="RBJ-Qq-b2R" firstAttribute="top" secondItem="Lyy-be-RM8" secondAttribute="bottom" constant="4" id="yQy-L9-Pdo"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
