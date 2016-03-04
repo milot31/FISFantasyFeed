@@ -29,6 +29,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    self.tableView.rowHeight = UITableViewAutomaticDimension;
+    self.tableView.estimatedRowHeight = 125.5;
+    
     CGRect orig = self.noTweetImage.frame;
     CGRect temp = self.noTweetImage.frame;
     temp.size.height = 20;
@@ -71,7 +74,7 @@
     return self.tweetStore.tweets.count;
 }
 
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
 //    static TwitterTableViewCell *cell = nil;
 //    static dispatch_once_t onceToken;
 //    
@@ -80,8 +83,8 @@
 //    });
 //    
 //    return [self calculateHeightForConfiguredSizingCell:cell];
-    return 125.5;
-}
+//    return 125.5;
+//}
 
 //- (CGFloat)calculateHeightForConfiguredSizingCell:(UITableViewCell *)sizingCell {
 //

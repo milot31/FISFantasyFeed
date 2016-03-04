@@ -8,9 +8,9 @@
 
 #import "TwitterTableViewCell.h"
 
-//@interface TwitterTableViewCell () <UITextViewDelegate>
-//
-//@end
+@interface TwitterTableViewCell () <UITextViewDelegate>
+
+@end
 
 @implementation TwitterTableViewCell 
 
@@ -18,9 +18,10 @@
     
     self.tweetBody.editable = NO;
     self.tweetBody.dataDetectorTypes = UIDataDetectorTypeLink;
-    [self.tweetBody sizeThatFits:CGSizeMake(self.tweetBody.frame.size.width, CGFLOAT_MAX)];
+    [self.tweetBody sizeToFit];
+    //[self.tweetBody layoutIfNeeded];
     self.retweetLabel.hidden = YES;
-
+    
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {

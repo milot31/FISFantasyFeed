@@ -423,6 +423,9 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Real Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPa-KG-oqN">
                                             <rect key="frame" x="8" y="4" width="277" height="17"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="17" id="9ju-Em-8YB"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="15"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
@@ -479,9 +482,6 @@
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleAspectFit" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4x-EY-Mcf">
                                             <rect key="frame" x="70" y="26" width="336" height="95.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="95.5" id="A9e-Ui-r7b"/>
-                                            </constraints>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -492,6 +492,7 @@
                                         <constraint firstItem="Lyy-be-RM8" firstAttribute="top" secondItem="TPa-KG-oqN" secondAttribute="bottom" constant="-2" id="7Yw-NF-fOa"/>
                                         <constraint firstItem="T4x-EY-Mcf" firstAttribute="top" secondItem="Lyy-be-RM8" secondAttribute="bottom" constant="-6" id="ABz-vq-oyI"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="Lyy-be-RM8" secondAttribute="leading" id="Ajj-4f-2xz"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="T4x-EY-Mcf" secondAttribute="bottom" constant="-4" id="Amj-sZ-eky"/>
                                         <constraint firstItem="Lyz-de-m6S" firstAttribute="top" secondItem="RBJ-Qq-b2R" secondAttribute="bottom" constant="-51" id="ENY-Tg-09M"/>
                                         <constraint firstItem="TPa-KG-oqN" firstAttribute="top" secondItem="WYi-U5-og6" secondAttribute="topMargin" constant="-4" id="Ltk-ae-uD4"/>
                                         <constraint firstItem="T4x-EY-Mcf" firstAttribute="leading" secondItem="Lyz-de-m6S" secondAttribute="trailing" constant="5" id="V5l-fN-kjQ"/>

@@ -69,16 +69,16 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newsCell" forIndexPath:indexPath];
     
-    FFNewsArticle *new = self.newsArray[indexPath.row];
-    
-    UILabel *titleLabel = (UILabel *)[cell viewWithTag:1];
-    titleLabel.text = new.title;
-    
-    UILabel *siteLabel = (UILabel *)[cell viewWithTag:2];
-    siteLabel.text = new.site;
-    
-    UILabel *dateLabel = (UILabel *)[cell viewWithTag:3];
-    dateLabel.text = new.date;
+        FFNewsArticle *new = self.newsArray[indexPath.row];
+        
+        UILabel *titleLabel = (UILabel *)[cell viewWithTag:1];
+        titleLabel.text = new.title;
+        
+        UILabel *siteLabel = (UILabel *)[cell viewWithTag:2];
+        siteLabel.text = new.site;
+        
+        UILabel *dateLabel = (UILabel *)[cell viewWithTag:3];
+        dateLabel.text = new.date;
     
     return cell;
 }
@@ -92,7 +92,8 @@
 }
 
 - (IBAction)refresh:(UIRefreshControl *)sender {
-    self.newsArray = [NSMutableArray new];
+    //check for news update to see if commenting out line below worked
+    //self.newsArray = [NSMutableArray new];
     
     [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray) {
         [[NSOperationQueue mainQueue] addOperationWithBlock:^{
