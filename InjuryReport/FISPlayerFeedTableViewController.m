@@ -64,6 +64,11 @@
     
 }
 
+-(void)viewDidAppear:(BOOL)animated {
+    [self.tabBarController.tabBar setHidden:NO];
+}
+
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
 
     return 1;
@@ -112,8 +117,10 @@
 
 -(BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
     SFSafariViewController *sfvc = [[SFSafariViewController alloc]initWithURL:URL entersReaderIfAvailable:YES];
+    //sfvc.hidesBottomBarWhenPushed = YES;
     [sfvc setModalPresentationStyle:UIModalTransitionStylePartialCurl];
     [self presentViewController:sfvc animated:YES completion:nil];
+    [self.tabBarController.tabBar setHidden:YES];
     return NO;
 }
 

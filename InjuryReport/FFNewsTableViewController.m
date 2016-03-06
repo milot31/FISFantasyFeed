@@ -55,6 +55,7 @@
 -(void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:YES];
     [self.tableView reloadData];
+    [self.tabBarController.tabBar setHidden:NO];
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -88,6 +89,7 @@
     SFSafariViewController *sfvc = [[SFSafariViewController alloc]initWithURL:news.url entersReaderIfAvailable:YES];
     [sfvc setModalPresentationStyle:UIModalTransitionStylePartialCurl];
     [self presentViewController:sfvc animated:YES completion:nil];
+    [self.tabBarController.tabBar setHidden:YES];
 }
 
 - (IBAction)refresh:(UIRefreshControl *)sender {
