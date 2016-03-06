@@ -337,6 +337,7 @@
 				TargetAttributes = {
 					3B0A71E71BF03CAA0010A257 = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = KXY9EDFTF5;
 					};
 					3B0A72001BF03CAA0010A257 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -609,10 +610,13 @@
 			baseConfigurationReference = 4E2A5AABAF092444485F13A4 /* Pods-InjuryReport.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InjuryReport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -621,10 +625,13 @@
 			baseConfigurationReference = 06791E0F02EA8200C51C1878 /* Pods-InjuryReport.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InjuryReport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReport;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

@@ -65,7 +65,6 @@
     return self.newsArray.count;
 }
 
-//ARRAY W CAPACITY TO FIX CRASH?
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"newsCell" forIndexPath:indexPath];
     
@@ -92,7 +91,6 @@
 }
 
 - (IBAction)refresh:(UIRefreshControl *)sender {
-    //check for news update to see if commenting out line below worked
     NSMutableArray *newArray = [NSMutableArray new];
     
     [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray) {

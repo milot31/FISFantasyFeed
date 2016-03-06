@@ -9,6 +9,7 @@
         <scene sceneID="tjw-Of-ia8">
             <objects>
                 <tabBarController id="LyW-FV-7Lp" customClass="TabBarViewController" sceneMemberID="viewController">
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="PQB-dh-LPy">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
@@ -200,9 +201,9 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aWZ-h8-GAj">
-                                                            <rect key="frame" x="4" y="21" width="209" height="19"/>
+                                                            <rect key="frame" x="4" y="21" width="230" height="19"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="width" constant="209" id="IVT-nn-BIk"/>
+                                                                <constraint firstAttribute="width" constant="230" id="IVT-nn-BIk"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="17"/>
                                                             <nil key="highlightedColor"/>
@@ -326,9 +327,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Hl-7H-4BX">
-                                                    <rect key="frame" x="4" y="21" width="209" height="19"/>
+                                                    <rect key="frame" x="4" y="21" width="230" height="19"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="209" id="B4l-PH-MAE"/>
+                                                        <constraint firstAttribute="width" constant="230" id="B4l-PH-MAE"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="17"/>
                                                     <nil key="highlightedColor"/>
@@ -426,21 +427,21 @@
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="17" id="9ju-Em-8YB"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="15"/>
+                                            <fontDescription key="fontDescription" name="Arial-BoldItalicMT" family="Arial" pointSize="18"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fav-MK-CFc">
-                                            <rect key="frame" x="305" y="17" width="92" height="11"/>
+                                            <rect key="frame" x="305" y="20.5" width="92" height="16"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="92" id="DN6-QT-XYy"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <view alpha="0.40000000000000002" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lyz-de-m6S" userLabel="Shadow">
-                                            <rect key="frame" x="11" y="39" width="54" height="54"/>
+                                            <rect key="frame" x="11" y="41" width="54" height="54"/>
                                             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="54" id="Dts-OQ-dkC"/>
@@ -451,7 +452,7 @@
                                             </userDefinedRuntimeAttributes>
                                         </view>
                                         <imageView autoresizesSubviews="NO" userInteractionEnabled="NO" tag="4" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RBJ-Qq-b2R">
-                                            <rect key="frame" x="8" y="36" width="54" height="54"/>
+                                            <rect key="frame" x="8" y="38" width="54" height="54"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="54" id="auU-RN-V5E"/>
                                                 <constraint firstAttribute="width" constant="54" id="xH4-6v-hiC"/>
@@ -461,35 +462,35 @@
                                             </userDefinedRuntimeAttributes>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Twitter Handle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fzx-P5-QBH">
-                                            <rect key="frame" x="286" y="4" width="111" height="12"/>
+                                            <rect key="frame" x="286" y="4" width="111" height="15.5"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="111" id="mUg-c8-uy3"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
+                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" tag="5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="retweet from:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lyy-be-RM8">
-                                            <rect key="frame" x="8" y="19" width="230" height="13"/>
+                                            <rect key="frame" x="8" y="21" width="230" height="13"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="230" id="ALg-jB-DYO"/>
                                                 <constraint firstAttribute="height" constant="13" id="Smo-ca-ICW"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="10"/>
+                                            <fontDescription key="fontDescription" name="Arial-ItalicMT" family="Arial" pointSize="13"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="3" contentMode="scaleAspectFit" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4x-EY-Mcf">
-                                            <rect key="frame" x="70" y="26" width="336" height="71.5"/>
+                                            <rect key="frame" x="70" y="28" width="336" height="69.5"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <color key="textColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
                                     </subviews>
                                     <color key="backgroundColor" red="0.73509349634388732" green="0.92434581656148829" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                     <constraints>
-                                        <constraint firstItem="Lyy-be-RM8" firstAttribute="top" secondItem="TPa-KG-oqN" secondAttribute="bottom" constant="-2" id="7Yw-NF-fOa"/>
+                                        <constraint firstItem="Lyy-be-RM8" firstAttribute="top" secondItem="TPa-KG-oqN" secondAttribute="bottom" id="7Yw-NF-fOa"/>
                                         <constraint firstItem="T4x-EY-Mcf" firstAttribute="top" secondItem="Lyy-be-RM8" secondAttribute="bottom" constant="-6" id="ABz-vq-oyI"/>
                                         <constraint firstAttribute="leadingMargin" secondItem="Lyy-be-RM8" secondAttribute="leading" id="Ajj-4f-2xz"/>
                                         <constraint firstItem="Lyz-de-m6S" firstAttribute="top" secondItem="RBJ-Qq-b2R" secondAttribute="bottom" constant="-51" id="ENY-Tg-09M"/>
@@ -561,6 +562,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="gVm-ts-5z7" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="3PS-fw-p0v"/>
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Qfa-3G-FFS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -585,6 +587,7 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="K3q-bj-kgz" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="mUU-KR-bcX"/>
                     <toolbarItems/>
+                    <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FLZ-z6-SLF">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>

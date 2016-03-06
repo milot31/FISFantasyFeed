@@ -74,24 +74,6 @@
     return self.tweetStore.tweets.count;
 }
 
-//-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    static TwitterTableViewCell *cell = nil;
-//    static dispatch_once_t onceToken;
-//    
-//    dispatch_once(&onceToken, ^{
-//        cell = [self.tableView dequeueReusableCellWithIdentifier:@"feedCell"];
-//    });
-//    
-//    return [self calculateHeightForConfiguredSizingCell:cell];
-//    return 125.5;
-//}
-
-//- (CGFloat)calculateHeightForConfiguredSizingCell:(UITableViewCell *)sizingCell {
-//
-//    CGSize size = [sizingCell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
-//    return size.height;
-//}
-
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     TwitterTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"feedCell" forIndexPath:indexPath];
     

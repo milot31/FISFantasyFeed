@@ -19,7 +19,6 @@
     self.tweetBody.editable = NO;
     self.tweetBody.dataDetectorTypes = UIDataDetectorTypeLink;
     [self.tweetBody sizeToFit];
-    //[self.tweetBody layoutIfNeeded];
     self.retweetLabel.hidden = YES;
     
 }
@@ -28,8 +27,6 @@
     [super setSelected:selected animated:animated];
 }
 
-//-(BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
-//    
-//}
+
 
 @end
