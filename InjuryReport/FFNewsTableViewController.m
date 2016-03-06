@@ -87,7 +87,7 @@
     
     FFNewsArticle *news = self.newsArray[indexPath.row];
     SFSafariViewController *sfvc = [[SFSafariViewController alloc]initWithURL:news.url entersReaderIfAvailable:YES];
-    [sfvc setModalPresentationStyle:UIModalTransitionStylePartialCurl];
+    [sfvc setModalPresentationStyle:UIModalTransitionStyleCoverVertical];
     [self presentViewController:sfvc animated:YES completion:nil];
     [self.tabBarController.tabBar setHidden:YES];
 }
