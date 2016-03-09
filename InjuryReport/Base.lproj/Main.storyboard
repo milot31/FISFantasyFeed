@@ -420,7 +420,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.73509349629999998" green="0.92434581660000004" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="pZU-dx-sVb">
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="zeY-Eb-PiS">
                             <rect key="frame" x="0.0" y="201" width="414" height="269"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -559,7 +559,7 @@
                     </refreshControl>
                     <connections>
                         <outlet property="navBar" destination="Ni1-X1-UPw" id="Oaq-yJ-5BP"/>
-                        <outlet property="noTweetImage" destination="pZU-dx-sVb" id="lf2-P6-Fsc"/>
+                        <outlet property="noTweetImage" destination="zeY-Eb-PiS" id="c3l-HD-6n5"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8YZ-nr-JG4" userLabel="First Responder" sceneMemberID="firstResponder"/>

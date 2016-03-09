@@ -34,6 +34,8 @@
     
     CGRect orig = self.noTweetImage.frame;
     CGRect temp = self.noTweetImage.frame;
+    orig.size.height = 269;
+    orig.size.width = [UIScreen mainScreen].bounds.size.width;;
     temp.size.height = 20;
     
     self.noTweetImage.frame = temp;
@@ -48,9 +50,10 @@
             
             if (self.tweetStore.tweets.count == 0) {
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                    [self.noTweetImage setImage:[FeedStyleKit imageOfCanvas3]];
                     self.noTweetImage.frame = orig;
                     self.noTweetImage.hidden = NO;
+                    [self.noTweetImage setImage:[FeedStyleKit imageOfCanvas3]];
+                    
                 }];
             } else {
                 [[NSOperationQueue mainQueue] addOperationWithBlock:^{

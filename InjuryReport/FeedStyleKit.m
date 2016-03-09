@@ -165,8 +165,8 @@ static UIImage* _imageOfCanvas4 = nil;
 
     //// Bezier Drawing
     UIBezierPath* bezierPath = [UIBezierPath bezierPath];
-    [bezierPath moveToPoint: CGPointMake(80, 53)];
-    [bezierPath addCurveToPoint: CGPointMake(52, 76) controlPoint1: CGPointMake(52, 53) controlPoint2: CGPointMake(52, 76)];
+    [bezierPath moveToPoint: CGPointMake(52, 53)];
+    [bezierPath addCurveToPoint: CGPointMake(24, 76) controlPoint1: CGPointMake(24, 53) controlPoint2: CGPointMake(24, 76)];
     bezierPath.lineCapStyle = kCGLineCapRound;
 
     [UIColor.lightGrayColor setStroke];
@@ -176,14 +176,14 @@ static UIImage* _imageOfCanvas4 = nil;
 
     //// Bezier 3 Drawing
     UIBezierPath* bezier3Path = [UIBezierPath bezierPath];
-    [bezier3Path moveToPoint: CGPointMake(117, 76.5)];
-    [bezier3Path addCurveToPoint: CGPointMake(77.5, 116) controlPoint1: CGPointMake(117, 98.32) controlPoint2: CGPointMake(99.32, 116)];
-    [bezier3Path addCurveToPoint: CGPointMake(38, 76.5) controlPoint1: CGPointMake(55.68, 116) controlPoint2: CGPointMake(38, 98.32)];
-    [bezier3Path addCurveToPoint: CGPointMake(77.5, 37) controlPoint1: CGPointMake(38, 54.68) controlPoint2: CGPointMake(55.68, 37)];
-    [bezier3Path addCurveToPoint: CGPointMake(117, 76.5) controlPoint1: CGPointMake(99.32, 37) controlPoint2: CGPointMake(117, 54.68)];
+    [bezier3Path moveToPoint: CGPointMake(89, 76.5)];
+    [bezier3Path addCurveToPoint: CGPointMake(49.5, 116) controlPoint1: CGPointMake(89, 98.32) controlPoint2: CGPointMake(71.32, 116)];
+    [bezier3Path addCurveToPoint: CGPointMake(10, 76.5) controlPoint1: CGPointMake(27.68, 116) controlPoint2: CGPointMake(10, 98.32)];
+    [bezier3Path addCurveToPoint: CGPointMake(49.5, 37) controlPoint1: CGPointMake(10, 54.68) controlPoint2: CGPointMake(27.68, 37)];
+    [bezier3Path addCurveToPoint: CGPointMake(89, 76.5) controlPoint1: CGPointMake(71.32, 37) controlPoint2: CGPointMake(89, 54.68)];
     [bezier3Path closePath];
-    [bezier3Path moveToPoint: CGPointMake(106, 107)];
-    [bezier3Path addLineToPoint: CGPointMake(158, 161)];
+    [bezier3Path moveToPoint: CGPointMake(78, 107)];
+    [bezier3Path addLineToPoint: CGPointMake(130, 161)];
     bezier3Path.lineCapStyle = kCGLineCapRound;
 
     [color4 setStroke];
@@ -192,7 +192,7 @@ static UIImage* _imageOfCanvas4 = nil;
 
 
     //// Text Drawing
-    CGRect textRect = CGRectMake(40, 177, 116, 28);
+    CGRect textRect = CGRectMake(12, 177, 116, 28);
     {
         NSString* textContent = @"no tweets found";
         NSMutableParagraphStyle* textStyle = NSMutableParagraphStyle.defaultParagraphStyle.mutableCopy;
@@ -290,7 +290,7 @@ static UIImage* _imageOfCanvas4 = nil;
     if (_imageOfCanvas3)
         return _imageOfCanvas3;
 
-    UIGraphicsBeginImageContextWithOptions(CGSizeMake(190, 205), NO, 0.0f);
+    UIGraphicsBeginImageContextWithOptions(CGSizeMake(142, 205), NO, 0.0f);
     [FeedStyleKit drawCanvas3];
 
     _imageOfCanvas3 = UIGraphicsGetImageFromCurrentImageContext();
