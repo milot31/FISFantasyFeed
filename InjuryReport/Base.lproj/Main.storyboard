@@ -286,6 +286,10 @@
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="separatorColor" red="1" green="0.99906272826365949" blue="0.068902175143192856" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="sectionIndexBackgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                        <imageView key="tableFooterView" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="rkY-bT-vWa">
+                            <rect key="frame" x="0.0" y="161" width="414" height="41"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="playerCell" rowHeight="69" id="TTX-EK-ZcS" customClass="PlayerTableViewCell">
                                 <rect key="frame" x="0.0" y="92" width="414" height="69"/>
@@ -399,6 +403,9 @@
                         </barButtonItem>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina55"/>
+                    <connections>
+                        <outlet property="getstartedLabel" destination="rkY-bT-vWa" id="4Nm-2V-4bR"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6FN-Ub-Ldo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

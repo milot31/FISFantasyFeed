@@ -18,6 +18,8 @@
 
 @property (nonatomic, strong) FISTeamDataStore *store;
 @property (nonatomic, strong) FISTweetsDataStore  *tweetStore;
+@property (strong, nonatomic) IBOutlet UIImageView *getstartedLabel;
+
 
 @end
 
@@ -31,6 +33,21 @@
     self.tweetStore = [FISTweetsDataStore tweetsDataStore];
     [self.tweetStore.tweets removeAllObjects];
     
+    [self.getstartedLabel setImage:[FeedStyleKit imageOfCanvas4]];
+    self.getstartedLabel.hidden = YES;
+    CGRect orig = self.getstartedLabel.frame;
+    CGRect temp = self.getstartedLabel.frame;
+    orig.size.height = 41;
+    temp.size.height = 0;
+    
+    if (self.store.team.count == 0) {
+        self.getstartedLabel.frame = orig;
+        self.getstartedLabel.hidden = NO;
+    } else {
+        self.getstartedLabel.frame = temp;
+        self.getstartedLabel.hidden = YES;
+    }
+    
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -38,6 +55,19 @@
     [[FISTeamDataStore sharedDataStore] fetchData];
     [self.tableView reloadData];
     [self.tweetStore.tweets removeAllObjects];
+    
+    CGRect orig = self.getstartedLabel.frame;
+    CGRect temp = self.getstartedLabel.frame;
+    orig.size.height = 41;
+    temp.size.height = 0;
+    
+    if (self.store.team.count == 0) {
+        self.getstartedLabel.frame = orig;
+        self.getstartedLabel.hidden = NO;
+    } else {
+        self.getstartedLabel.frame = temp;
+        self.getstartedLabel.hidden = YES;
+    }
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -57,6 +87,19 @@
         [self.store.team removeObjectAtIndex:indexPath.row];
         [[FISTeamDataStore sharedDataStore] fetchData];
         [self.tableView reloadData];
+        
+        CGRect orig = self.getstartedLabel.frame;
+        CGRect temp = self.getstartedLabel.frame;
+        orig.size.height = 41;
+        temp.size.height = 0;
+        
+        if (self.store.team.count == 0) {
+            self.getstartedLabel.frame = orig;
+            self.getstartedLabel.hidden = NO;
+        } else {
+            self.getstartedLabel.frame = temp;
+            self.getstartedLabel.hidden = YES;
+        }
     }
 }
 
