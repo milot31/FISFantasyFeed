@@ -56,7 +56,7 @@
 
 /* Begin PBXFileReference section */
 		06791E0F02EA8200C51C1878 /* Pods-InjuryReport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InjuryReport.release.xcconfig"; path = "Pods/Target Support Files/Pods-InjuryReport/Pods-InjuryReport.release.xcconfig"; sourceTree = "<group>"; };
-		3B0A71E81BF03CAA0010A257 /* InjuryReport.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = InjuryReport.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0A71E81BF03CAA0010A257 /* No Huddle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "No Huddle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0A71EC1BF03CAA0010A257 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		3B0A71EE1BF03CAA0010A257 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		3B0A71EF1BF03CAA0010A257 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -64,10 +64,10 @@
 		3B0A71F71BF03CAA0010A257 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3B0A71FA1BF03CAA0010A257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3B0A71FC1BF03CAA0010A257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B0A72011BF03CAA0010A257 /* InjuryReportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InjuryReportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0A72011BF03CAA0010A257 /* No Huddle.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "No Huddle.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0A72051BF03CAA0010A257 /* InjuryReportTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InjuryReportTests.m; sourceTree = "<group>"; };
 		3B0A72071BF03CAA0010A257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3B0A720C1BF03CAA0010A257 /* InjuryReportUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InjuryReportUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3B0A720C1BF03CAA0010A257 /* No Huddle.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "No Huddle.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B0A72101BF03CAA0010A257 /* InjuryReportUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InjuryReportUITests.m; sourceTree = "<group>"; };
 		3B0A72121BF03CAA0010A257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3B0A72211BF135C10010A257 /* FISTeamDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISTeamDataStore.h; sourceTree = "<group>"; };
@@ -164,9 +164,9 @@
 		3B0A71E91BF03CAA0010A257 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				3B0A71E81BF03CAA0010A257 /* InjuryReport.app */,
-				3B0A72011BF03CAA0010A257 /* InjuryReportTests.xctest */,
-				3B0A720C1BF03CAA0010A257 /* InjuryReportUITests.xctest */,
+				3B0A71E81BF03CAA0010A257 /* No Huddle.app */,
+				3B0A72011BF03CAA0010A257 /* No Huddle.xctest */,
+				3B0A720C1BF03CAA0010A257 /* No Huddle.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -287,7 +287,7 @@
 			);
 			name = InjuryReport;
 			productName = InjuryReport;
-			productReference = 3B0A71E81BF03CAA0010A257 /* InjuryReport.app */;
+			productReference = 3B0A71E81BF03CAA0010A257 /* No Huddle.app */;
 			productType = "com.apple.product-type.application";
 		};
 		3B0A72001BF03CAA0010A257 /* InjuryReportTests */ = {
@@ -305,7 +305,7 @@
 			);
 			name = InjuryReportTests;
 			productName = InjuryReportTests;
-			productReference = 3B0A72011BF03CAA0010A257 /* InjuryReportTests.xctest */;
+			productReference = 3B0A72011BF03CAA0010A257 /* No Huddle.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		3B0A720B1BF03CAA0010A257 /* InjuryReportUITests */ = {
@@ -323,7 +323,7 @@
 			);
 			name = InjuryReportUITests;
 			productName = InjuryReportUITests;
-			productReference = 3B0A720C1BF03CAA0010A257 /* InjuryReportUITests.xctest */;
+			productReference = 3B0A720C1BF03CAA0010A257 /* No Huddle.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -349,7 +349,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 3B0A71E31BF03CAA0010A257 /* Build configuration list for PBXProject "InjuryReport" */;
+			buildConfigurationList = 3B0A71E31BF03CAA0010A257 /* Build configuration list for PBXProject "No Huddle" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -615,7 +615,7 @@
 				INFOPLIST_FILE = InjuryReport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReport;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "No Huddle";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
@@ -630,7 +630,7 @@
 				INFOPLIST_FILE = InjuryReport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReport;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "No Huddle";
 				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
@@ -642,7 +642,7 @@
 				INFOPLIST_FILE = InjuryReportTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReportTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "No Huddle";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InjuryReport.app/InjuryReport";
 			};
 			name = Debug;
@@ -654,7 +654,7 @@
 				INFOPLIST_FILE = InjuryReportTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReportTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "No Huddle";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/InjuryReport.app/InjuryReport";
 			};
 			name = Release;
@@ -665,7 +665,7 @@
 				INFOPLIST_FILE = InjuryReportUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReportUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "No Huddle";
 				TEST_TARGET_NAME = InjuryReport;
 				USES_XCTRUNNER = YES;
 			};
@@ -677,7 +677,7 @@
 				INFOPLIST_FILE = InjuryReportUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReportUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "No Huddle";
 				TEST_TARGET_NAME = InjuryReport;
 				USES_XCTRUNNER = YES;
 			};
@@ -686,7 +686,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3B0A71E31BF03CAA0010A257 /* Build configuration list for PBXProject "InjuryReport" */ = {
+		3B0A71E31BF03CAA0010A257 /* Build configuration list for PBXProject "No Huddle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3B0A72131BF03CAA0010A257 /* Debug */,

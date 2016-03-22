@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3B0A71E71BF03CAA0010A257"
-               BuildableName = "InjuryReport.app"
+               BuildableName = "No Huddle.app"
                BlueprintName = "InjuryReport"
-               ReferencedContainer = "container:InjuryReport.xcodeproj">
+               ReferencedContainer = "container:No Huddle.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3B0A72001BF03CAA0010A257"
-               BuildableName = "InjuryReportTests.xctest"
+               BuildableName = "No Huddle.xctest"
                BlueprintName = "InjuryReportTests"
-               ReferencedContainer = "container:InjuryReport.xcodeproj">
+               ReferencedContainer = "container:No Huddle.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -43,9 +43,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3B0A720B1BF03CAA0010A257"
-               BuildableName = "InjuryReportUITests.xctest"
+               BuildableName = "No Huddle.xctest"
                BlueprintName = "InjuryReportUITests"
-               ReferencedContainer = "container:InjuryReport.xcodeproj">
+               ReferencedContainer = "container:No Huddle.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -53,9 +53,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3B0A71E71BF03CAA0010A257"
-            BuildableName = "InjuryReport.app"
+            BuildableName = "No Huddle.app"
             BlueprintName = "InjuryReport"
-            ReferencedContainer = "container:InjuryReport.xcodeproj">
+            ReferencedContainer = "container:No Huddle.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -76,9 +76,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3B0A71E71BF03CAA0010A257"
-            BuildableName = "InjuryReport.app"
+            BuildableName = "No Huddle.app"
             BlueprintName = "InjuryReport"
-            ReferencedContainer = "container:InjuryReport.xcodeproj">
+            ReferencedContainer = "container:No Huddle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -95,9 +95,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "3B0A71E71BF03CAA0010A257"
-            BuildableName = "InjuryReport.app"
+            BuildableName = "No Huddle.app"
             BlueprintName = "InjuryReport"
-            ReferencedContainer = "container:InjuryReport.xcodeproj">
+            ReferencedContainer = "container:No Huddle.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
