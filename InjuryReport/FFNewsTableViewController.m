@@ -32,16 +32,18 @@
     [self.loadingImage setImage:[FeedStyleKit imageOfLoading]];
     self.loadingImage.hidden = NO;
     
-    [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray) {
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            for (NSDictionary *dict in rotoNewsArray) {
-                FFNewsArticle *new = [FFNewsArticle newsFromDictionary:dict];
-                [self.newsArray addObject:new];
-                self.loadingImage.hidden = YES;
-            }
-            [self.tableView reloadData];
-        }];
-    }];
+//    [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray) {
+//        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//            for (NSDictionary *dict in rotoNewsArray) {
+//                FFNewsArticle *new = [FFNewsArticle newsFromDictionary:dict];
+//                [self.newsArray addObject:new];
+//                self.loadingImage.hidden = YES;
+//            }
+//            [self.tableView reloadData];
+//        }];
+//    }];
+    
+    [self getNews];
     
     self.refreshControl.tintColor = [UIColor whiteColor];
     
@@ -93,19 +95,62 @@
 }
 
 - (IBAction)refresh:(UIRefreshControl *)sender {
-    NSMutableArray *newArray = [NSMutableArray new];
+//    NSMutableArray *newArray = [NSMutableArray new];
+//    
+//    [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray, NSError *newsError) {
+//        
+//        if (newsError) {
+//            //ALERT CONTROLLER
+//        } else {
+//            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+//                for (NSDictionary *dict in rotoNewsArray) {
+//                    FFNewsArticle *new = [FFNewsArticle newsFromDictionary:dict];
+//                    [newArray addObject:new];
+//                }
+//                self.newsArray = newArray;
+//                [self.tableView reloadData];
+//                [sender endRefreshing];
+//            }];
+//        }
+//    }];
     
-    [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray) {
-        [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-            for (NSDictionary *dict in rotoNewsArray) {
-                FFNewsArticle *new = [FFNewsArticle newsFromDictionary:dict];
-                [newArray addObject:new];
-            }
-            self.newsArray = newArray;
-            [self.tableView reloadData];
-            [sender endRefreshing];
-        }];
+    [self getNews];
+    [sender endRefreshing];
+}
+
+-(void)getNews {
+    [FFRotoNewsAPI getNewsWithCompletion:^(NSArray *rotoNewsArray, NSError *newsError) {
+        
+        if (newsError) {
+            [self alertViewFailure];
+        } else {
+            
+            NSMutableArray *newArray = [NSMutableArray new];
+            
+            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                for (NSDictionary *dict in rotoNewsArray) {
+                    FFNewsArticle *new = [FFNewsArticle newsFromDictionary:dict];
+                    [newArray addObject:new];
+                }
+                self.newsArray = newArray;
+                self.loadingImage.hidden = YES;
+                [self.tableView reloadData];
+            }];
+        }
     }];
+}
+
+-(void)alertViewFailure {
+    
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Oops!" message:@"There was a connection error.  Please try again" preferredStyle:1];
+    
+    UIAlertAction *ok = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:nil];
+    
+    [controller addAction:ok];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self presentViewController:controller animated:YES completion:nil];
+    });
 }
 
 

@@ -25,11 +25,11 @@
                         
             completionBlock(statuses);
         } errorBlock:^(NSError *error) {
-            NSLog(@"%@", error);
+            //NSLog(@"%@", error);
         }];
         
     } errorBlock:^(NSError *error) {
-        NSLog(@"-- %@", [error localizedDescription]);
+        //NSLog(@"-- %@", [error localizedDescription]);
         
     }];
 }

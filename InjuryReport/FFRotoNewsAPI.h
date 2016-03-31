@@ -10,6 +10,6 @@
 
 @interface FFRotoNewsAPI : NSObject
 
-+(void)getNewsWithCompletion:(void (^)(NSArray *rotoNewsArray))completion;
++(void)getNewsWithCompletion:(void (^)(NSArray *rotoNewsArray, NSError *newsError))completion;
 
 @end
