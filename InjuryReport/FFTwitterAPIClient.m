@@ -22,14 +22,13 @@
         NSString *searchQuery = [NSString stringWithFormat:@"(from:Stephania_ESPN OR from:MatthewBerryTMR OR from:thepme OR from:Michael_Fabiano OR from:YahooFootball OR from:evansilva OR from:scotteRotoEx OR from:nfl OR from:espn OR from:sportscenter OR from:TMZ_Sports OR from:ProFootballTalk OR from:pfrumors OR from:SINow OR from:Deadspin OR from:AlberBreer OR %@) AND %@ since:2015-09-01", teamString, playerName];
         
         [twitter getSearchTweetsWithQuery:searchQuery successBlock:^(NSDictionary *searchMetadata, NSArray *statuses) {
-                        
+
             completionBlock(statuses);
         } errorBlock:^(NSError *error) {
-            //NSLog(@"%@", error);
+
         }];
         
     } errorBlock:^(NSError *error) {
-        //NSLog(@"-- %@", [error localizedDescription]);
         
     }];
 }

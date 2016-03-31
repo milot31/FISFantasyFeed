@@ -19,7 +19,7 @@
 
 @property (strong, nonatomic) FISTweetsDataStore *tweetStore;
 @property (strong, nonatomic) IBOutlet UINavigationItem *navBar;
-- (IBAction)refresh:(UIRefreshControl *)sender;
+//- (IBAction)refresh:(UIRefreshControl *)sender;
 @property (strong, nonatomic) IBOutlet UIImageView *noTweetImage;
 
 @end
@@ -62,6 +62,8 @@
             }
         }
     }];
+    
+    [self performSelector:@selector(alertViewForFailure) withObject:nil afterDelay:15.0];
     
     self.navBar.title = [NSString stringWithFormat:@"%@", self.player.fullName];
     
@@ -120,7 +122,7 @@
 
 -(BOOL)textView:(UITextView *)textView shouldInteractWithURL:(NSURL *)URL inRange:(NSRange)characterRange {
     SFSafariViewController *sfvc = [[SFSafariViewController alloc]initWithURL:URL entersReaderIfAvailable:YES];
-    [sfvc setModalPresentationStyle:UIModalTransitionStyleCoverVertical];
+    [sfvc setModalPresentationStyle:0];
     [self presentViewController:sfvc animated:YES completion:nil];
     [self.tabBarController.tabBar setHidden:YES];
     return NO;
@@ -142,5 +144,20 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+-(void)alertViewForFailure {
+    
+    if (self.tweetStore.tweets.count == 0) {
+    
+        UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Oops!" message:@"There was a connection error.  Please try again." preferredStyle:1];
+        
+        UIAlertAction *goBack = [UIAlertAction actionWithTitle:@"Go Back" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+            [self.navigationController popViewControllerAnimated:YES];
+        }];
+        
+        [controller addAction:goBack];
+        
+        [self presentViewController:controller animated:YES completion:nil];
+    }
+}
 
 @end
