@@ -13,7 +13,7 @@
 #import "Player.h"
 #import "PlayerTableViewCell.h"
 
-@interface FISAddPlayerViewController () <UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate>
+@interface FISAddPlayerViewController () <UIPickerViewDelegate, UIPickerViewDataSource, UITableViewDelegate, UITableViewDataSource, UISearchBarDelegate, UIAlertViewDelegate>
 
 @property (nonatomic, strong) NSArray *positionArray;
 @property (strong, nonatomic) IBOutlet UIPickerView *positionPickerView;
@@ -200,9 +200,7 @@
         [FFFantasyAPIClient getActiveQBPlayersWithCompletion:^(NSDictionary *quarterBacks, NSError *qbError) {
             
             if (qbError) {
-                NSLog(@"%@", qbError);
-                //ALERT CONTROLLER
-                
+                [self alertViewForFailure];
             } else {
             
                 for (NSDictionary *player in quarterBacks[@"Players"]) {
@@ -233,7 +231,7 @@
         [FFFantasyAPIClient getActiveRBPlayersWithCompletion:^(NSDictionary *runningBacks, NSError *rbError) {
             
             if (rbError) {
-                //ALERT CONTROLLER
+                [self alertViewForFailure];
             } else {
             
                 for (NSDictionary *player in runningBacks[@"Players"]) {
@@ -262,7 +260,7 @@
         [FFFantasyAPIClient getActiveWRPlayersWithCompletion:^(NSDictionary *wideReceivers, NSError *wrError) {
             
             if (wrError) {
-                //ALERT CONTROLLER
+                [self alertViewForFailure];
             } else {
             
                 for (NSDictionary *player in wideReceivers[@"Players"]) {
@@ -291,7 +289,7 @@
         [FFFantasyAPIClient getActiveTEPlayersWithCompletion:^(NSDictionary *tightEnds, NSError *teError) {
             
             if (teError) {
-                //ALERT CONTROLLER
+                [self alertViewForFailure];
             } else {
             
                 for (NSDictionary *player in tightEnds[@"Players"]) {
@@ -320,7 +318,7 @@
         [FFFantasyAPIClient getActiveKPlayersWithCompletion:^(NSDictionary *kickers, NSError *kError) {
             
             if (kError) {
-                //ALERT CONTROLLER
+                [self alertViewForFailure];
             } else {
             
                 for (NSDictionary *player in kickers[@"Players"]) {
@@ -349,7 +347,7 @@
         [FFFantasyAPIClient getActiveDEFPlayersWithCompletion:^(NSDictionary *defenses, NSError *defError) {
             
             if (defError) {
-                //ALERT CONTROLLER
+                [self alertViewForFailure];
             } else {
                 
                 for (NSDictionary *player in defenses[@"Players"]) {
@@ -404,6 +402,21 @@
 
 - (IBAction)cancelButtonTapper:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+-(void)alertViewForFailure {
+    
+    UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Oops!" message:@"There was a connection error.  Please try again." preferredStyle:1];
+    
+    UIAlertAction *goBack = [UIAlertAction actionWithTitle:@"Go Back" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    
+    [controller addAction:goBack];
+    
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self presentViewController:controller animated:YES completion:nil];
+    });
 }
 
 @end
