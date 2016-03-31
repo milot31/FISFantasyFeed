@@ -70,6 +70,8 @@
     self.playerArray = [NSMutableArray new];
 }
 
+#pragma mark pickerView Methods
+
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component {
     
     
@@ -77,49 +79,6 @@
 
     [self.playerTableView reloadData];
 }
-
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    
-    if ([self.playerSearchBar.text isEqualToString:@""]) {
-        return self.playerArray.count;
-    } else {
-        return self.filteredPlayerArray.count;
-    }
-}
-
-
- - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-     PlayerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
- 
-     if ([self.playerSearchBar.text isEqualToString: @""]) {
-         
-         Player *player = self.playerArray[indexPath.row];
-         
-         cell.playerNameLabel.text = player.fullName;
-         cell.playersPositionLabel.text = player.position;
-         cell.playersTeamLabel.text = player.team;
-         cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
-         cell.logoView.image = [PlayerTableViewCell getTeamLogo:cell];
-
-     } else {
-         
-         Player *player = self.filteredPlayerArray[indexPath.row];
-
-         cell.playerNameLabel.text = player.fullName;
-         cell.playersPositionLabel.text = player.position;
-         cell.playersTeamLabel.text = player.team;
-         cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
-         cell.logoView.image = [PlayerTableViewCell getTeamLogo:cell];
-
-     }
-     return cell;
- }
-
 
 -(NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView {
     return 1;
@@ -149,6 +108,52 @@
     } else if ([activePickerSelection isEqualToString:self.positionArray[6]]) {
         [self loadDefense];
     }
+}
+
+#pragma mark tableViewMethods
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    return 1;
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    
+    if ([self.playerSearchBar.text isEqualToString:@""]) {
+        return self.playerArray.count;
+    } else {
+        return self.filteredPlayerArray.count;
+    }
+}
+
+ - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+     PlayerTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"playerCell" forIndexPath:indexPath];
+ 
+     if ([self.playerSearchBar.text isEqualToString: @""]) {
+         
+         Player *player = self.playerArray[indexPath.row];
+         
+         cell.playerNameLabel.text = player.fullName;
+         cell.playersPositionLabel.text = player.position;
+         cell.playersTeamLabel.text = player.team;
+         cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
+         cell.logoView.image = [PlayerTableViewCell getTeamLogo:cell];
+
+     } else {
+         
+         Player *player = self.filteredPlayerArray[indexPath.row];
+
+         cell.playerNameLabel.text = player.fullName;
+         cell.playersPositionLabel.text = player.position;
+         cell.playersTeamLabel.text = player.team;
+         cell.layerAnimationColor = [PlayerTableViewCell getAnimationColor:cell];
+         cell.logoView.image = [PlayerTableViewCell getTeamLogo:cell];
+
+     }
+     return cell;
+ }
+
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 69.0;
 }
 
 
@@ -185,26 +190,35 @@
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
+#pragma mark API Methods
+
 -(void)loadQuarterbacks {
     
 
     if (self.quarterBacks.count == 0) {
         
-        [FFFantasyAPIClient getActiveQBPlayersWithCompletion:^(NSDictionary *quarterBacks) {
+        [FFFantasyAPIClient getActiveQBPlayersWithCompletion:^(NSDictionary *quarterBacks, NSError *qbError) {
             
-            for (NSDictionary *player in quarterBacks[@"Players"]) {
-                FISPlayer *newPlayer = [[FISPlayer alloc]init];
-                newPlayer.fullName = player[@"displayName"];
-                newPlayer.position = player[@"position"];
-                newPlayer.team = player[@"team"];
-                [self.quarterBacks addObject:newPlayer];
+            if (qbError) {
+                NSLog(@"%@", qbError);
+                //ALERT CONTROLLER
                 
-            }
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+            } else {
             
-                self.playerArray = self.quarterBacks;
-                [self.playerTableView reloadData];
-            }];
+                for (NSDictionary *player in quarterBacks[@"Players"]) {
+                    FISPlayer *newPlayer = [[FISPlayer alloc]init];
+                    newPlayer.fullName = player[@"displayName"];
+                    newPlayer.position = player[@"position"];
+                    newPlayer.team = player[@"team"];
+                    [self.quarterBacks addObject:newPlayer];
+                    
+                }
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                
+                    self.playerArray = self.quarterBacks;
+                    [self.playerTableView reloadData];
+                }];
+            }
         }];
     } else {
         self.playerArray = self.quarterBacks;
@@ -216,19 +230,24 @@
     
     if (self.runningBacks.count == 0) {
     
-        [FFFantasyAPIClient getActiveRBPlayersWithCompletion:^(NSDictionary *runningBacks) {
+        [FFFantasyAPIClient getActiveRBPlayersWithCompletion:^(NSDictionary *runningBacks, NSError *rbError) {
             
-            for (NSDictionary *player in runningBacks[@"Players"]) {
-                FISPlayer *newPlayer = [[FISPlayer alloc]init];
-                newPlayer.fullName = player[@"displayName"];
-                newPlayer.position = player[@"position"];
-                newPlayer.team = player[@"team"];
-                [self.runningBacks addObject:newPlayer];
+            if (rbError) {
+                //ALERT CONTROLLER
+            } else {
+            
+                for (NSDictionary *player in runningBacks[@"Players"]) {
+                    FISPlayer *newPlayer = [[FISPlayer alloc]init];
+                    newPlayer.fullName = player[@"displayName"];
+                    newPlayer.position = player[@"position"];
+                    newPlayer.team = player[@"team"];
+                    [self.runningBacks addObject:newPlayer];
+                }
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    self.playerArray = self.runningBacks;
+                    [self.playerTableView reloadData];
+                }];
             }
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                self.playerArray = self.runningBacks;
-                [self.playerTableView reloadData];
-            }];
         }];
     } else {
         self.playerArray = self.runningBacks;
@@ -240,19 +259,24 @@
     
     if (self.wideReceivers.count == 0) {
     
-        [FFFantasyAPIClient getActiveWRPlayersWithCompletion:^(NSDictionary *wideReceivers) {
+        [FFFantasyAPIClient getActiveWRPlayersWithCompletion:^(NSDictionary *wideReceivers, NSError *wrError) {
             
-            for (NSDictionary *player in wideReceivers[@"Players"]) {
-                FISPlayer *newPlayer = [[FISPlayer alloc]init];
-                newPlayer.fullName = player[@"displayName"];
-                newPlayer.position = player[@"position"];
-                newPlayer.team = player[@"team"];
-                [self.wideReceivers addObject:newPlayer];
+            if (wrError) {
+                //ALERT CONTROLLER
+            } else {
+            
+                for (NSDictionary *player in wideReceivers[@"Players"]) {
+                    FISPlayer *newPlayer = [[FISPlayer alloc]init];
+                    newPlayer.fullName = player[@"displayName"];
+                    newPlayer.position = player[@"position"];
+                    newPlayer.team = player[@"team"];
+                    [self.wideReceivers addObject:newPlayer];
+                }
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    self.playerArray = self.wideReceivers;
+                    [self.playerTableView reloadData];
+                }];
             }
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                self.playerArray = self.wideReceivers;
-                [self.playerTableView reloadData];
-            }];
         }];
     } else {
         self.playerArray = self.wideReceivers;
@@ -264,18 +288,24 @@
     
     if (self.tightEnds.count == 0) {
     
-        [FFFantasyAPIClient getActiveTEPlayersWithCompletion:^(NSDictionary *tightEnds) {
-            for (NSDictionary *player in tightEnds[@"Players"]) {
-                FISPlayer *newPlayer = [[FISPlayer alloc]init];
-                newPlayer.fullName = player[@"displayName"];
-                newPlayer.position = player[@"position"];
-                newPlayer.team = player[@"team"];
-                [self.tightEnds addObject:newPlayer];
+        [FFFantasyAPIClient getActiveTEPlayersWithCompletion:^(NSDictionary *tightEnds, NSError *teError) {
+            
+            if (teError) {
+                //ALERT CONTROLLER
+            } else {
+            
+                for (NSDictionary *player in tightEnds[@"Players"]) {
+                    FISPlayer *newPlayer = [[FISPlayer alloc]init];
+                    newPlayer.fullName = player[@"displayName"];
+                    newPlayer.position = player[@"position"];
+                    newPlayer.team = player[@"team"];
+                    [self.tightEnds addObject:newPlayer];
+                }
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    self.playerArray = self.tightEnds;
+                    [self.playerTableView reloadData];
+                }];
             }
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                self.playerArray = self.tightEnds;
-                [self.playerTableView reloadData];
-            }];
         }];
     } else {
         self.playerArray = self.tightEnds;
@@ -287,18 +317,24 @@
     
     if (self.kickers.count == 0) {
     
-        [FFFantasyAPIClient getActiveKPlayersWithCompletion:^(NSDictionary *kickers) {
-            for (NSDictionary *player in kickers[@"Players"]) {
-                FISPlayer *newPlayer = [[FISPlayer alloc]init];
-                newPlayer.fullName = player[@"displayName"];
-                newPlayer.position = player[@"position"];
-                newPlayer.team = player[@"team"];
-                [self.kickers addObject:newPlayer];
+        [FFFantasyAPIClient getActiveKPlayersWithCompletion:^(NSDictionary *kickers, NSError *kError) {
+            
+            if (kError) {
+                //ALERT CONTROLLER
+            } else {
+            
+                for (NSDictionary *player in kickers[@"Players"]) {
+                    FISPlayer *newPlayer = [[FISPlayer alloc]init];
+                    newPlayer.fullName = player[@"displayName"];
+                    newPlayer.position = player[@"position"];
+                    newPlayer.team = player[@"team"];
+                    [self.kickers addObject:newPlayer];
+                }
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    self.playerArray = self.kickers;
+                    [self.playerTableView reloadData];
+                }];
             }
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                self.playerArray = self.kickers;
-                [self.playerTableView reloadData];
-            }];
         }];
     } else {
         self.playerArray = self.kickers;
@@ -310,18 +346,24 @@
     
     if (self.defenses.count == 0) {
     
-        [FFFantasyAPIClient getActiveDEFPlayersWithCompletion:^(NSDictionary *defenses) {
-            for (NSDictionary *player in defenses[@"Players"]) {
-                FISPlayer *newPlayer = [[FISPlayer alloc]init];
-                newPlayer.fullName = player[@"displayName"];
-                newPlayer.position = player[@"position"];
-                newPlayer.team = player[@"team"];
-                [self.defenses addObject:newPlayer];
+        [FFFantasyAPIClient getActiveDEFPlayersWithCompletion:^(NSDictionary *defenses, NSError *defError) {
+            
+            if (defError) {
+                //ALERT CONTROLLER
+            } else {
+                
+                for (NSDictionary *player in defenses[@"Players"]) {
+                    FISPlayer *newPlayer = [[FISPlayer alloc]init];
+                    newPlayer.fullName = player[@"displayName"];
+                    newPlayer.position = player[@"position"];
+                    newPlayer.team = player[@"team"];
+                    [self.defenses addObject:newPlayer];
+                }
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    self.playerArray = self.defenses;
+                    [self.playerTableView reloadData];
+                }];
             }
-            [[NSOperationQueue mainQueue] addOperationWithBlock:^{
-                self.playerArray = self.defenses;
-                [self.playerTableView reloadData];
-            }];
         }];
     } else {
         self.playerArray = self.defenses;
@@ -329,13 +371,7 @@
     }
 }
 
-- (IBAction)cancelButtonTapper:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
-}
-
--(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 69.0;
-}
+#pragma mark searchBar Methods
 
 -(void)searchBar:(UISearchBar *)searchBar textDidChange:(NSString *)searchText {
     
@@ -362,6 +398,12 @@
     NSLog(@"search button clicked");
     [searchBar resignFirstResponder];
 
+}
+
+#pragma mark miscellaneous methods
+
+- (IBAction)cancelButtonTapper:(id)sender {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end
