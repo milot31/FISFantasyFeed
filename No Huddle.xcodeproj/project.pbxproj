@@ -20,6 +20,7 @@
 		3B0A72301BF13A2E0010A257 /* FFFantasyAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A722F1BF13A2E0010A257 /* FFFantasyAPIClient.m */; };
 		3B0A72331BF140020010A257 /* FFTwitterAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72321BF140020010A257 /* FFTwitterAPIClient.m */; };
 		3B0A72361BF193920010A257 /* FISAddPlayerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B0A72351BF193920010A257 /* FISAddPlayerViewController.m */; };
+		3BD2FEA61CAE067E00DAB01D /* Settings.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 3BD2FEA51CAE067E00DAB01D /* Settings.bundle */; };
 		3BD6AE4C1C45D3D70058C0BE /* PlayerTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6AE4B1C45D3D70058C0BE /* PlayerTableViewCell.m */; };
 		3BD6AE4F1C46B55B0058C0BE /* FeedStyleKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD6AE4E1C46B55B0058C0BE /* FeedStyleKit.m */; };
 		3BD8FE6B1C5EA11D005C2F25 /* TabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD8FE6A1C5EA11D005C2F25 /* TabBarViewController.m */; };
@@ -82,6 +83,7 @@
 		3B0A72321BF140020010A257 /* FFTwitterAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FFTwitterAPIClient.m; sourceTree = "<group>"; };
 		3B0A72341BF193920010A257 /* FISAddPlayerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FISAddPlayerViewController.h; sourceTree = "<group>"; };
 		3B0A72351BF193920010A257 /* FISAddPlayerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISAddPlayerViewController.m; sourceTree = "<group>"; };
+		3BD2FEA51CAE067E00DAB01D /* Settings.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = Settings.bundle; sourceTree = "<group>"; };
 		3BD6AE4A1C45D3D70058C0BE /* PlayerTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlayerTableViewCell.h; sourceTree = "<group>"; };
 		3BD6AE4B1C45D3D70058C0BE /* PlayerTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayerTableViewCell.m; sourceTree = "<group>"; };
 		3BD6AE4D1C46B55B0058C0BE /* FeedStyleKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedStyleKit.h; sourceTree = "<group>"; };
@@ -214,6 +216,7 @@
 				3BD8FE701C5F98A8005C2F25 /* FFRotoNewsAPI.m */,
 				3BD8FE721C5FA75F005C2F25 /* FFNewsArticle.h */,
 				3BD8FE731C5FA75F005C2F25 /* FFNewsArticle.m */,
+				3BD2FEA51CAE067E00DAB01D /* Settings.bundle */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -337,7 +340,7 @@
 				TargetAttributes = {
 					3B0A71E71BF03CAA0010A257 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = KXY9EDFTF5;
+						DevelopmentTeam = E3GXZGNWZY;
 					};
 					3B0A72001BF03CAA0010A257 = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -374,6 +377,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD2FEA61CAE067E00DAB01D /* Settings.bundle in Resources */,
 				3B0A71FB1BF03CAA0010A257 /* LaunchScreen.storyboard in Resources */,
 				3B0A71F81BF03CAA0010A257 /* Assets.xcassets in Resources */,
 				3B0A71F61BF03CAA0010A257 /* Main.storyboard in Resources */,
@@ -614,7 +618,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InjuryReport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReport;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Milot.NoHuddle;
 				PRODUCT_NAME = "No Huddle";
 				PROVISIONING_PROFILE = "";
 			};
@@ -629,7 +633,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = InjuryReport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = flatiron.InjuryReport;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Milot.NoHuddle;
 				PRODUCT_NAME = "No Huddle";
 				PROVISIONING_PROFILE = "";
 			};
